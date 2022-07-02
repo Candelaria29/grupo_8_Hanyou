@@ -14,3 +14,9 @@ que sean consumidores y fanáticos de la cultura pop.
 - [American mix](https://www.americanmix.shop/) - de este sitio nos inspiramos para la estructura y estética del carrito de compras.
 - [Mercado Libre](https://www.mercadolibre.com.ar/) - lo usamos como referencia para la estructura y elementos del sitio.
 - [Playground](https://playground.digitalhouse.com/) - fue la inspiración para las páginas de login y registro.
+
+**Integrantes del grupo**
+- *Juan Manuel Pizzorno*:
+- *Matias Dure*:
+- *Nicolás Agustín Cilio*:
+- *Maria Candelaria Barrios:* tengo 27 años, originalmente de Misiones, pero vivo en Buenos Aires. Hace unos meses me gradué de médica y ahora estoy ingresandome en el mundo del desarrollo web, con el objetivo de buscar la manera de integrar ambas cosas en un proyecto a futuro.    
