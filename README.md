@@ -13,4 +13,4 @@ que sean consumidores y fanaticos de la cultura pop.
 - [Steam](https://store.steampowered.com/) - por su estetica minimalista y paleta de colores oscuros.
 - [American mix](https://www.americanmix.shop/) - de este sitio nos inspiramos para la estructura y estetica del carrito de compras.
 - [Mercado Libre](https://www.mercadolibre.com.ar/) - lo usamos como referencia para la estructura y elementos del sitio.
-- [Playground] (https://playground.digitalhouse.com/login) - fue la inspiracion para las paginas de login y registro.
+- [Playground] (https://playground.digitalhouse.com/) - fue la inspiracion para las paginas de login y registro.
