@@ -14,6 +14,7 @@ que sean consumidores y fanáticos de la cultura pop.
 - [American mix](https://www.americanmix.shop/) - de este sitio nos inspiramos para la estructura y estética del carrito de compras.
 - [Mercado Libre](https://www.mercadolibre.com.ar/) - lo usamos como referencia para la estructura y elementos del sitio.
 - [Playground](https://playground.digitalhouse.com/) - fue la inspiración para las páginas de login y registro.
+- [Polygon](https://instagram.com/polygon3d.pos?igshid=YmMyMTA2M2Y=) - Aunque no sea un sitio web, incluimos esta pagina que es de un emprendimiento muy similar al nuestro. Tiene los mismos productos y poblacion objetivo.
 
 **Integrantes del grupo**
 - *Juan Manuel Pizzorno*:
