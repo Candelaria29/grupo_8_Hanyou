@@ -19,5 +19,5 @@ que sean consumidores y fanáticos de la cultura pop.
 **Integrantes del grupo**
 - *Juan Manuel Pizzorno*:
 - *Matias Dure*:
-- *Nicolás Agustín Cilio*:
+- *Nicolás Agustín Cilio*: tengo 26 años, vivi toda mi vida en Vicente López. Me gradué de abogado en el 2020. Este año empece a trabajar en la industria tecnológica como abogado, en el sector crypto, lo cual me despertó la inquietud por aprender sobre la programación y el desarrollo web y poder complementar estos conocimientos con mi profesión.
 - *Maria Candelaria Barrios:* tengo 27 años, originalmente de Misiones, pero vivo en Buenos Aires. Hace unos meses me gradué de médica y ahora estoy ingresandome en el mundo del desarrollo web, con el objetivo de buscar la manera de integrar ambas cosas en un proyecto a futuro.    
