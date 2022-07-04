@@ -17,7 +17,7 @@ que sean consumidores y fanáticos de la cultura pop.
 - [Polygon](https://instagram.com/polygon3d.pos?igshid=YmMyMTA2M2Y=) - Aunque no sea un sitio web, incluimos esta página que es de un emprendimiento muy similar al nuestro. Tiene los mismos productos y población objetivo.
 
 **Integrantes del grupo**
-- *Juan Manuel Pizzorno*:
+- *Juan Manuel Pizzorno*: tengo 24 años y vivo en Quilmes, Provincia de Buenos Aires. Soy músico y técnico en sonido. Me acerqué al mundo it a través del diseño gráfico y conociendo conceptos como el diseño web y la experiencia de usuario, lo cual me demostró que el desarrollo de tecnología es una experiencia mucho más creativa de lo que pensaba y con un gran potencial que desarrollar en el sector cultural y artístico. 
 - *Matias Dure*:
 - *Nicolás Agustín Cilio*: tengo 26 años, vivi toda mi vida en Vicente López. Me gradué de abogado en el 2020. Este año empece a trabajar en la industria tecnológica como abogado, en el sector crypto, lo cual me despertó la inquietud por aprender sobre la programación y el desarrollo web y poder complementar estos conocimientos con mi profesión.
 - *Maria Candelaria Barrios:* tengo 27 años, originalmente de Misiones, pero vivo en Buenos Aires. Hace unos meses me gradué de médica y ahora estoy ingresandome en el mundo del desarrollo web, con el objetivo de buscar la manera de integrar ambas cosas en un proyecto a futuro.    
