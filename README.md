@@ -18,6 +18,6 @@ que sean consumidores y fanáticos de la cultura pop.
 
 **Integrantes del grupo**
 - *Juan Manuel Pizzorno*: tengo 24 años y vivo en Quilmes, Provincia de Buenos Aires. Soy músico y técnico en sonido. Me acerqué al mundo it a través del diseño gráfico y conociendo conceptos como el diseño web y la experiencia de usuario, lo cual me demostró que el desarrollo de tecnología es una experiencia mucho más creativa de lo que pensaba y con un gran potencial que desarrollar en el sector cultural y artístico. 
-- *Matias Dure*:
+- *Camilo Dure*: Tengo 24 años, vivo en Buenos Aires, en Lomas de Zamora mas especificamente. Soy tecnico de impresoras 3d y siempre estuve en el mundillo de 3d pero por fuera de eso siempre estuve haciendo cosas relacionadas al diseño. El programar fue una asignatura pendiente mia, me llama la atencion hace mucho tiempo.
 - *Nicolás Agustín Cilio*: tengo 26 años, vivi toda mi vida en Vicente López. Me gradué de abogado en el 2020. Este año empece a trabajar en la industria tecnológica como abogado, en el sector crypto, lo cual me despertó la inquietud por aprender sobre la programación y el desarrollo web y poder complementar estos conocimientos con mi profesión.
 - *Maria Candelaria Barrios:* tengo 27 años, originalmente de Misiones, pero vivo en Buenos Aires. Hace unos meses me gradué de médica y ahora estoy ingresandome en el mundo del desarrollo web, con el objetivo de buscar la manera de integrar ambas cosas en un proyecto a futuro.    
