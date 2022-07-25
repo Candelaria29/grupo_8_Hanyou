@@ -16,6 +16,10 @@ que sean consumidores y fanáticos de la cultura pop.
 - [Playground](https://playground.digitalhouse.com/) - fue la inspiración para las páginas de login y registro.
 - [Polygon](https://instagram.com/polygon3d.pos?igshid=YmMyMTA2M2Y=) - Aunque no sea un sitio web, incluimos esta página que es de un emprendimiento muy similar al nuestro. Tiene los mismos productos y población objetivo.
 
+**Tablero de trabajo**
+- [TRELLO](https://trello.com/b/3tX187De/hanyou-grupo-8)
+
+
 **Integrantes del grupo**
 - *Juan Manuel Pizzorno*: tengo 24 años y vivo en Quilmes, Provincia de Buenos Aires. Soy músico y técnico en sonido. Me acerqué al mundo it a través del diseño gráfico y conociendo conceptos como el diseño web y la experiencia de usuario, lo cual me demostró que el desarrollo de tecnología es una experiencia mucho más creativa de lo que pensaba y con un gran potencial que desarrollar en el sector cultural y artístico. 
 - *Camilo Dure*: Tengo 24 años, vivo en Buenos Aires, en Lomas de Zamora mas especificamente. Soy tecnico de impresoras 3d y siempre estuve en el mundillo de 3d pero por fuera de eso siempre estuve haciendo cosas relacionadas al diseño. El programar fue una asignatura pendiente mia, me llama la atencion hace mucho tiempo.
