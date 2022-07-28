@@ -11,23 +11,25 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Stylesheet-->
-    <link rel=stylesheet href="/css/styles.css">
+    <link rel=stylesheet href="/css/main.css">
 </head>
 
 <body>
     <header>
-        <img src="/img/logo.png" alt="Logo Hanyou">
-        <form action="" method="get">
-            <input type="text" name="q" placeholder="Buscar">
-            <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
-        </form>
-        <nav>
-            <ul>
+        <div class="top-nav-bar">
+            <img src="/img/logo.png" alt="Logo Hanyou" id="logo">
+            <form action="" method="get" id="barra-busqueda">
+                <input type="text" name="q" placeholder="Buscar">
+                <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+            </form>
+        </div>
+        <nav class="bottom-nav-bar">
+            <ul class="link-nav-bar">
                 <li> <a href=''>Categorías</a></li>
                 <li> <a href=''>Contacto</a></li>
-                <li> <a href=''>Extra que no se que poner</a></li>
+                <li> <a href=''>Extra</a></li>
             </ul>
-            <ul>
+            <ul class="icon-nav-bar">
                 <li> <a href='/productCart'><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li> <a href='/login'><i class="fa-solid fa-user"></i></a> </li>
             </ul>
@@ -38,11 +40,13 @@
     </main>
     <footer>
         <nav>
-            <ul></ul>
-            <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+            <ul class="footer-icon-bar">
+                <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://www.instagram.com/hanyou_earings/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
         </nav>
     </footer>
 
