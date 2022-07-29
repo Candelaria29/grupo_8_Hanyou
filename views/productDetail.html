@@ -1,1 +1,77 @@
-<p>Producto</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a Hanyou</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Stylesheet-->
+    <link rel=stylesheet href="/css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-nav-bar">
+            <img src="/img/logo.png" alt="Logo Hanyou" id="logo">
+            <form action="" method="get" id="barra-busqueda">
+                <input type="text" name="q" placeholder="Buscar">
+                <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+            </form>
+        </div>
+        <nav class="bottom-nav-bar">
+            <ul class="link-nav-bar">
+                <li> <a href=''>Categorías</a></li>
+                <li> <a href=''>Contacto</a></li>
+                <li> <a href=''>Extra</a></li>
+            </ul>
+            <ul class="icon-nav-bar">
+                <li> <a href='/productCart'><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li> <a href='/login'><i class="fa-solid fa-user"></i></a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="mainSection">
+
+        <img src="" alt="Producto" id="productImg">
+
+        <div class="descripcion">
+            <p class="nombreDeProducto">Nombre del producto</p>
+            <p class="precio">Precio</p>
+        </div>
+        
+        <div class="buttons">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <button id="botonAgregarAlCarrito">Agregar al carrito</button>
+
+            <i class="fa-solid fa-basket-shopping"></i>
+            <button id="botonComprar">Comprar</button>
+        </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="footer-icon-bar">
+                <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://www.instagram.com/hanyou_earings/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+</body>
+
+</html>
