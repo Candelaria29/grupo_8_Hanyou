@@ -1,1 +1,75 @@
-<p>Registro</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate en Hanyou</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Stylesheet-->
+    <link rel=stylesheet href="/css/main.css">
+</head>
+<body>
+
+    <header>
+
+        <!--Barra superior limitada-->
+        <div class="top-nav-bar">
+            <img src="/img/logo.png" alt="Logo Hanyou" id="logo">
+        </div>
+
+    </header>
+
+    <main>
+
+        <div id="mainBox">
+            <form action="" method="POST" id="formularioDeRegistro">
+
+                <!--Campos completables-->
+
+                <label for="nombre" class="camposDeTexto">Nombre completo</label>
+                <input type="text" name="nombre" id="nombre">
+
+                <label for="email" class="camposDeTexto">Correo electrónico</label>
+                <input type="email" name="email" id="email">
+
+                <label for="password" class="camposDeTexto">Creá tu contraseña</label>
+                <input type="password" name="password" id="password">
+
+                <label for="password" class="camposDeTexto">Confirmá tu contraseña</label>
+                <input type="password" name="password" id="confirmPassword">
+
+                <label class="camposDeTexto">Acepto términos de servicio y privacidad</label>
+                <input type="checkbox" name="terms" value="terminos">
+
+                <!--Creá tu cuenta o iniciá sesión-->
+
+                <input type="submit" value="Creá tu cuenta" id="signUpButton">    
+                
+                <label class="camposDeTexto">¿Ya tenés una cuenta?</label>
+
+                <input type="submit" value="Iniciá Sesión" id="loginButton"> 
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="footer-icon-bar">
+                <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://www.instagram.com/hanyou_earings/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
