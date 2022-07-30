@@ -1,0 +1,50 @@
+/* banner */
+.mainBanner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+#banner {
+    width: 90%;
+}
+
+/* productos */
+.mainProducts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.product {
+    display: flex;
+    width: 90%;
+    border: solid 1px red;
+    padding: 5px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.product a {
+    display: flex;
+    justify-content: center;
+}
+.productImg {
+    width: 90%;
+    padding: 10px
+}
+
+@media (min-width: 768px) {
+
+    #banner {
+        width: 92%;
+    }
+    .product {
+        width: 25%
+    }
+}
