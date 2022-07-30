@@ -1,3 +1,6 @@
+footer {
+    background-color: #323232;
+}
 .footer-icon-bar {
     list-style: none;
     display: flex;
@@ -10,6 +13,6 @@
     padding: 5px;
 }
 
-.footer-icon-bar li a i {
+/* .footer-icon-bar li a i {
     color: black;
-}
+} */

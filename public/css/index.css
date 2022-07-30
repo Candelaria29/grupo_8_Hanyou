@@ -1,9 +1,15 @@
 /* banner */
+
+main {
+    background-color: #424242;
+    padding-bottom: 10px;
+}
+
 .mainBanner {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 10px 0px;
+    padding: 20px;
 }
 
 #banner {
