@@ -1,40 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar sesión - Hanyou</title>
-</head>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
 
-<body>
-    <header>----Header-----</header>
-    <form action="" method="post">
-        <div>
-            <input type="text" name="userName" placeholder="Nombre de Usuario" required>
+  <body>
+    <header>
+      <div class="top-nav-bar">
+        <img src="/img/logo.png" alt="Logo Hanyou" id="logo" />
+        <form action="" method="get" id="barra-busqueda">
+          <input type="text" name="q" placeholder="Buscar" />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <nav class="bottom-nav-bar">
+        <ul class="link-nav-bar">
+          <li><a href="">Categorías</a></li>
+          <li><a href="">Contacto</a></li>
+          <li><a href="">Extra</a></li>
+        </ul>
+        <ul class="icon-nav-bar">
+          <li>
+            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <li>
+            <a href="/login"><i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="mainLogin">
+      <form action="" method="post">
+        <div class="inputForm" id="nombreUsuario">
+          <input
+            type="text"
+            name="userName"
+            placeholder="Nombre de Usuario"
+            required
+          />
         </div>
-        <div>
-            <input type="password" name="password" placeholder="Contraseña" required>
+        <div class="inputForm" id="contraseña">
+          <input
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            required
+          />
         </div>
-        <div>
-            <label>
-                <input type="checkbox" value="true"> Recordar mi usuario y contraseña
-            </label>
+        <div class="inputForm" id="recordarUsuario">
+          <label>
+            <input type="checkbox" value="true" /> Recordar mi usuario y
+            contraseña
+          </label>
         </div>
-        <div>
-        <a href="">¡Olvidé mi contraseña!</a>
+        <div class="inputForm">
+          <a href="" id="olvideContraseña">¡Olvidé mi contraseña!</a>
         </div>
-        <div>
-        <button type="submit">Iniciar sesión</button>
+        <div class="inputForm" id="inciarSesion">
+          <a href="/"><button type="submit">Iniciar sesión</button></a>
         </div>
-        <div>
-        <p>¿No tenés cuenta?</p>
-        <a href="">Crear cuenta</a>
+        <div class="inputForm" id="noTenesCuenta">
+          <p>¿No tenés cuenta?</p>
+          <a href="">Crear cuenta</a>
         </div>
-    </form>
-<footer>---Footer----</footer>
-
-</body>
-
+      </form>
+    </main>
+    <footer>
+      <nav>
+        <ul class="footer-icon-bar">
+          <li>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hanyou_earings/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
