@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenidos a Hanyou</title>
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -17,7 +22,7 @@
 <body>
     <header>
         <div class="top-nav-bar">
-            <img src="/img/logo.png" alt="Logo Hanyou" id="logo">
+            <img src="/img/logoDef.png" alt="Logo Hanyou" id="logo">
             <form action="" method="get" id="barra-busqueda">
                 <input type="text" name="q" placeholder="Buscar">
                 <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
@@ -25,69 +30,79 @@
         </div>
         <nav class="bottom-nav-bar">
             <ul class="link-nav-bar">
-                <li> <a href=''>Categorías</a></li>
+                <li> <a href=''>Productos</a></li>
                 <li> <a href=''>Contacto</a></li>
-                <li> <a href=''>Extra</a></li>
+                <li> <a href=''>Sobre Hanyou</a></li>
             </ul>
             <ul class="icon-nav-bar">
-                <li> <a href='/productCart'><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li> <a href='/login'><i class="fa-solid fa-user"></i></a> </li>
+                <li> <a href='/productCart'><i class="fa-solid fa-cart-shopping" id="iconHeader"></i></a></li>
+                <li> <a href='/login'><i class="fa-solid fa-user" id="iconHeader"></i></a> </li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <!--Banner Principal-->
         <div class="mainBanner">
-            <a href="/productDetail"> 
-                <img src="" alt="Banner" id="banner"> 
-            </a> 
+            <img src="/img/banner.png" alt="Banner" id="banner">
         </div>
 
         <!--Productos principales-->
         <section class="mainProducts">
 
 
-        <div class="product"> 
-            <a href="/productDetail">
-                <img src="" alt="Producto" class="productImg">
-            </a>
+            <div class="product">
+                <a href="/productDetail">
+                    <img src="/img/product.png" alt="Producto" class="productImg">
+                </a>
 
-            <ul class="description">
-                <a href="/productDetail"> <li class="nombre"> Nombre del producto 1 </li></a>
-                <a href="/productDetail"> <li class="precio"> Precio </li></a>
-            </ul>
-        </div>
-
-
-        <div class="product"> 
-            <a href="/productDetail">
-                <img src="" alt="Producto" class="productImg">
-            </a>
-
-            <ul class="description">
-                <a href="/productDetail"> <li class="nombre"> Nombre del producto 2 </li></a>
-                <a href="/productDetail"> <li class="precio"> Precio </li></a>
-            </ul>
-        </div>
+                <ul class="description">
+                    <a href="/productDetail">
+                        <li class="nombre"> Nombre del producto 1 </li>
+                    </a>
+                    <a href="/productDetail">
+                        <li class="precio"> Precio </li>
+                    </a>
+                </ul>
+            </div>
 
 
-        <div class="product"> 
-            <a href="/productDetail">
-                <img src="" alt="Producto" class="productImg">
-            </a>
+            <div class="product">
+                <a href="/productDetail">
+                    <img src="/img/product.png" alt="Producto" class="productImg">
+                </a>
 
-            <ul class="description">
-                <a href="/productDetail"> <li class="nombre"> Nombre del producto 1 </li></a>
-                <a href="/productDetail"> <li class="precio"> Precio </li></a>
-            </ul>
-        </div>
-        
+                <ul class="description">
+                    <a href="/productDetail">
+                        <li class="nombre"> Nombre del producto 2 </li>
+                    </a>
+                    <a href="/productDetail">
+                        <li class="precio"> Precio </li>
+                    </a>
+                </ul>
+            </div>
+
+
+            <div class="product">
+                <a href="/productDetail">
+                    <img src="/img/product.png" alt="Producto" class="productImg">
+                </a>
+
+                <ul class="description">
+                    <a href="/productDetail">
+                        <li class="nombre"> Nombre del producto 1 </li>
+                    </a>
+                    <a href="/productDetail">
+                        <li class="precio"> Precio </li>
+                    </a>
+                </ul>
+            </div>
+
 
         </section>
 
     </main>
-    
+
     <footer>
         <nav>
             <ul class="footer-icon-bar">
