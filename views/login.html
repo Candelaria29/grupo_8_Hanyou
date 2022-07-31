@@ -20,7 +20,7 @@
   <body>
     <header>
       <div class="top-nav-bar">
-        <img src="/img/logo.png" alt="Logo Hanyou" id="logo" />
+        <img src="/img/logoDef.png" alt="Logo Hanyou" id="logo" />
         <form action="" method="get" id="barra-busqueda">
           <input type="text" name="q" placeholder="Buscar" />
           <button type="submit">
@@ -30,16 +30,20 @@
       </div>
       <nav class="bottom-nav-bar">
         <ul class="link-nav-bar">
-          <li><a href="">Categorías</a></li>
+          <li><a href="">Productos</a></li>
           <li><a href="">Contacto</a></li>
-          <li><a href="">Extra</a></li>
+          <li><a href="">Sobre Hanyou</a></li>
         </ul>
         <ul class="icon-nav-bar">
           <li>
-            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="/productCart"
+              ><i class="fa-solid fa-cart-shopping" id="iconHeader"></i
+            ></a>
           </li>
           <li>
-            <a href="/login"><i class="fa-solid fa-user"></i></a>
+            <a href="/login"
+              ><i class="fa-solid fa-user" id="iconHeader"></i
+            ></a>
           </li>
         </ul>
       </nav>
@@ -71,12 +75,12 @@
         <div class="inputForm">
           <a href="" id="olvideContraseña">¡Olvidé mi contraseña!</a>
         </div>
-        <div class="inputForm" id="inciarSesion">
+        <div class="inputForm" id="iniciarSesion">
           <a href="/"><button type="submit">Iniciar sesión</button></a>
         </div>
         <div class="inputForm" id="noTenesCuenta">
           <p>¿No tenés cuenta?</p>
-          <a href="">Crear cuenta</a>
+          <a href=""><button type="button">Crear cuenta</button></a>
         </div>
       </form>
     </main>

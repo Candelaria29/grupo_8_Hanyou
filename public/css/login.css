@@ -64,7 +64,7 @@
   flex-grow: 0.3;
 }
 
-#inciarSesion {
+#iniciarSesion {
   display: flex;
   justify-content: center;
 }
@@ -72,4 +72,20 @@
 #noTenesCuenta {
   display: flex;
   flex-direction: column;
+}
+
+#iniciarSesion a,
+#noTenesCuenta a {
+  height: 35%;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+#iniciarSesion a button,
+#noTenesCuenta a button {
+  border-radius: 8px;
+  background-color: black;
+  color: grey;
+  width: 80%;
 }
