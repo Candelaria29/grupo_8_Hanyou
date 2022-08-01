@@ -1,0 +1,78 @@
+#registerBox {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+#formularioDeRegistro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 30px;
+    border: solid 1px #323232;
+    border-radius: 20px;
+    width: 90%;
+    background-color: #323232;
+}
+
+.campos {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #424242;
+    margin: 10px;
+    width: 100%;
+    color: #645EFF;
+}
+
+#nombreCompleto {
+    display: flex;
+}
+
+#terminosYCondiciones {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#nombre,
+#apellido {
+    width: 50%;
+}
+
+.terms {
+    width: 10%;
+    height: 10px;
+}
+
+#terminos {
+    width: 90%;
+}
+
+.botonesRegistro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* css botones viene de la vista de producto */
+
+@media (min-width: 768px) {
+    #formularioDeRegistro {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1028px) {
+    #formularioDeRegistro {
+        width: 40%;
+    }
+}
