@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrate en Hanyou</title>
+    <title>Bienvenidos a Hanyou</title>
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -13,47 +18,53 @@
     <!--Stylesheet-->
     <link rel=stylesheet href="/css/main.css">
 </head>
+
 <body>
-
     <header>
-
-        <!--Barra superior limitada-->
         <div class="top-nav-bar">
-            <img src="/img/logo.png" alt="Logo Hanyou" id="logo">
+            <img src="/img/logo4.png" alt="Logo Hanyou" id="logo">
+            <form action="" method="get" id="barra-busqueda">
+                <input type="text" name="q" placeholder="Buscar" id="buscador">
+                <button type="submit" id="buttonLupa"> <i class="fa-solid fa-magnifying-glass" id="lupa"></i> </button>
+            </form>
         </div>
-
+        <nav class="bottom-nav-bar">
+            <ul class="link-nav-bar">
+                <li id="linksHeader"> <a href=''>Productos</a></li>
+                <li id="linksHeader"> <a href=''>Contacto</a></li>
+                <li id="linksHeader"> <a href=''>Sobre Hanyou</a></li>
+            </ul>
+            <ul class="icon-nav-bar">
+                <li> <a href='/productCart'><i class="fa-solid fa-cart-shopping" id="icon"></i></a></li>
+                <li> <a href='/login'><i class="fa-solid fa-user" id="icon"></i></a> </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-
-        <div id="mainBox">
+        <div id="registerBox">
             <form action="" method="POST" id="formularioDeRegistro">
-
                 <!--Campos completables-->
-
-                <label for="nombre" class="camposDeTexto">Nombre completo</label>
-                <input type="text" name="nombre" id="nombre">
-
-                <label for="email" class="camposDeTexto">Correo electrónico</label>
-                <input type="email" name="email" id="email">
-
-                <label for="password" class="camposDeTexto">Creá tu contraseña</label>
-                <input type="password" name="password" id="password">
-
-                <label for="password" class="camposDeTexto">Confirmá tu contraseña</label>
-                <input type="password" name="password" id="confirmPassword">
-
-                <label class="camposDeTexto">Acepto términos de servicio y privacidad</label>
-                <input type="checkbox" name="terms" value="terminos">
+                <div id="nombreCompleto">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="campos">
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="campos">
+                </div>
+                <input type="email" name="email" id="email" placeholder="Correo electrónico" class="campos">
+                <input type="password" name="password" id="password" placeholder="Creá tu contraseña" class="campos">
+                <input type="password" name="password" id="confirmPassword" placeholder="Confirmá tu contraseña"
+                    class="campos">
+                <div id="terminosYCondiciones">
+                    <input type="checkbox" name="terms" id="terms" value="terminos" class="terms">
+                    <label for="terms" id="terminos">Acepto términos de servicio y privacidad</label>
+                </div>
 
                 <!--Creá tu cuenta o iniciá sesión-->
+                <div class="botonesRegistro">
+                    <button id="button">Crear cuenta</button>
+                    <p>¿Ya tenés una cuenta?</p>
+                    <button id="button">Iniciar sesión</button>
 
-                <input type="submit" value="Creá tu cuenta" id="signUpButton">    
-                
-                <label class="camposDeTexto">¿Ya tenés una cuenta?</label>
-
-                <input type="submit" value="Iniciá Sesión" id="loginButton"> 
-
+                </div>
             </form>
         </div>
 
@@ -62,14 +73,15 @@
     <footer>
         <nav>
             <ul class="footer-icon-bar">
-                <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-whatsapp" id="icon"></i></a></li>
                 <li><a href="https://www.instagram.com/hanyou_earings/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                            class="fa-brands fa-instagram" id="icon"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter" id="icon"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-envelope" id="icon"></i></a></li>
             </ul>
         </nav>
     </footer>
 
 </body>
+
 </html>
