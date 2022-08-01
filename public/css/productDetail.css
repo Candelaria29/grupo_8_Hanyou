@@ -1,53 +1,77 @@
-#body-productDetail {
-  width: 100vw;
+.productDetail {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
-#main-productDetail {
-  width: 100vw;
-  height: 75vh;
+#firstSection-productDetail {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 #product-picture {
-  text-align: center;
-  display: flex;
-  justify-content: center;
+  width: 80%;
 }
 
-#product-picture img {
-  margin-top: 10px;
-  max-width: 90%;
-  max-height: 50vh;
-}
-
-#secondSection-productDetail {
-  margin-top: 20px;
-  flex-grow: 0.4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.descripcion,
-.buttons {
-  margin-top: 12px;
+#productImg {
+  width: 100%;
+  padding: 20px;
 }
 
 .descripcion {
-  flex-grow: 0.7;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
 }
 
-.buttons {
+#nombreDeProducto {
+  font-size: 40px;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+#precioDelProducto {
+  color: #645EFF;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 5px;
+}
+
+#descripcionDelProducto {
+  font-size: 20px;
+  padding: 5px;
   text-align: center;
 }
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    align-content: center;
+    
+}
 
+#button {
+  width: 50%;
+    padding: 10px;
+    background-color: #645EFF;
+    border: solid 1px #645EFF;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 20px;
+    transition: all 450ms;
+}
+
+#button:hover {
+  background-color: #52A8FF;
+  border: solid 1px #52A8FF;
+}
 #precioDelDetalle {
   margin-top: 5px;
 }
@@ -57,22 +81,16 @@
 }
 
 @media (min-width: 769px) {
-  #main-productDetail {
+
+  .productDetail {
     flex-direction: row;
   }
 
+  #firstSection-productDetail {
+    width: 50%;
+  }
+
   #secondSection-productDetail {
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-grow: 0.7;
-  }
-
-  .descripcion {
-    flex-grow: 0.3;
-    justify-content: flex-end;
-  }
-
-  .buttons {
-    flex-grow: 0.6;
+    width: 50%;
   }
 }
