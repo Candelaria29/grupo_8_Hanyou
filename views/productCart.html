@@ -1,1 +1,112 @@
-<p>Carrito</p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bienvenidos a Hanyou</title>
+        <!-- fuentes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--Stylesheet-->
+        <link rel=stylesheet href="../public/css/main.css">
+    </head>
+<body>
+
+    <header>
+        
+            <div class="top-nav-bar">
+                <img src="../public/img/logo4.png" alt="Logo Hanyou" id="logo">
+                <form action="" method="get" id="barra-busqueda">
+                    <input type="text" name="q" placeholder="Buscar" id="buscador">
+                    <button type="submit" id="buttonLupa"> <i class="fa-solid fa-magnifying-glass" id="lupa"></i> </button>
+                </form>
+            </div>
+            <nav class="bottom-nav-bar">
+                <ul class="link-nav-bar">
+                    <li id="linksHeader"> <a href=''>Productos</a></li>
+                    <li id="linksHeader"> <a href=''>Contacto</a></li>
+                    <li id="linksHeader"> <a href=''>Sobre Hanyou</a></li>
+                </ul>
+                <ul class="icon-nav-bar">
+                    <li> <a href='/productCart'><i class="fa-solid fa-cart-shopping" id="icon"></i></a></li>
+                    <li> <a href='/login'><i class="fa-solid fa-user" id="icon"></i></a> </li>
+                </ul>
+            </nav>
+        
+    </header>
+
+    <main>
+
+        <section class="mainSection"> <!--Todos los Productos-->
+
+
+            <div class="producto"> <!--Producto por ítem-->
+
+                <img src="../public/img/product.png" alt="producto" class="productImg">
+
+                <nav class = "botonera">
+                    <button class="button"> + </button>
+                    <p class="cantidad">1</p>
+                    <button class="button"> - </button>
+                </nav>
+
+                <p class="precio"> $800</p>
+
+                <div class="icono">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+
+            </div> 
+
+            <div class="producto"> <!--Producto por ítem-->
+
+                <img src="../public/img/product.png" alt="producto" class="productImg">
+
+            
+                <nav class = "botonera">
+                        <button class="button"> + </button>
+                        <p class="cantidad">1</p>
+                        <button class="button"> - </button>
+                </nav>
+
+
+                <p class="precio"> $800</p>
+
+                <div class="icono">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+
+            </div> 
+
+            <div class="actions">
+
+                <button id="seguirComprando">Seguir Comprando</button>
+
+                <button id="comprar">Comprar</button>
+           
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="footer-icon-bar">
+                <li><a href=""><i class="fa-brands fa-whatsapp" id="icon"></i></a></li>
+                <li><a href="https://www.instagram.com/hanyou_earings/" target="_blank"><i
+                            class="fa-brands fa-instagram" id="icon"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter" id="icon"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-envelope" id="icon"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
