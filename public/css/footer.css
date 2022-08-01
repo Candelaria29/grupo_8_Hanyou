@@ -13,6 +13,7 @@ footer {
     padding: 5px;
 }
 
-/* .footer-icon-bar li a i {
-    color: black;
-} */
+.footer-icon-bar li:hover {
+    color: #323232;
+}
+
