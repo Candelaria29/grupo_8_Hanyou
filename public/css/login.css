@@ -32,6 +32,8 @@
   color: #52A8FF;
 }
 
+/* css botones viene de la vista de producto */
+
 @media (min-width: 768px){
   .loginForm {
       width: 60%;

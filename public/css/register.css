@@ -63,6 +63,8 @@
     align-items: center;
 }
 
+/* css botones viene de la vista de producto */
+
 @media (min-width: 768px) {
     #formularioDeRegistro {
         width: 60%;
