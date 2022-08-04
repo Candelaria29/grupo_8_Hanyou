@@ -34,6 +34,23 @@
 
 /* css botones viene de la vista de producto */
 
+#buttonRegister {
+  width: 50%;
+    padding: 10px;
+    background-color: #645EFF;
+    border: solid 1px #645EFF;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 20px;
+    transition: all 450ms;
+    text-align: center;
+}
+
+#buttonRegister:hover {
+  background-color: #52A8FF;
+  border: solid 1px #52A8FF;
+}
+
 @media (min-width: 768px){
   .loginForm {
       width: 60%;
