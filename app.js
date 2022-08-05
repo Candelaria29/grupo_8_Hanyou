@@ -12,18 +12,10 @@ app.use(express.static(rutaPublic));
 
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/index.ejs"))
-);
-app.get("/login", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/login.ejs"))
-);
-app.get("/productCart", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/productCart.ejs"))
-);
-app.get("/productDetail", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/productDetail.ejs"))
-);
-app.get("/register", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "./views/register.ejs"))
-);
+app.get("/", (req, res) => {
+  res.render("index");
+});
+app.get("/login", (req, res) => res.render("login"));
+app.get("/productCart", (req, res) => res.render("productCart"));
+app.get("/productDetail", (req, res) => res.render("productDetail"));
+app.get("/register", (req, res) => res.render("register"));
