@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/header') %>
+    <main>
+      <div id="createProductFormBox">
+        <form>
+          <!-- Nombre del producto -->
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre del producto"
+            class="campos"
+          />
+          <!-- Descripción  -->
+          <textarea
+            type="text"
+            name="descripcion"
+            id="descripcion"
+            placeholder="Descripción del producto"
+            class="campos"
+          >
+          </textarea>
+          <!-- Imagen -->
+          <!-- Categoría -->
+          <input
+            type="text"
+            name="categoria"
+            id="categoria"
+            placeholder="Categoría"
+            class="campos"
+          />
+          <!-- Características -->
+          <div id="caracteristicasProductoCreado">
+            <h2>Características del producto</h2>
+            <!-- Colores -->
+            <label>Seleccione un color</label>
+            <select name="color">
+              <option value="#ff0000">Rojo</option>
+              <option value="#00ff00">Verde</option>
+              <option value="0000ff">Azul</option>
+              <option value="#770077">Morado</option>
+            </select>
+            <!-- Tamaños -->
+            <label>Seleccione una medida</label>
+            <select name="medida">
+              <option value="2x6">Pequeño</option>
+              <option value="4x12">Regular</option>
+              <option value="6x18">Mediano</option>
+              <option value="8x24">Grande</option>
+            </select>
+          </div>
+          <!-- Precio -->
+          <div id="precioProductoCreado">
+            <p>$</p>
+            <input
+              type="number"
+              name="precio"
+              id="precio"
+              placeholder="Precio"
+              class="campos"
+            />
+          </div>
+        </form>
+      </div>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>
