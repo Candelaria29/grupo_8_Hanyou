@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <body>
-    <header>
-      <div class="top-nav-bar">
-        <a href="/"><img src="/img/logo4.png" alt="Logo Hanyou" id="logo" /></a>
-        <form action="" method="get" id="barra-busqueda">
-          <input type="text" name="q" placeholder="Buscar" id="buscador" />
-          <button type="submit" id="buttonLupa">
-            <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
-          </button>
-        </form>
-      </div>
-      <nav class="bottom-nav-bar">
-        <ul class="link-nav-bar">
-          <li id="linksHeader"><a href="">Productos</a></li>
-          <li id="linksHeader"><a href="">Contacto</a></li>
-          <li id="linksHeader"><a href="">Sobre Hanyou</a></li>
-        </ul>
-        <ul class="icon-nav-bar">
-          <li>
-            <a href="/productCart"
-              ><i class="fa-solid fa-cart-shopping" id="icon"></i
-            ></a>
-          </li>
-          <li>
-            <a href="/login"><i class="fa-solid fa-user" id="icon"></i></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  </body>
+
+<body>
+  <header>
+    <!-- logo -->
+    <a href="/" id="logo">
+      <picture><img src="/img/logo4.png" alt="Logo Hanyou"/></picture>
+    </a>
+    <!-- barra busqueda -->
+    <form action="" method="get" id="barra-busqueda">
+      <input type="text" name="q" placeholder="Buscar" id="buscador" />
+      <button type="submit" id="buttonLupa">
+        <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
+      </button>
+    </form>
+
+    <!-- navegacion -->
+      <ul class="link-nav-bar">
+        <li id="linksHeader"><a href="">Productos</a></li>
+        <li id="linksHeader"><a href="">Contacto</a></li>
+        <li id="linksHeader"><a href="">Sobre Hanyou</a></li>
+      </ul>
+      <ul class="icon-nav-bar">
+        <li><a href="/productCart"><i class="fa-solid fa-cart-shopping icon"></i></a></li>
+        <li><a href="/login"><i class="fa-solid fa-user icon"></i></a></li>
+      </ul>
+
+  </header>
+</body>
+
 </html>
