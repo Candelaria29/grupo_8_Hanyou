@@ -29,7 +29,6 @@
   border-radius: 20px;
   border: 1px solid #424242;
   margin: 10px;
-  width: 100%;
   color: #645eff;
 }
 
@@ -39,12 +38,8 @@
 
 #terminosYCondiciones {
   display: flex;
-  align-content: flex-end;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0% 5%;
 }
 
 #nombre,
@@ -59,6 +54,7 @@
 
 #terminos {
   width: 90%;
+  font-size: 16px;
 }
 
 #botonesRegistro {
@@ -68,6 +64,10 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+}
+
+#cuentaExistente {
+  text-align: center;
 }
 
 /* css botones viene de la vista de producto */

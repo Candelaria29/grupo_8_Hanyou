@@ -40,7 +40,6 @@ main {
     display: flex;
     width: 90%;
     border: solid 1px #323232;
-    padding: 5px;
     flex-wrap: nowrap;
     flex-direction: column;
     align-content: center;
@@ -53,8 +52,8 @@ main {
 .itemIndex {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
+    align-items: center;
 }
 
 .product:hover {
@@ -62,14 +61,14 @@ main {
     border: solid 1px transparent;
 }
 
-.productImg {
+.productImgIndex {
     width: 90%;
     padding: 20px
 }
 
 .description {
     border-top: solid 1px #323232;
-    width: 90%;
+    width: 100%;
     padding-top: 5px;
     text-align: center;
 }
