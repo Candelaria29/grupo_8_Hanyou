@@ -1,19 +1,19 @@
 footer {
     background-color: #323232;
 }
-.footer-icon-bar {
+#footer-icon-bar {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.footer-icon-bar li {
+#footer-icon-bar a {
     margin: 10px;
     padding: 5px;
 }
 
-.footer-icon-bar li:hover {
-    color: #323232;
+#footer-icon-bar a:hover {
+    color: #645eff;
 }
 
