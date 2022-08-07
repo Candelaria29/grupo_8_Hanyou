@@ -1,0 +1,121 @@
+#createNewProductMain {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+#createNewProductForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding: 30px;
+  border: solid 1px #323232;
+  border-radius: 20px;
+  width: 90%;
+  background-color: #323232;
+}
+
+#createNewProductForm {
+  box-shadow: 0px 0px 20px #424242;
+}
+#createNewProductForm:hover {
+  box-shadow: 0px 0px 20px rgb(9, 21, 244);
+}
+
+#filesButton {
+  margin: auto;
+  text-align: center;
+}
+
+#caracteristicasProductoCreado {
+  display: flex;
+  flex-direction: column;
+}
+
+.createNewProductcharacteristic {
+  text-align: center;
+}
+
+#precioProductoCreado {
+  margin: 10px;
+  display: flex;
+  position: relative;
+}
+
+#precioProductoCreado p {
+  color: grey;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 0.9rem;
+}
+
+#createNewProductPrice {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  padding-left: 18px;
+}
+
+#botonProductoCreado {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#botonProductoCreado button,
+.createNewProductcharacteristic select {
+  margin-bottom: 15px;
+}
+
+#botonProductoCreado button,
+#filesButton {
+  width: 30vw;
+}
+
+#filesButton {
+  margin-bottom: 10px;
+}
+#filesButton:hover,
+.createNewProductcharacteristic select:hover {
+  background-color: #52a8ff;
+  border: solid 1px #52a8ff;
+}
+
+.createNewProductTitles {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.createNewProductSubtitles {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+@media (min-width: 481px) {
+  #createNewProductForm {
+    width: 70%;
+  }
+}
+
+@media (min-width: 481px) {
+  #createNewProductForm {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1028px) {
+  #createNewProductForm {
+    width: 40%;
+  }
+  #characteristicArticles {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0px;
+  }
+}

@@ -3,68 +3,93 @@
   <%- include('partials/head') %>
   <body>
     <%- include('partials/header') %>
-    <main>
-      <div id="createProductFormBox">
-        <form>
-          <!-- Nombre del producto -->
-          <input
-            type="text"
-            name="nombre"
-            id="nombre"
-            placeholder="Nombre del producto"
-            class="campos"
-          />
-          <!-- Descripción  -->
-          <textarea
-            type="text"
-            name="descripcion"
-            id="descripcion"
-            placeholder="Descripción del producto"
-            class="campos"
-          >
-          </textarea>
-          <!-- Imagen -->
-          <!-- Categoría -->
-          <input
-            type="text"
-            name="categoria"
-            id="categoria"
-            placeholder="Categoría"
-            class="campos"
-          />
-          <!-- Características -->
-          <div id="caracteristicasProductoCreado">
-            <h2>Características del producto</h2>
-            <!-- Colores -->
-            <label>Seleccione un color</label>
-            <select name="color">
-              <option value="#ff0000">Rojo</option>
-              <option value="#00ff00">Verde</option>
-              <option value="0000ff">Azul</option>
-              <option value="#770077">Morado</option>
-            </select>
+    <main id="createNewProductMain">
+      <form id="createNewProductForm">
+        <h1 class="createNewProductTitles">Creación de productos</h1>
+        <input
+          type="file"
+          name="imageOfCreatedProduct"
+          id="createNewProductDesign"
+          style="display: none"
+          accept=".jpg, .png"
+          multiple
+        />
+        <label for="createNewProductDesign" class="button" id="filesButton"
+          >Cargar imagen del diseño</label
+        >
+        <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
+        <label for="img">Click me to upload image</label> -->
+        <!-- Nombre del producto -->
+        <input
+          type="text"
+          name="nombre"
+          id="createNewProductName"
+          placeholder="Nombre del producto"
+          class="campos"
+        />
+        <!-- Descripción  -->
+        <textarea
+          type="text"
+          name="descripcion"
+          id="descripcion"
+          placeholder="Descripción del producto"
+          class="campos"
+        ></textarea>
+        <!-- Imagen -->
+        <!-- Categoría -->
+        <input
+          type="text"
+          name="categoria"
+          id="categoria"
+          placeholder="Categoría"
+          class="campos"
+        />
+        <!-- Características -->
+        <section id="caracteristicasProductoCreado">
+          <h2 class="createNewProductTitles">Características del producto</h2>
+          <!-- Colores -->
+          <div id="characteristicArticles">
+            <article class="createNewProductcharacteristic">
+              <label class="createNewProductSubtitles"
+                >Seleccione un color</label
+              >
+              <select name="color" class="button">
+                <option value="#ff0000">Rojo</option>
+                <option value="#00ff00">Verde</option>
+                <option value="0000ff">Azul</option>
+                <option value="#770077">Morado</option>
+              </select>
+            </article>
             <!-- Tamaños -->
-            <label>Seleccione una medida</label>
-            <select name="medida">
-              <option value="2x6">Pequeño</option>
-              <option value="4x12">Regular</option>
-              <option value="6x18">Mediano</option>
-              <option value="8x24">Grande</option>
-            </select>
+            <article class="createNewProductcharacteristic">
+              <label class="createNewProductSubtitles"
+                >Seleccione una medida</label
+              >
+              <select name="medida" class="button">
+                <option value="2x6">Pequeño</option>
+                <option value="4x12">Regular</option>
+                <option value="6x18">Mediano</option>
+                <option value="8x24">Grande</option>
+              </select>
+            </article>
           </div>
-          <!-- Precio -->
-          <div id="precioProductoCreado">
-            <p>$</p>
-            <input
-              type="number"
-              name="precio"
-              id="precio"
-              placeholder="Precio"
-              class="campos"
-            />
-          </div>
-        </form>
-      </div>
+        </section>
+        <!-- Precio -->
+        <section id="precioProductoCreado">
+          <p>$</p>
+          <input
+            type="number"
+            name="precio"
+            id="createNewProductPrice"
+            placeholder="Precio"
+            class="campos"
+          />
+        </section>
+        <section id="botonProductoCreado">
+          <button type="button" class="button">Crear producto</button>
+          <button type="submit" class="button">Reset</button>
+        </section>
+      </form>
     </main>
     <%- include('partials/footer') %>
   </body>
