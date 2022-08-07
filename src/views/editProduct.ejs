@@ -3,7 +3,96 @@
   <%- include('partials/head') %>
   <body>
     <%- include('partials/header') %>
-    <main></main>
+    <main id="createNewProductMain">
+      <form id="createNewProductForm">
+        <h1 class="createNewProductTitles">Edición de productos</h1>
+        <input
+          type="file"
+          name="imageOfCreatedProduct"
+          id="createNewProductDesign"
+          style="display: none"
+          accept=".jpg, .png"
+          multiple
+        />
+        <label for="createNewProductDesign" class="button" id="filesButton"
+          >Modificar imagen del diseño</label
+        >
+        <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
+        <label for="img">Click me to upload image</label> -->
+        <!-- Nombre del producto -->
+        <input
+          type="text"
+          name="nombre"
+          id="createNewProductName"
+          placeholder="Nuevo nombre del producto"
+          class="campos"
+        />
+        <!-- Descripción  -->
+        <textarea
+          type="text"
+          name="descripcion"
+          id="descripcion"
+          placeholder="Nueva descripción del producto"
+          class="campos"
+        ></textarea>
+        <!-- Imagen -->
+        <!-- Categoría -->
+        <input
+          type="text"
+          name="categoria"
+          id="categoria"
+          placeholder="Nueva categoría"
+          class="campos"
+        />
+        <!-- Características -->
+        <section id="caracteristicasProductoCreado">
+          <h2 class="createNewProductTitles">
+            Modificar características del producto
+          </h2>
+          <!-- Colores -->
+          <div id="characteristicArticles">
+            <article class="createNewProductcharacteristic">
+              <label class="createNewProductSubtitles"
+                >Modifique el color</label
+              >
+              <select name="color" class="button">
+                <option value="#ff0000">Rojo</option>
+                <option value="#00ff00">Verde</option>
+                <option value="0000ff">Azul</option>
+                <option value="#770077">Morado</option>
+              </select>
+            </article>
+            <!-- Tamaños -->
+            <article class="createNewProductcharacteristic">
+              <label class="createNewProductSubtitles"
+                >Modifique la medida</label
+              >
+              <select name="medida" class="button">
+                <option value="2x6">Pequeño</option>
+                <option value="4x12">Regular</option>
+                <option value="6x18">Mediano</option>
+                <option value="8x24">Grande</option>
+              </select>
+            </article>
+          </div>
+        </section>
+        <!-- Precio -->
+        <section id="precioProductoCreado">
+          <p>$</p>
+          <input
+            type="number"
+            name="precio"
+            id="createNewProductPrice"
+            placeholder="Nuevo precio"
+            class="campos"
+          />
+        </section>
+        <section id="botonProductoCreado">
+          <button type="button" class="button">Guardar cambios</button>
+          <button type="submit" class="button">Reset</button>
+        </section>
+      </form>
+    </main>
     <%- include('partials/footer') %>
   </body>
 </html>
