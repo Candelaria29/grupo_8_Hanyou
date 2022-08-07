@@ -6,30 +6,25 @@
     <%- include('partials/header') %>
 
     <main id="main-productDetail">
-      <div class="productDetail">
-        <section id="firstSection-productDetail">
-          <picture id="product-picture">
-            <img src="/img/product.png" alt="Producto" id="productImg" />
-          </picture>
-        </section>
-
-        <section id="secondSection-productDetail">
-          <div class="descripcion">
-            <p id="nombreDeProducto">Alien I</p>
-            <p id="precioDelProducto">$100.00</p>
-            <p id="descripcionDelProducto">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
-              dolore voluptatem eaque amet, itaque labore! Reprehenderit quidem
-              molestias eveniet quaerat, quibusdam molestiae culpa alias enim
-              vel qui dignissimos facere commodi!
-            </p>
-          </div>
-          <div class="buttons">
-            <button id="button">Agregar al carrito</button>
-            <button id="button">Comprar</button>
-          </div>
-        </section>
-      </div>
+      <section id="firstSection-productDetail" class="sectionProducDetail">
+        <img src="/img/product.png" alt="Producto" id="productImg" />
+      </section>
+      <section class="sectionProducDetail">
+        <nav id="descripcion">
+          <p id="nombreDeProducto">Alien I</p>
+          <p id="precioDelProducto">$100.00</p>
+          <p id="descripcionDelProducto">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
+            dolore voluptatem eaque amet, itaque labore! Reprehenderit quidem
+            molestias eveniet quaerat, quibusdam molestiae culpa alias enim vel
+            qui dignissimos facere commodi!
+          </p>
+        </nav>
+        <div id="buttons">
+          <button id="button">Agregar al carrito</button>
+          <button id="button">Comprar</button>
+        </div>
+      </section>
     </main>
 
     <%- include('partials/footer') %>

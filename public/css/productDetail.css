@@ -1,4 +1,4 @@
-.productDetail {
+#main-productDetail {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -13,16 +13,12 @@
   align-items: center;
 }
 
-#product-picture {
-  width: 80%;
-}
-
 #productImg {
-  width: 100%;
+  width: 80%;
   padding: 20px;
 }
 
-.descripcion {
+#descripcion {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +32,7 @@
 }
 
 #precioDelProducto {
-  color: #645EFF;
+  color: #645eff;
   font-weight: 500;
   font-size: 30px;
   padding: 5px;
@@ -47,30 +43,29 @@
   padding: 5px;
   text-align: center;
 }
-.buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
-    align-content: center;
-    
+#buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 #button {
   width: 50%;
-    padding: 10px;
-    background-color: #645EFF;
-    border: solid 1px #645EFF;
-    border-radius: 10px;
-    margin: 10px;
-    font-size: 20px;
-    transition: all 450ms;
+  padding: 10px;
+  background-color: #645eff;
+  border: solid 1px #645eff;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 20px;
+  transition: all 450ms;
 }
 
 #button:hover {
-  background-color: #52A8FF;
-  border: solid 1px #52A8FF;
+  background-color: #52a8ff;
+  border: solid 1px #52a8ff;
 }
 
 #precioDelDetalle {
@@ -82,16 +77,11 @@
 }
 
 @media (min-width: 769px) {
-
-  .productDetail {
+  #main-productDetail {
     flex-direction: row;
   }
 
-  #firstSection-productDetail {
-    width: 50%;
-  }
-
-  #secondSection-productDetail {
+  .sectionProducDetail {
     width: 50%;
   }
 }
