@@ -9,9 +9,13 @@ header {
   width: 100%;
 }
 
-#logo {
+.top-nav-bar a {
   width: 20%;
   margin: 10px;
+}
+
+#logo {
+  width: 100%;
 }
 
 #barra-busqueda {

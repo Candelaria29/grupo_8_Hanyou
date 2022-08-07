@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   padding: 50px;
+  background-color: #424242;
 }
 
 #createNewProductForm {
@@ -27,6 +28,26 @@
 #filesButton {
   margin: auto;
   text-align: center;
+}
+
+.c_eButton {
+  font-size: 14px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 10px;
+  border: solid 1px #645eff;
+  background-color: #645eff;
+  padding: 10px;
+  transition: all 450ms;
+}
+
+.createNewProductCampos {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #424242;
+  margin: 10px;
+  width: 100%;
+  color: #645eff;
 }
 
 #caracteristicasProductoCreado {

@@ -4,7 +4,7 @@
   <body>
     <%- include('partials/header') %>
     <main id="createNewProductMain">
-      <form id="createNewProductForm">
+      <form action="/" method="post" id="createNewProductForm">
         <h1 class="createNewProductTitles">Creación de productos</h1>
         <input
           type="file"
@@ -13,8 +13,9 @@
           style="display: none"
           accept=".jpg, .png"
           multiple
+          required
         />
-        <label for="createNewProductDesign" class="button" id="filesButton"
+        <label for="createNewProductDesign" class="c_eButton" id="filesButton"
           >Cargar imagen del diseño</label
         >
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
@@ -25,7 +26,8 @@
           name="nombre"
           id="createNewProductName"
           placeholder="Nombre del producto"
-          class="campos"
+          class="createNewProductCampos"
+          required
         />
         <!-- Descripción  -->
         <textarea
@@ -33,7 +35,8 @@
           name="descripcion"
           id="descripcion"
           placeholder="Descripción del producto"
-          class="campos"
+          class="createNewProductCampos"
+          required
         ></textarea>
         <!-- Imagen -->
         <!-- Categoría -->
@@ -42,7 +45,8 @@
           name="categoria"
           id="categoria"
           placeholder="Categoría"
-          class="campos"
+          class="createNewProductCampos"
+          required
         />
         <!-- Características -->
         <section id="caracteristicasProductoCreado">
@@ -53,7 +57,7 @@
               <label class="createNewProductSubtitles"
                 >Seleccione un color</label
               >
-              <select name="color" class="button">
+              <select name="color" class="c_eButton" required>
                 <option value="#ff0000">Rojo</option>
                 <option value="#00ff00">Verde</option>
                 <option value="0000ff">Azul</option>
@@ -65,7 +69,7 @@
               <label class="createNewProductSubtitles"
                 >Seleccione una medida</label
               >
-              <select name="medida" class="button">
+              <select name="medida" class="c_eButton" required>
                 <option value="2x6">Pequeño</option>
                 <option value="4x12">Regular</option>
                 <option value="6x18">Mediano</option>
@@ -82,12 +86,13 @@
             name="precio"
             id="createNewProductPrice"
             placeholder="Precio"
-            class="campos"
+            class="createNewProductCampos"
+            required
           />
         </section>
         <section id="botonProductoCreado">
-          <button type="button" class="button">Crear producto</button>
-          <button type="submit" class="button">Reset</button>
+          <button type="button" class="c_eButton">Crear producto</button>
+          <button type="reset" class="c_eButton">Reiniciar formulario</button>
         </section>
       </form>
     </main>
