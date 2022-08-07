@@ -5,69 +5,67 @@
   <body>
     <%- include('partials/header') %>
 
-    <main>
-      <div id="registerBox">
-        <form action="/" method="POST" id="formularioDeRegistro">
-          <!--Campos completables-->
-          <div id="nombreCompleto">
-            <input
-              type="text"
-              name="nombre"
-              id="nombre"
-              placeholder="Nombre"
-              class="campos"
-            />
-            <input
-              type="text"
-              name="apellido"
-              id="apellido"
-              placeholder="Apellido"
-              class="campos"
-            />
-          </div>
+    <main id="registerBox">
+      <form action="/" method="POST" id="formularioDeRegistro">
+        <!--Campos completables-->
+        <section id="nombreCompleto">
           <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Correo electrónico"
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre"
             class="campos"
           />
           <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Creá tu contraseña"
+            type="text"
+            name="apellido"
+            id="apellido"
+            placeholder="Apellido"
             class="campos"
           />
+        </section>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Correo electrónico"
+          class="campos"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Creá tu contraseña"
+          class="campos"
+        />
+        <input
+          type="password"
+          name="password"
+          id="confirmPassword"
+          placeholder="Confirmá tu contraseña"
+          class="campos"
+        />
+        <section id="terminosYCondiciones">
           <input
-            type="password"
-            name="password"
-            id="confirmPassword"
-            placeholder="Confirmá tu contraseña"
-            class="campos"
+            type="checkbox"
+            name="terms"
+            id="terms"
+            value="terminos"
+            class="terms"
+            required
           />
-          <div id="terminosYCondiciones">
-            <input
-              type="checkbox"
-              name="terms"
-              id="terms"
-              value="terminos"
-              class="terms"
-              required
-            />
-            <label for="terms" id="terminos"
-              >Acepto términos de servicio y privacidad</label
-            >
-          </div>
+          <label for="terms" id="terminos"
+            >Acepto términos de servicio y privacidad</label
+          >
+        </section>
 
-          <!--Creá tu cuenta o iniciá sesión-->
-          <div class="botonesRegistro">
-            <button id="button">Crear cuenta</button>
-            <p>¿Ya tenés una cuenta?</p>
-            <button id="button">Iniciar sesión</button>
-          </div>
-        </form>
-      </div>
+        <!--Creá tu cuenta o iniciá sesión-->
+        <section id="botonesRegistro">
+          <button class="button">Crear cuenta</button>
+          <p>¿Ya tenés una cuenta?</p>
+          <button class="button">Iniciar sesión</button>
+        </section>
+      </form>
     </main>
 
     <%- include('partials/footer') %>

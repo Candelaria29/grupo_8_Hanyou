@@ -52,7 +52,7 @@
   align-content: center;
 }
 
-#button {
+.button {
   width: 50%;
   padding: 10px;
   background-color: #645eff;

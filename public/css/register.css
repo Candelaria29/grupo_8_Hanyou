@@ -54,7 +54,7 @@
   width: 90%;
 }
 
-.botonesRegistro {
+#botonesRegistro {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
