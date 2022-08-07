@@ -17,6 +17,13 @@
   background-color: #323232;
 }
 
+#formularioDeRegistro {
+  box-shadow: 0px 0px 0px #424242;
+}
+#formularioDeRegistro:hover {
+  box-shadow: 0px 0px 20px rgb(9, 21, 244);
+}
+
 .campos {
   padding: 10px;
   border-radius: 20px;
