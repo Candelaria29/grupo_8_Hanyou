@@ -1,7 +1,7 @@
 #createNewProductMain {
   display: flex;
   justify-content: center;
-  padding: 50px;
+  padding: 15px;
   background-color: #424242;
 }
 
@@ -122,11 +122,17 @@
   #createNewProductForm {
     width: 70%;
   }
+  #createNewProductMain {
+    padding: 30px;
+  }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 769px) {
   #createNewProductForm {
     width: 60%;
+  }
+  #createNewProductMain {
+    padding: 50px;
   }
 }
 
