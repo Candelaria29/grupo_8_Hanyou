@@ -1,51 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head') %>
-
+  <head>
+    <%- include('partials/top_head') %>
+    <title>Bienvenido a Hanyou</title>
+    <%- include('partials/bottom_head') %>
+  </head>
   <body>
     <%- include('partials/header') %>
-      <main>
-        <!--Banner Principal-->
-        <figure id="mainBanner">
-          <img src="/img/banner.png" alt="Banner" id="banner" />
-        </figure>
+    <main>
+      <!--Banner Principal-->
+      <figure id="mainBanner">
+        <img src="/img/banner.png" alt="Banner" id="banner" />
+      </figure>
 
-        <!--Productos principales-->
-        <section id="mainProducts">
-          <h2>Productos destacados</h2>
-          <ul id="productosIndex">
-            <li class="product">
-              <a href="/productDetail" class="itemIndex">
-                <img src="/img/product.png" alt="Producto" class="productImgIndex" />
-                <article class="description">
-                  <h3 class="nombreIndex">Alien</h3>
-                  <p class="precioIndex">$100.00</p>
-                </article>
-              </a>
-            </li>
-            <li class="product">
-              <a href="/productDetail" class="itemIndex">
-                <img src="/img/product.png" alt="Producto" class="productImgIndex" />
-                <article class="description">
-                  <h3 class="nombreIndex">Alien</h3>
-                  <p class="precioIndex">$100.00</p>
-                </article>
-              </a>
-            </li>
-            <li class="product">
-              <a href="/productDetail" class="itemIndex">
-                <img src="/img/product.png" alt="Producto" class="productImgIndex" />
-                <article class="description">
-                  <h3 class="nombreIndex">Alien</h3>
-                  <p class="precioIndex">$100.00</p>
-                </article>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <!--Productos principales-->
+      <section id="mainProducts">
+        <h2>Productos destacados</h2>
+        <ul id="productosIndex">
+          <% for (i=0; i<3; i++) {%> <%- include('partials/productCards') %> <%
+          } %>
+        </ul>
+      </section>
+    </main>
 
-      <%- include('partials/footer') %>
+    <%- include('partials/footer') %>
   </body>
-
 </html>

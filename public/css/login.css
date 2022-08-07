@@ -1,14 +1,7 @@
-/* .loginForm {
-  display: flex;
-  width: 90%;
-  margin: auto;
-  padding: 50px;
-} */
-
 #loginForm {
   display: flex;
   justify-content: center;
-  padding: 117px;
+  padding: 118px;
 }
 
 #loginBox {
