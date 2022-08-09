@@ -7,63 +7,20 @@
   </head>
   <body>
     <%- include('partials/header') %>
-    
+
     <main>
+      <section class="mainSection">
+        <!--Todos los Productos-->
 
-     <section class="mainSection"> <!--Todos los Productos-->
+        <% for (i=0; i<2; i++) {%> <%- include('partials/productBar') %> <% } %>
 
+        <div class="actions">
+          <button id="seguirComprando">Seguir Comprando</button>
 
-            <div class="producto"> <!--Producto por ítem-->
-                <picture>
-                    <img src="../public/img/product.png" alt="producto" class="productImg">
-                </picture>
-
-                <nav class = "botonera">
-                    <button class="button"> <i class="fa-solid fa-plus"></i> </button>
-                    <p class="cantidad">1</p>
-                    <button class="button"> <i class="fa-solid fa-minus"></i> </button>
-                </nav>
-
-                <p class="precio"> $800</p>
-
-                <div class="icono">
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
-
-            </div> 
-
-            <div class="producto"> <!--Producto por ítem-->
-
-                <picture>
-                    <img src="../public/img/product.png" alt="producto" class="productImg">
-                </picture>
-            
-                <nav class = "botonera">
-                        <button class="button"> <i class="fa-solid fa-plus"></i> </button>
-                        <p class="cantidad">1</p>
-                        <button class="button"> <i class="fa-solid fa-minus"></i> </button>
-                </nav>
-
-
-                <p class="precio"> $800 </p>
-
-                <div class="icono">
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
-
-            </div> 
-
-            <div class="actions">
-
-                <button id="seguirComprando">Seguir Comprando</button>
-
-                <button id="comprar">Comprar</button>
-           
-            </div>
-
-        </section>
-        
-     </main>
+          <button id="comprar">Comprar</button>
+        </div>
+      </section>
+    </main>
 
     <%- include('partials/footer') %>
   </body>
