@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('partials/top_head') %>
-  <title>Edición de productos</title>
-  <%- include('partials/bottom_head') %>
+  <%- include('../partials/top_head') %>
+  <title>Creación de productos</title>
+  <%- include('../partials/bottom_head') %>
   <body>
-    <%- include('partials/header') %>
+    <%- include('../partials/header') %>
     <main id="createNewProductMain">
       <form action="/" method="post" id="createNewProductForm">
-        <h1 class="createNewProductTitles">Edición de productos</h1>
+        <h1 class="createNewProductTitles">Creación de productos</h1>
         <input
           type="file"
           name="imageOfCreatedProduct"
@@ -18,7 +18,7 @@
           required
         />
         <label for="createNewProductDesign" class="c_eButton" id="filesButton"
-          >Modificar imagen del diseño</label
+          >Cargar imagen del diseño</label
         >
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
         <label for="img">Click me to upload image</label> -->
@@ -27,7 +27,7 @@
           type="text"
           name="nombre"
           id="createNewProductName"
-          placeholder="Nuevo nombre del producto"
+          placeholder="Nombre del producto"
           class="createNewProductCampos"
           required
         />
@@ -36,7 +36,7 @@
           type="text"
           name="descripcion"
           id="c_eDescripcion"
-          placeholder="Nueva descripción del producto"
+          placeholder="Descripción del producto"
           class="createNewProductCampos"
           required
         ></textarea>
@@ -45,21 +45,19 @@
         <input
           type="text"
           name="categoria"
-          id="c_eCategoria"
-          placeholder="Nueva categoría"
+          id="c_dCategoria"
+          placeholder="Categoría"
           class="createNewProductCampos"
           required
         />
         <!-- Características -->
         <section id="caracteristicasProductoCreado">
-          <h2 class="createNewProductTitles">
-            Modificar características del producto
-          </h2>
+          <h2 class="createNewProductTitles">Características del producto</h2>
           <!-- Colores -->
           <div id="characteristicArticles">
             <article class="createNewProductcharacteristic">
               <label class="createNewProductSubtitles"
-                >Modifique el color</label
+                >Seleccione un color</label
               >
               <select name="color" class="c_eButton" required>
                 <option value="#ff0000">Rojo</option>
@@ -71,7 +69,7 @@
             <!-- Tamaños -->
             <article class="createNewProductcharacteristic">
               <label class="createNewProductSubtitles"
-                >Modifique la medida</label
+                >Seleccione una medida</label
               >
               <select name="medida" class="c_eButton" required>
                 <option value="2x6">Pequeño</option>
@@ -89,17 +87,17 @@
             type="number"
             name="precio"
             id="createNewProductPrice"
-            placeholder="Nuevo precio"
+            placeholder="Precio"
             class="createNewProductCampos"
             required
           />
         </section>
         <section id="botonProductoCreado">
-          <button type="button" class="c_eButton">Guardar cambios</button>
+          <button type="button" class="c_eButton">Crear producto</button>
           <button type="reset" class="c_eButton">Reiniciar formulario</button>
         </section>
       </form>
     </main>
-    <%- include('partials/footer') %>
+    <%- include('../partials/footer') %>
   </body>
 </html>
