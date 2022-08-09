@@ -7,54 +7,63 @@
   </head>
   <body>
     <%- include('partials/header') %>
-
+    
     <main>
-      <section class="mainSection">
-        <!--Todos los Productos-->
 
-        <div class="producto">
-          <!--Producto por ítem-->
+     <section class="mainSection"> <!--Todos los Productos-->
 
-          <img src="/img/product.png" alt="producto" class="productImg" />
 
-          <nav class="botonera">
-            <button class="button">+</button>
-            <p class="cantidad">1</p>
-            <button class="button">-</button>
-          </nav>
+            <div class="producto"> <!--Producto por ítem-->
+                <picture>
+                    <img src="../public/img/product.png" alt="producto" class="productImg">
+                </picture>
 
-          <p class="precio">$800</p>
+                <nav class = "botonera">
+                    <button class="button"> <i class="fa-solid fa-plus"></i> </button>
+                    <p class="cantidad">1</p>
+                    <button class="button"> <i class="fa-solid fa-minus"></i> </button>
+                </nav>
 
-          <div class="icono">
-            <i class="fa-solid fa-trash-can"></i>
-          </div>
-        </div>
+                <p class="precio"> $800</p>
 
-        <div class="producto">
-          <!--Producto por ítem-->
+                <div class="icono">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
 
-          <img src="/img/product.png" alt="producto" class="productImg" />
+            </div> 
 
-          <nav class="botonera">
-            <button class="button">+</button>
-            <p class="cantidad">1</p>
-            <button class="button">-</button>
-          </nav>
+            <div class="producto"> <!--Producto por ítem-->
 
-          <p class="precio">$800</p>
+                <picture>
+                    <img src="../public/img/product.png" alt="producto" class="productImg">
+                </picture>
+            
+                <nav class = "botonera">
+                        <button class="button"> <i class="fa-solid fa-plus"></i> </button>
+                        <p class="cantidad">1</p>
+                        <button class="button"> <i class="fa-solid fa-minus"></i> </button>
+                </nav>
 
-          <div class="icono">
-            <i class="fa-solid fa-trash-can"></i>
-          </div>
-        </div>
 
-        <div class="actions">
-          <button id="seguirComprando">Seguir Comprando</button>
+                <p class="precio"> $800 </p>
 
-          <button id="comprar">Comprar</button>
-        </div>
-      </section>
-    </main>
+                <div class="icono">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+
+            </div> 
+
+            <div class="actions">
+
+                <button id="seguirComprando">Seguir Comprando</button>
+
+                <button id="comprar">Comprar</button>
+           
+            </div>
+
+        </section>
+        
+     </main>
 
     <%- include('partials/footer') %>
   </body>
