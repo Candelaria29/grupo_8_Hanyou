@@ -85,3 +85,20 @@
     width: 50%;
   }
 }
+
+#productModif {
+  align-self: flex-end;
+  font-size: 15px;
+  margin-left: auto;
+  padding: 40px 10px 0px 40px
+}
+
+#productModif a {
+  color: #645eff;
+  padding: 5px;
+  transition: text-decoration 450ms;
+}
+
+#productModif a:hover {
+  text-decoration: underline;
+}

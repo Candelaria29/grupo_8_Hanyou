@@ -7,7 +7,8 @@
   <body id="body-productDetail">
     <%- include('partials/header') %>
 
-    <main id="main-productDetail">
+    <main>
+      <article id="main-productDetail">
       <section id="firstSection-productDetail" class="sectionProducDetail">
         <img src="/img/product.png" alt="Producto" id="productImg" />
       </section>
@@ -27,6 +28,11 @@
           <button class="button">Comprar</button>
         </div>
       </section>
+      <section id="productModif">
+        <a href="/createNewProduct" target="_blank"> Crear nuevo producto </a>
+        <a href="/editProduct" target="_blank"> Modificar producto </a>
+      </section>
+    </article>
     </main>
 
     <%- include('partials/footer') %>

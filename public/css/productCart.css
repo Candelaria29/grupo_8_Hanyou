@@ -57,7 +57,7 @@ main {
 }
 
 .button {
-  font-size: 14px;
+  font-size: 20px;
   margin-left: 30px;
   margin-right: 30px;
   border-radius: 10px;
@@ -67,7 +67,7 @@ main {
   transition: all 450ms;
 }
 
-button:hover {
+.button:hover {
   background-color: #52a8ff;
   border: solid 1px #52a8ff;
 }
@@ -167,7 +167,7 @@ button:hover {
     transition: all 450ms;
   }
 
-  button:hover {
+  .button:hover {
     background-color: #52a8ff;
     border: solid 1px #52a8ff;
   }
@@ -203,10 +203,10 @@ button:hover {
     transition: all 450ms;
   }
 
-  #button:hover {
+  /* #button:hover {
     background-color: #52a8ff;
     border: solid 1px #52a8ff;
-  }
+  } */
 
   #comprar {
     width: 50%;
@@ -219,10 +219,10 @@ button:hover {
     transition: all 450ms;
   }
 
-  #button:hover {
+  /* #button:hover {
     background-color: #52a8ff;
     border: solid 1px #52a8ff;
-  }
+  } */
 
   .icono {
     position: absolute;
