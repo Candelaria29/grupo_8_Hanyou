@@ -47,6 +47,7 @@ main {
   align-items: center;
   margin: 10px;
   transition: all 450ms;
+  position: relative;
 }
 
 .itemIndex {
@@ -84,21 +85,22 @@ main {
   font-size: 25px;
 }
 
-/* .addCart {
+.cartProduct {
     padding: 5px 10px;
     background-color: #645EFF;
     border-radius: 50%;
     border: solid 1px #645EFF;
-    font-size: 20px;
+    font-size: 16px;
+    transition: background-color 450ms;
     position: absolute;
     bottom: 85px;
-    right: 65px;
-    transition: background-color 450ms;
 }
 
-#addCart:hover {
-    background-color: #52A8FF;
-} */
+.cartProduct:hover {
+  background-color: #52a8ff;
+  border: solid 1px #52a8ff;
+}
+
 
 @media (min-width: 768px) {
   #productosIndex {

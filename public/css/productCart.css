@@ -105,7 +105,6 @@ button:hover {
 #comprar {
   width: 50%;
   padding: 10px;
-  color: black;
   background-color: #645eff;
   border: solid 1px #645eff;
   border-radius: 10px;
@@ -191,10 +190,6 @@ button:hover {
     font-size: 1.7rem;
   }
 
-  .actions {
-    display: flex;
-  }
-
   #seguirComprando {
     width: 50%;
     padding: 10px;
@@ -204,7 +199,6 @@ button:hover {
     margin: 10px;
     font-size: 20px;
     transition: all 450ms;
-    color: black;
   }
 
   #button:hover {
