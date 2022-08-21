@@ -6,7 +6,7 @@
     "size": "small",
     "price": 3000,
     "sku": 1,
-    "image": "default.png"
+    "image": "/img/product.png"
   },
   {
     "name": "Alien2",
@@ -15,7 +15,7 @@
     "size": "small",
     "price": 3000,
     "sku": 2,
-    "image": "default.png"
+    "image": "/img/logo4.png"
   },
   {
     "name": "Alien3",
@@ -24,7 +24,7 @@
     "size": "big",
     "price": 8000,
     "sku": 3,
-    "image": "default.png"
+    "image": "/img/product.png"
   },
   {
     "name": "Alien4",
@@ -33,6 +33,6 @@
     "size": "big",
     "price": 8000,
     "sku": 4,
-    "image": "default.png"
+    "image": "/img/product.png"
   }
 ]

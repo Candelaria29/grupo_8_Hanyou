@@ -1,5 +1,4 @@
 const express = require("express");
-const { Server } = require("http");
 const app = express();
 const { resolve } = require("path");
 const { port, start } = require("./modules/server.js");
@@ -16,8 +15,8 @@ app.set("view engine", "ejs");
 app.set("views", resolve(__dirname, "views"));
 
 // Rutas
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// app.get("/", (req, res) => {
+//   res.render("index");
+// });
 app.use(require("./routes/productsRoutes"));
 app.use(require("./routes/usersRoutes"));

@@ -1,11 +1,9 @@
 const { all, one } = require("../models/productsModel");
 
 const controller = {
-  // Este index hace referencia al productCart y no al index/home de la web
   index: (req, res) => {
     let products = all();
-    // return res.send(products);
-    return res.render("products/productCart");
+    return res.render("index", { products });
   },
   show: (req, res) => {
     let product = one(req.params.sku);
