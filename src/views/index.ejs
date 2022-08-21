@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../partials/top_head') %>
+    <%- include('./partials/top_head') %>
     <title>Bienvenido a Hanyou</title>
-    <%- include('../partials/bottom_head') %>
+    <%- include('./partials/bottom_head') %>
   </head>
   <body>
-    <%- include('../partials/header') %>
+    <%- include('./partials/header') %>
     <main>
       <!--Banner Principal-->
       <figure id="mainBanner">
@@ -17,12 +17,12 @@
       <section id="mainProducts">
         <h2>Productos destacados</h2>
         <ul id="productosIndex">
-          <% for (i=0; i<3; i++) {%> <%- include('../partials/productCards') %>
+          <% for (i=0; i<3; i++) {%> <%- include('./partials/productCards') %>
           <% } %>
         </ul>
       </section>
     </main>
 
-    <%- include('../partials/footer') %>
+    <%- include('./partials/footer') %>
   </body>
 </html>

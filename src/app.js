@@ -15,7 +15,7 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "views"));
 
 app.get("/", (req, res) => {
-  res.render("users/index");
+  res.render("index");
 });
 app.get("/login", (req, res) => res.render("users/login"));
 app.get("/productCart", (req, res) => res.render("products/productCart"));
