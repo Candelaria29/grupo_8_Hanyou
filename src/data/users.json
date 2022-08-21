@@ -1,0 +1,30 @@
+[
+  {
+    "firstName": "Juan",
+    "lastName": "Perez",
+    "email": "jperez@gmail.com",
+    "password": 1234,
+    "avatar": "default.png"
+  },
+  {
+    "firstName": "Carlos",
+    "lastName": "Rodriguez",
+    "email": "carlitos@gmail.com",
+    "password": 34325,
+    "avatar": "default.png"
+  },
+  {
+    "firstName": "Esteban",
+    "lastName": "Quito",
+    "email": "banquito@hotmail.com",
+    "password": 213123,
+    "avatar": "default.png"
+  },
+  {
+    "firstName": "Eduardo",
+    "lastName": "Hernandez",
+    "email": "hernandez_eduardo@yahoo.com",
+    "password": 587867,
+    "avatar": "default.png"
+  }
+]

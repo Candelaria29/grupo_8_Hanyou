@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Alien1",
+    "description": "Figura humanoide",
+    "color": "red",
+    "size": "small",
+    "price": 3000,
+    "sku": 1,
+    "image": "default.png"
+  },
+  {
+    "name": "Alien2",
+    "description": "Figura humanoide",
+    "color": "green",
+    "size": "small",
+    "price": 3000,
+    "sku": 2,
+    "image": "default.png"
+  },
+  {
+    "name": "Alien3",
+    "description": "Figura humanoide",
+    "color": "red",
+    "size": "big",
+    "price": 8000,
+    "sku": 3,
+    "image": "default.png"
+  },
+  {
+    "name": "Alien4",
+    "description": "Figura no humanoide",
+    "color": "blue",
+    "size": "big",
+    "price": 8000,
+    "sku": 4,
+    "image": "default.png"
+  }
+]

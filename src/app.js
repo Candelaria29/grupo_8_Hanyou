@@ -1,18 +1,16 @@
 const express = require("express");
 const app = express();
-const path = require("path");
+const { resolve } = require("path");
+const { port, start } = require("./modules/server.js");
+const { static } = require("./modules/static.js");
 
-const rutaPublic = path.resolve(__dirname, "../public");
+app.listen(port, start());
 
-app.listen(8000, () => {
-  console.log("Servidor funcionando en http://localhost:8000");
-});
-
-app.use(express.static(rutaPublic));
+app.use(static(resolve(__dirname, "../public")));
 
 app.set("view engine", "ejs");
 
-app.set("views", path.resolve(__dirname, "views"));
+app.set("views", resolve(__dirname, "views"));
 
 app.get("/", (req, res) => {
   res.render("index");
