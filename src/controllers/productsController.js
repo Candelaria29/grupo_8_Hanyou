@@ -8,10 +8,10 @@ const controller = {
   show: (req, res) => {
     let product = one(req.params.sku);
     if (product) {
-      return res.send(product);
-      return res.render("products/productDetail");
+      // return res.send(product);
+      return res.render("products/productDetail", { product });
     }
-    return res.send("No se encontro ningun producto con ese sku");
+    return res.render("products/productDetail", { product: null });
   },
 };
 

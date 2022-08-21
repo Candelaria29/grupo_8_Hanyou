@@ -7,32 +7,11 @@
   <body id="body-productDetail">
     <%- include('../partials/header') %>
 
-    <main>
-      <article id="main-productDetail">
-        <section id="firstSection-productDetail" class="sectionProducDetail">
-          <img src="/img/product.png" alt="Producto" id="productImg" />
-        </section>
-        <section class="sectionProducDetail">
-          <nav id="descripcion">
-            <p id="nombreDeProducto">Alien I</p>
-            <p id="precioDelProducto">$100.00</p>
-            <p id="descripcionDelProducto">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
-              dolore voluptatem eaque amet, itaque labore! Reprehenderit quidem
-              molestias eveniet quaerat, quibusdam molestiae culpa alias enim
-              vel qui dignissimos facere commodi!
-            </p>
-          </nav>
-          <div id="buttons">
-            <button class="button">Agregar al carrito</button>
-            <button class="button">Comprar</button>
-          </div>
-        </section>
-        <section id="productModif">
-          <a href="/createNewProduct" target="_blank"> Crear nuevo producto </a>
-          <a href="/editProduct" target="_blank"> Modificar producto </a>
-        </section>
-      </article>
+    <main id="main-productDetail">
+      <% if (product) {%> <%- include('../partials/productSingleDescription',
+      {product: product}) %> <% } else {%>
+      <h2>No existe el producto solicitado</h2>
+      <% } %>
     </main>
 
     <%- include('../partials/footer') %>

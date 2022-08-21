@@ -17,24 +17,8 @@
       <section id="mainProducts">
         <h2>Productos destacados</h2>
         <ul id="productosIndex">
-          <% if (products.length > 0) {products.forEach (e => {%>
-          <li class="product">
-            <a href="/productos/detalle/<%= e.sku %>" class="itemIndex">
-              <img
-                src="<%= e.image %> "
-                alt="Producto"
-                class="productImgIndex"
-              />
-              <article class="description">
-                <h3 class="nombreIndex"><%= e.name %></h3>
-                <p class="precioIndex">$<%= e.price %></p>
-              </article>
-              <a href="/productos/detalle/<%= e.sku %>" class="cartProduct"
-                ><i class="fa-solid fa-cart-shopping"></i
-              ></a>
-            </a>
-          </li>
-          <% })} %>
+          <% if (products.length > 0) {products.forEach (e => {%> <%-
+          include('./partials/productCards', {e:e}) %> <% })} %>
         </ul>
       </section>
     </main>

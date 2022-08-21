@@ -1,0 +1,18 @@
+<section id="firstSection-productDetail" class="sectionProducDetail">
+  <img src="<%= product.image %> " alt="Producto" id="productImg" />
+</section>
+<section class="sectionProducDetail">
+  <nav id="descripcion">
+    <p id="nombreDeProducto"><%= product.name %></p>
+    <p id="precioDelProducto">$<%= product.price %></p>
+    <p id="descripcionDelProducto"><%= product.description %></p>
+  </nav>
+  <div id="buttons">
+    <button class="button">Agregar al carrito</button>
+    <button class="button">Comprar</button>
+  </div>
+</section>
+<section id="productModif">
+  <a href="/createNewProduct" target="_blank"> Crear nuevo producto </a>
+  <a href="/editProduct" target="_blank"> Modificar producto </a>
+</section>

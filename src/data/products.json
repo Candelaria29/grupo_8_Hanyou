@@ -10,7 +10,7 @@
   },
   {
     "name": "Alien2",
-    "description": "Figura humanoide",
+    "description": "Figura no humanoide",
     "color": "green",
     "size": "small",
     "price": 3000,
@@ -28,7 +28,7 @@
   },
   {
     "name": "Alien4",
-    "description": "Figura no humanoide",
+    "description": "Figura humanoide",
     "color": "blue",
     "size": "big",
     "price": 8000,
