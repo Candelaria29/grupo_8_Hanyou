@@ -1,8 +1,10 @@
 const { Router } = require("express");
 const route = Router();
+const { index, show } = require("../controllers/productsController");
 
-route.get("/productCart", (req, res) => res.render("products/productCart"));
-route.get("/productDetail", (req, res) => res.render("products/productDetail"));
+// Este index hace referencia al productCart y no al index/home de la web
+route.get("/productos/productCart", index);
+route.get("/productos/detalle/:sku", show);
 route.get("/createNewProduct", (req, res) =>
   res.render("products/createNewProduct")
 );
