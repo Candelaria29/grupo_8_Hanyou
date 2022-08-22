@@ -6,11 +6,11 @@
   <body>
     <%- include('../partials/header') %>
     <main id="createNewProductMain">
-      <form action="/" method="post" id="createNewProductForm">
+      <form action="/productos/guardar" method="post" id="createNewProductForm">
         <h1 class="createNewProductTitles">Creación de productos</h1>
         <input
           type="file"
-          name="imageOfCreatedProduct"
+          name="image"
           id="createNewProductDesign"
           style="display: none"
           accept=".jpg, .png"
@@ -25,7 +25,7 @@
         <!-- Nombre del producto -->
         <input
           type="text"
-          name="nombre"
+          name="name"
           id="createNewProductName"
           placeholder="Nombre del producto"
           class="createNewProductCampos"
@@ -34,7 +34,7 @@
         <!-- Descripción  -->
         <textarea
           type="text"
-          name="descripcion"
+          name="description"
           id="c_eDescripcion"
           placeholder="Descripción del producto"
           class="createNewProductCampos"
@@ -61,7 +61,7 @@
               <label class="createNewProductSubtitles"
                 >Seleccione una medida</label
               >
-              <select name="medida" class="c_eButton" required>
+              <select name="size" class="c_eButton" required>
                 <option value="2x6">Pequeño</option>
                 <option value="8x24">Grande</option>
               </select>
@@ -73,7 +73,7 @@
           <p>$</p>
           <input
             type="number"
-            name="precio"
+            name="price"
             id="createNewProductPrice"
             placeholder="Precio"
             class="createNewProductCampos"
@@ -81,7 +81,7 @@
           />
         </section>
         <section id="botonProductoCreado">
-          <button type="button" class="c_eButton">Crear producto</button>
+          <button type="submit" class="c_eButton">Crear producto</button>
           <button type="reset" class="c_eButton">Reiniciar formulario</button>
         </section>
       </form>

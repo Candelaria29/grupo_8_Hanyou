@@ -1,6 +1,11 @@
 const { Router } = require("express");
 const route = Router();
-const { index, show } = require("../controllers/productsController");
+const {
+  index,
+  show,
+  create,
+  save,
+} = require("../controllers/productsController");
 
 // READ:
 // List:
@@ -14,10 +19,9 @@ route.get("/productos/detalle/:sku", show);
 
 //CREATE:
 //Envio:
-route.get("/createNewProduct", (req, res) =>
-  res.render("products/createNewProduct")
-);
+route.get("/productos/crear", create);
 //Creacion:
+route.post("/productos/guardar", save);
 
 //UPDATE:
 //Envio:

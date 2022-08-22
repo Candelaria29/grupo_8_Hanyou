@@ -1,4 +1,4 @@
-const { all, one } = require("../models/productsModel");
+const { all, one, generate, write } = require("../models/productsModel");
 
 const controller = {
   index: (req, res) => {
@@ -12,6 +12,16 @@ const controller = {
       return res.render("products/productDetail", { product });
     }
     return res.render("products/productDetail", { product: null });
+  },
+  create: (req, res) => {
+    return res.render("products/createNewProduct");
+  },
+  save: (req, res) => {
+    let nuevo = generate(req.body);
+    let todos = all();
+    todos.push(nuevo);
+    write(todos);
+    return res.redirect("/");
   },
 };
 

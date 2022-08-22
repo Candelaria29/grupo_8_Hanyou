@@ -14,6 +14,9 @@ app.use(static(resolve(__dirname, "../public")));
 app.set("view engine", "ejs");
 app.set("views", resolve(__dirname, "views"));
 
+//Para el req.body o el req.query:
+app.use(express.urlencoded({ extended: true }));
+
 // Rutas
 // app.get("/", (req, res) => {
 //   res.render("index");
