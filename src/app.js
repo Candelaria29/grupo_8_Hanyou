@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const method = require("method-override");
 const { resolve } = require("path");
 const { port, start } = require("./modules/server.js");
 const { static } = require("./modules/static.js");
@@ -21,5 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 // app.get("/", (req, res) => {
 //   res.render("index");
 // });
+app.use(method("m"));
+
 app.use(require("./routes/productsRoutes"));
 app.use(require("./routes/usersRoutes"));

@@ -6,7 +6,8 @@
   <body>
     <%- include('../partials/header') %>
     <main id="createNewProductMain">
-      <form action="/" method="post" id="createNewProductForm">
+      <form action="/productos/actualizar?m=PUT" method="post" id="createNewProductForm">
+        <input type = "hidden" name = "sku" value = <%= product.sku%>>
         <h1 class="createNewProductTitles">Edición de productos</h1>
         <input
           type="file"
@@ -27,6 +28,7 @@
           type="text"
           name="nombre"
           id="createNewProductName"
+          value="<%= product.name%>"
           placeholder="Nuevo nombre del producto"
           class="createNewProductCampos"
           required
@@ -36,6 +38,7 @@
           type="text"
           name="descripcion"
           id="c_eDescripcion"
+          value="<%= product.description%>"
           placeholder="Nueva descripción del producto"
           class="createNewProductCampos"
           required
@@ -53,9 +56,10 @@
                 >Modifique el color</label
               >
               <select name="color" class="c_eButton" required>
-                <option value="#ff0000">Rojo</option>
-                <option value="#00ff00">Verde</option>
-                <option value="0000ff">Azul</option>
+                <!-- MODIFICAR LOS VALUE POR EL COLOR EN TEXTO -->
+                <option value="#ff0000"<% if (product.color == 'red') {%>selected<%}%> >Rojo</option>
+                <option value="#00ff00"<% if (product.color == 'green') {%>selected<%}%>>Verde</option>
+                <option value="0000ff"<% if (product.color == 'blue') {%>selected<%}%>>Azul</option>
               </select>
             </article>
             <!-- Tamaños -->
@@ -64,9 +68,9 @@
                 >Modifique la medida</label
               >
               <select name="medida" class="c_eButton" required>
-                <option value="2x6">Pequeño</option>
+                <option value="2x6" <% if (product.size == 'small') {%>selected <% }%>>Pequeño</option>
 
-                <option value="8x24">Grande</option>
+                <option value="8x24"<% if (product.size == 'big') {%>selected <% }%>>Grande</option>
               </select>
             </article>
           </div>
@@ -78,13 +82,14 @@
             type="number"
             name="precio"
             id="createNewProductPrice"
+            value="<%= product.price%>"
             placeholder="Nuevo precio"
             class="createNewProductCampos"
             required
           />
         </section>
         <section id="botonProductoCreado">
-          <button type="button" class="c_eButton">Guardar cambios</button>
+          <button type="submit" class="c_eButton">Guardar cambios</button>
           <button type="reset" class="c_eButton">Reiniciar formulario</button>
         </section>
       </form>

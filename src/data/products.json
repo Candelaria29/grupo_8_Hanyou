@@ -18,22 +18,13 @@
     "image": "/img/logo4.png"
   },
   {
-    "name": "Alien3",
-    "description": "Figura humanoide",
-    "color": "red",
-    "size": "big",
-    "price": 8000,
+    "name": "Alien3modificado",
+    "description": "alien modificado",
+    "color": "#00ff00",
+    "size": "8x24",
+    "price": 30003,
     "sku": 3,
-    "image": "/img/product.png"
-  },
-  {
-    "name": "Alien4",
-    "description": "Figura humanoide",
-    "color": "blue",
-    "size": "big",
-    "price": 8000,
-    "sku": 4,
-    "image": "/img/product.png"
+    "image": "catYoda.png"
   },
   {
     "name": "Cat yoda",
