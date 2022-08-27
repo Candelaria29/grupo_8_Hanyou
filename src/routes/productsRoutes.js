@@ -59,5 +59,5 @@ route.get("/productos/editar/:sku", edit);
 route.put("/productos/actualizar", upload.any(), update);
 //DELETE:
 //Borrado:
-
+// route.delete ("/productos/eliminar", erase)
 module.exports = route;
