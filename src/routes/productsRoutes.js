@@ -9,6 +9,8 @@ const {
   update,
 } = require("../controllers/productsController");
 
+const destination = function (req, file, cb) {};
+
 // READ:
 // List:
 route.get("/", index);
