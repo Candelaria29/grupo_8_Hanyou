@@ -86,21 +86,21 @@ main {
 }
 
 .cartProduct {
-    padding: 5px 10px;
-    background-color: #645EFF;
-    border-radius: 50%;
-    border: solid 1px #645EFF;
-    font-size: 16px;
-    transition: background-color 450ms;
-    position: absolute;
-    bottom: 85px;
+  padding: 5px 10px;
+  background-color: #645eff;
+  border-radius: 50%;
+  border: solid 1px #645eff;
+  font-size: 16px;
+  transition: all 450ms;
+  position: absolute;
+  bottom: 85px;
 }
 
 .cartProduct:hover {
   background-color: #52a8ff;
   border: solid 1px #52a8ff;
+  transform: rotate(360deg);
 }
-
 
 @media (min-width: 768px) {
   #productosIndex {
