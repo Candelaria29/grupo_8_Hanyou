@@ -51,6 +51,12 @@ const controller = {
     write(actualizados);
     return res.redirect("/");
   },
+  destroy: (req, res) => {
+    let todos = all();
+    let noEliminados = todos.filter((e) => e.sku != req.body.sku);
+    write(noEliminados);
+    return res.redirect("/");
+  },
 };
 
 module.exports = controller;

@@ -34,14 +34,5 @@
     "price": 12,
     "sku": 5,
     "image": "logo4.png"
-  },
-  {
-    "name": "Yoda",
-    "description": "Yoda construyendo",
-    "color": "#00ff00",
-    "size": "8x24",
-    "price": 3400,
-    "sku": 6,
-    "image": "imageOfCreatedProduct-1661704526423-641958363.png"
   }
 ]

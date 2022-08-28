@@ -7,6 +7,7 @@ const {
   save,
   edit,
   update,
+  destroy,
 } = require("../controllers/productsController");
 const { resolve, extname } = require("path");
 const { existsSync, mkdirSync } = require("fs");
@@ -59,5 +60,5 @@ route.get("/productos/editar/:sku", edit);
 route.put("/productos/actualizar", upload.any(), update);
 //DELETE:
 //Borrado:
-// route.delete ("/productos/eliminar", destroy)
+route.delete("/productos/eliminar", destroy);
 module.exports = route;

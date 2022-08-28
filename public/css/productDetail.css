@@ -90,7 +90,7 @@
   align-self: flex-end;
   font-size: 15px;
   margin-left: auto;
-  padding: 40px 10px 0px 40px
+  padding: 40px 10px 0px 40px;
 }
 
 #productModif a {
@@ -101,4 +101,20 @@
 
 #productModif a:hover {
   text-decoration: underline;
+}
+
+#destroyButton {
+  width: 90%;
+  padding: 10px;
+  background-color: #645eff;
+  border: solid 1px #645eff;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 20px;
+  transition: all 450ms;
+}
+
+#destroyButton:hover {
+  background-color: #ff020f;
+  border: solid 1px #ff020f;
 }
