@@ -28,9 +28,9 @@
   },
   {
     "name": "Cat yoda",
-    "description": "Es el gato de Yoda",
-    "color": "#00ff00",
-    "size": "8x24",
+    "description": "Es el gato de Yoda ",
+    "color": "green",
+    "size": "small",
     "price": 12,
     "sku": 5,
     "image": "logo4.png"
