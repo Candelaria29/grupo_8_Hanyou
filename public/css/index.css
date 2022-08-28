@@ -34,6 +34,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .product {
   display: block;
@@ -63,6 +64,8 @@ main {
 }
 
 .productImgIndex {
+  max-height: 30vh;
+  min-height: 30vh;
   width: 90%;
   padding: 20px;
 }

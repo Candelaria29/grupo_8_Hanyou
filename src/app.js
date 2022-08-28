@@ -18,11 +18,10 @@ app.set("views", resolve(__dirname, "views"));
 //Para el req.body o el req.query:
 app.use(express.urlencoded({ extended: true }));
 
+app.use(method("m"));
 // Rutas
 // app.get("/", (req, res) => {
 //   res.render("index");
 // });
-app.use(method("m"));
-
 app.use(require("./routes/productsRoutes"));
 app.use(require("./routes/usersRoutes"));

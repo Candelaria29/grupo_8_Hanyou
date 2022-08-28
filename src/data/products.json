@@ -34,5 +34,14 @@
     "price": 12,
     "sku": 5,
     "image": "logo4.png"
+  },
+  {
+    "name": "Constructor",
+    "description": "Imagen modificada por cat Yoda",
+    "color": "green",
+    "size": "big",
+    "price": 456,
+    "sku": 6,
+    "image": "imageOfCreatedProduct-1661707920314-619593254.png"
   }
 ]

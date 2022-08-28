@@ -57,9 +57,9 @@
               >
               <select name="color" class="c_eButton" required>
                 <!-- MODIFICAR LOS VALUE POR EL COLOR EN TEXTO -->
-                <option value="#ff0000"<% if (product.color == 'red') {%>selected<%}%> >Rojo</option>
-                <option value="#00ff00"<% if (product.color == 'green') {%>selected<%}%>>Verde</option>
-                <option value="0000ff"<% if (product.color == 'blue') {%>selected<%}%>>Azul</option>
+                <option value="red"<% if (product.color == 'red') {%>selected<%}%> >Rojo</option>
+                <option value="green"<% if (product.color == 'green') {%>selected<%}%>>Verde</option>
+                <option value="blue"<% if (product.color == 'blue') {%>selected<%}%>>Azul</option>
               </select>
             </article>
             <!-- Tamaños -->
@@ -68,9 +68,9 @@
                 >Modifique la medida</label
               >
               <select name="medida" class="c_eButton" required>
-                <option value="2x6" <% if (product.size == 'small') {%>selected <% }%>>Pequeño</option>
+                <option value="small" <% if (product.size == 'small') {%>selected <% }%>>Pequeño</option>
 
-                <option value="8x24"<% if (product.size == 'big') {%>selected <% }%>>Grande</option>
+                <option value="big"<% if (product.size == 'big') {%>selected <% }%>>Grande</option>
               </select>
             </article>
           </div>
