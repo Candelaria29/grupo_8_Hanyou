@@ -6,7 +6,7 @@
   <body>
     <%- include('../partials/header') %>
     <main id="createNewProductMain">
-      <form action="/productos/actualizar?m=PUT" method="post" id="createNewProductForm">
+      <form action="/productos/actualizar?m=PUT" method="post" enctype = "multipart/form-data" id="createNewProductForm">
         <input type = "hidden" name = "sku" value = <%= product.sku%>>
         <h1 class="createNewProductTitles">Edición de productos</h1>
         <input
@@ -16,7 +16,7 @@
           style="display: none"
           accept=".jpg, .png"
           multiple
-          required
+
         />
         <label for="createNewProductDesign" class="c_eButton" id="filesButton"
           >Modificar imagen del diseño</label

@@ -37,20 +37,11 @@
   },
   {
     "name": "Yoda",
-    "description": "Yoda gato",
+    "description": "Yoda construyendo",
     "color": "#00ff00",
-    "size": "2x6",
-    "price": 34,
+    "size": "8x24",
+    "price": 3400,
     "sku": 6,
-    "image": "image-1661703044241-333770546.png"
-  },
-  {
-    "name": "Cat yoda",
-    "description": "yoda",
-    "color": "#ff0000",
-    "size": "2x6",
-    "price": 45,
-    "sku": 7,
-    "image": "catYoda.png"
+    "image": "imageOfCreatedProduct-1661704526423-641958363.png"
   }
 ]

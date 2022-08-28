@@ -35,9 +35,6 @@ const controller = {
     });
   },
   update: (req, res) => {
-    if (req.files && req.files.length > 0) {
-      return res.send({ archivos: req.files });
-    }
     let todos = all();
     let actualizados = todos.map((e) => {
       if (e.sku == req.body.sku) {
@@ -46,7 +43,8 @@ const controller = {
         e.color = req.body.color;
         e.size = req.body.medida;
         e.price = parseInt(req.body.precio);
-        e.image = req.body.imageOfCreatedProduct;
+        e.image =
+          req.files && req.files.length > 0 ? req.files[0].filename : e.image;
       }
       return e;
     });
