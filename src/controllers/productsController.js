@@ -17,6 +17,11 @@ const controller = {
     return res.render("products/createNewProduct");
   },
   save: (req, res) => {
+    if (req.files && req.files.length > 0) {
+      req.body.image = req.files[0].filename;
+    } else {
+      req.body.image = "/img/products/logo4.png";
+    }
     let nuevo = generate(req.body);
     let todos = all();
     todos.push(nuevo);
@@ -30,6 +35,9 @@ const controller = {
     });
   },
   update: (req, res) => {
+    if (req.files && req.files.length > 0) {
+      return res.send({ archivos: req.files });
+    }
     let todos = all();
     let actualizados = todos.map((e) => {
       if (e.sku == req.body.sku) {

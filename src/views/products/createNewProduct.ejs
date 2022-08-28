@@ -6,7 +6,12 @@
   <body>
     <%- include('../partials/header') %>
     <main id="createNewProductMain">
-      <form action="/productos/guardar" method="post" id="createNewProductForm">
+      <form
+        action="/productos/guardar"
+        method="post"
+        enctype="multipart/form-data"
+        id="createNewProductForm"
+      >
         <h1 class="createNewProductTitles">Creación de productos</h1>
         <input
           type="file"
@@ -18,7 +23,7 @@
           required
         />
         <label for="createNewProductDesign" class="c_eButton" id="filesButton"
-          >Cargar imagen del diseño</label
+          >Cargar boceto del diseño</label
         >
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
         <label for="img">Click me to upload image</label> -->

@@ -1,6 +1,10 @@
 <li class="product">
   <a href="/productos/detalle/<%= e.sku %>" class="itemIndex">
-    <img src="<%= e.image %> " alt="Producto" class="productImgIndex" />
+    <img
+      src="/img/products/<%= e.image %> "
+      alt="Producto"
+      class="productImgIndex"
+    />
     <article class="description">
       <h3 class="nombreIndex"><%= e.name %></h3>
       <p class="precioIndex">$<%= e.price %></p>
