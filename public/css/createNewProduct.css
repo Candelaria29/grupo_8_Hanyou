@@ -30,6 +30,13 @@
   text-align: center;
 }
 
+#c_eDescripcion {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 200px;
+  min-height: 50px;
+}
+
 .c_eButton {
   font-size: 14px;
   margin-left: 30px;

@@ -23,6 +23,28 @@ const controller = {
     write(todos);
     return res.redirect("/");
   },
+  edit: (req, res) => {
+    let product = one(req.params.sku);
+    return res.render("products/editProduct", {
+      product,
+    });
+  },
+  update: (req, res) => {
+    let todos = all();
+    let actualizados = todos.map((e) => {
+      if (e.sku == req.body.sku) {
+        e.name = req.body.nombre;
+        e.description = req.body.descripcion;
+        e.color = req.body.color;
+        e.size = req.body.medida;
+        e.price = parseInt(req.body.precio);
+        e.image = req.body.imageOfCreatedProduct;
+      }
+      return e;
+    });
+    write(actualizados);
+    return res.redirect("/");
+  },
 };
 
 module.exports = controller;
