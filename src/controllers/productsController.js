@@ -1,4 +1,6 @@
 const { all, one, generate, write } = require("../models/productsModel");
+const { unlinkSync } = require("fs");
+const { resolve } = require("path");
 
 const controller = {
   index: (req, res) => {
@@ -52,6 +54,19 @@ const controller = {
     return res.redirect("/");
   },
   destroy: (req, res) => {
+    let product = one(req.body.sku);
+    if (product.image != "logo4.png") {
+      let file = resolve(
+        __dirname,
+        "..",
+        "..",
+        "public",
+        "img",
+        "products",
+        product.image
+      );
+      unlinkSync(file);
+    }
     let todos = all();
     let noEliminados = todos.filter((e) => e.sku != req.body.sku);
     write(noEliminados);
