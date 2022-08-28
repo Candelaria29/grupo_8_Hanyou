@@ -36,7 +36,7 @@ const upload = multer({
 
 // READ:
 // List:
-route.get("/", index);
+route.get("/productos", index);
 //El de abajo, seria un read de algunos, ni todos ni uno sólo, si no los enviados al carrito.
 //Seria muy similar al one del model, pero en lugar de usar un find, se podria usar un filter.
 // Por otro lado, podriamos agregarle al json un campo con valor boolean

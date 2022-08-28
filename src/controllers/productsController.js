@@ -5,7 +5,7 @@ const { resolve } = require("path");
 const controller = {
   index: (req, res) => {
     let products = all();
-    return res.render("index", { products });
+    return res.render("products/productList", { products });
   },
   show: (req, res) => {
     let product = one(req.params.sku);
