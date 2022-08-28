@@ -1,10 +1,15 @@
 - ## Sprint 2. Retrospectiva:
 
+<div style="text-align: justify"> 
 Con el sprint anterior, donde no hubo una distribución pactada y ordenada de tareas, y por motivo de ello terminamos trabajando de manera dispar, y con los tiempos justos, aprendimos la importancia de asignar tareas a nombre de cada uno de los integrantes del grupo, así como de los **deadlines**. De este modo, cada uno de los integrantes pudo concentrarse específicamente en sus tareas y pudo otorgar su mejor rendimiento.
 
 Además, implementamos de manera eficiente el sistema de **testing** lo que permitió que todos participasemos en las tareas del resto, a la vez que a cada uno de los responsables de cada una de las tareas, le sirvió para recibir el **feedback** de sus compañeros.
 
+</div>
+
 - ## Sprint 3. Retrospectiva:
+
+<div style="text-align: justify">
 
 En el sprint anterior reforzamos algunos de los conceptos que habiamos aprendido, y pudimos incorporar nuevos metodos que nos ayudaron a realizar y unificar cada una de las tareas de manera mas ordenada.
 
@@ -21,3 +26,5 @@ También podría ser de gran utilidad normalizar los mensajes insertados al mome
 4.**Less of:** Podría ser de gran ayuda dejar de implementar código excesivo, cuando hayan maneras más resumidas de realizar una funcionalidad. Esto está relacionado con el testeo en equipo, ya que muchas veces la misma persona que realizó un bloque de código está convencido de que lo hizo de la manera más eficiente posible, mientras que un observador externo podría aportar un punto de vista más fresco y de esa manera proponer una mejora superadora.
 
 5.**Stop doing:** Deberíamos evitar, en todos los casos, que el mismo integrante que realizó una tarea determinada sea el único que la testee.
+
+</div>
