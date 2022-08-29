@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Bienvenido a Hanyou</title>
-    <%- include('./partials/head') %>
-  </head>
-  <body>
-    <%- include('./partials/header') %>
+
+<head>
+  <title>Bienvenido a Hanyou</title>
+  <%- include('./partials/head') %>
+</head>
+
+<body>
+  <%- include('./partials/header') %>
     <main>
       <!--Banner Principal-->
       <figure id="mainBanner">
         <img src="/img/banner.png" alt="Banner" id="banner" />
       </figure>
 
-      <!--Productos principales-->
+      <!--Productos destacados-->
       <section id="mainProducts">
         <h2>Productos destacados</h2>
         <ul id="productosIndex">
-          <% for (i=0;i<3;i++) {%>
-          <li class="product">
-            <a href="/" class="itemIndex">
-              <img
-                src="/img/product.png"
-                alt="Producto"
-                class="productImgIndex"
-              />
-              <article class="description">
-                <h3 class="nombreIndex">Alien</h3>
-                <p class="precioIndex">$20</p>
-              </article>
-              <a href="/" class="cartProduct"
-                ><i class="fa-solid fa-cart-shopping"></i
-              ></a>
-            </a>
-          </li>
-          <% } %>
+          <% indexProducts.forEach (e => {%> 
+            <li class="product">
+              <a href="/productos/detalle/<%= e.sku %>" class="itemIndex">
+                <img src="/img/products/<%= e.image %> " alt="Producto" class="productImgIndex" />
+                <article class="description">
+                  <h3 class="nombreIndex"><%= e.name %></h3>
+                  <p class="precioIndex">$<%= e.price %></p>
+                </article>
+                <a href="/productos/detalle/<%= e.sku %>" class="cartProduct"><i class="fa-solid fa-cart-shopping"></i></a>
+              </a>
+            </li>
+          <% })%>
         </ul>
       </section>
     </main>
 
     <%- include('./partials/footer') %>
-  </body>
+</body>
+
 </html>

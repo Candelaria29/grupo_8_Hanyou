@@ -19,10 +19,12 @@ app.set("views", resolve(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(method("m"));
-// Rutas;
+
+/* //Ruta main;
 app.get("/", (req, res) => {
   res.render("index");
-});
+}); */
 
+//app.use(require("./routes/mainRoutes"));
 app.use(require("./routes/productsRoutes"));
 app.use(require("./routes/usersRoutes"));
