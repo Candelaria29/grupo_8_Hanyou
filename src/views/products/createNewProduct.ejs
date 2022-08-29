@@ -1,51 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hanyou - Crear Producto</title>
-    <%- include('../partials/head') %>
-  </head>
-  <body>
-    <%- include('../partials/header') %>
+
+<head>
+  <title>Hanyou - Crear Producto</title>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <%- include('../partials/header') %>
     <main id="createNewProductMain">
-      <form
-        action="/productos/guardar"
-        method="post"
-        enctype="multipart/form-data"
-        id="createNewProductForm"
-      >
+      <form action="/productos/guardar" method="post" enctype="multipart/form-data" id="createNewProductForm">
         <h1 class="createNewProductTitles">Creación de productos</h1>
-        <input
-          type="file"
-          name="image"
-          id="createNewProductDesign"
-          style="display: none"
-          accept=".jpg, .png"
-          multiple
-          required
-        />
-        <label for="createNewProductDesign" class="c_eButton" id="filesButton"
-          >Cargar boceto del diseño</label
-        >
+        <input type="file" name="image" id="createNewProductDesign" style="display: none" accept=".jpg, .png" multiple
+          required />
+        <label for="createNewProductDesign" class="c_eButton" id="filesButton">Cargar boceto del diseño</label>
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
         <label for="img">Click me to upload image</label> -->
         <!-- Nombre del producto -->
-        <input
-          type="text"
-          name="name"
-          id="createNewProductName"
-          placeholder="Nombre del producto"
-          class="createNewProductCampos"
-          required
-        />
+        <input type="text" name="name" id="createNewProductName" placeholder="Nombre del producto"
+          class="createNewProductCampos" required />
         <!-- Descripción  -->
-        <textarea
-          type="text"
-          name="description"
-          id="c_eDescripcion"
-          placeholder="Descripción del producto"
-          class="createNewProductCampos"
-          required
-        ></textarea>
+        <textarea type="text" name="description" id="c_eDescripcion" placeholder="Descripción del producto"
+          class="createNewProductCampos" required></textarea>
         <!-- Imagen -->
         <!-- Características -->
         <section id="caracteristicasProductoCreado">
@@ -53,20 +29,15 @@
           <!-- Colores -->
           <div id="characteristicArticles">
             <article class="createNewProductcharacteristic">
-              <label class="createNewProductSubtitles"
-                >Seleccione un color</label
-              >
+              <label class="createNewProductSubtitles">Seleccione un color</label>
               <select name="color" class="c_eButton" required>
                 <option value="painted">Pintado</option>
                 <option value="not painted">No pintado</option>
-                <!-- <option value="blue">Azul</option> -->
               </select>
             </article>
             <!-- Tamaños -->
             <article class="createNewProductcharacteristic">
-              <label class="createNewProductSubtitles"
-                >Seleccione una medida</label
-              >
+              <label class="createNewProductSubtitles">Seleccione una medida</label>
               <select name="size" class="c_eButton" required>
                 <option value="small">Pequeño</option>
                 <option value="big">Grande</option>
@@ -77,15 +48,13 @@
         <!-- Precio -->
         <section id="precioProductoCreado">
           <p>$</p>
-          <input
-            type="number"
-            name="price"
-            id="createNewProductPrice"
-            placeholder="Precio"
-            class="createNewProductCampos"
-            required
-          />
+          <input type="number" name="price" id="createNewProductPrice" placeholder="Precio"
+            class="createNewProductCampos" required />
         </section>
+        <section id="addIndex">
+        <input type="checkbox" name="index" value="true"/>
+        <label for="index">Agregar a "Productos Destacados"</label>
+      </section>
         <section id="botonProductoCreado">
           <button type="submit" class="c_eButton">Crear producto</button>
           <button type="reset" class="c_eButton">Reiniciar formulario</button>
@@ -93,5 +62,6 @@
       </form>
     </main>
     <%- include('../partials/footer') %>
-  </body>
+</body>
+
 </html>

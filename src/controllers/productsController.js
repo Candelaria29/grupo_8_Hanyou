@@ -47,6 +47,7 @@ const controller = {
         e.price = parseInt(req.body.precio);
         e.image =
           req.files && req.files.length > 0 ? req.files[0].filename : e.image;
+        e.index = req.body.index
       }
       return e;
     });
