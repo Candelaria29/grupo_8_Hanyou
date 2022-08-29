@@ -6,7 +6,8 @@
     "size": "big",
     "price": 2500,
     "sku": 1,
-    "image": "babyyodafernet.png"
+    "image": "babyyodafernet.png",
+    "index": true
   },
   {
     "name": "Set de macetas Pokemón",
@@ -15,7 +16,8 @@
     "size": "small",
     "price": 3560,
     "sku": 2,
-    "image": "macetaspokemon.png"
+    "image": "macetaspokemon.png",
+    "index": true
   },
   {
     "name": "Capitán América",
@@ -24,7 +26,8 @@
     "size": "small",
     "price": 30003,
     "sku": 3,
-    "image": "capamerica.png"
+    "image": "capamerica.png",
+    "index": true
   },
   {
     "name": "Mate Pikachu",
@@ -33,7 +36,8 @@
     "size": "small",
     "price": 666,
     "sku": 4,
-    "image": "pokemonmate.png"
+    "image": "pokemonmate.png",
+    "index": false
   },
   {
     "name": "Portalápiz Darth Vader",
@@ -42,6 +46,7 @@
     "size": "small",
     "price": 405,
     "sku": 5,
-    "image": "swpenholder.png"
+    "image": "swpenholder.png",
+    "index": false
   }
 ]
