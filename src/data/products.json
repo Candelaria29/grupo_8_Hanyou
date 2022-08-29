@@ -1,47 +1,47 @@
 [
   {
-    "name": "Alien1",
-    "description": "Figura humanoide",
-    "color": "red",
-    "size": "small",
-    "price": 3000,
+    "name": "Baby Yoda - Fernet",
+    "description": "¿Habrá un baby Yoda más argentino que este? ",
+    "color": "painted",
+    "size": "big",
+    "price": 2500,
     "sku": 1,
-    "image": "logo4.png"
+    "image": "babyyodafernet.png"
   },
   {
-    "name": "Alien2",
-    "description": "Figura no humanoide",
-    "color": "green",
+    "name": "Set de macetas Pokemón",
+    "description": "Combiná tu amor por las plantas y Pokemón con este set de macetas de Bulbasaur y Oddish.",
+    "color": "painted",
     "size": "small",
-    "price": 3000,
+    "price": 3560,
     "sku": 2,
-    "image": "logo4.png"
+    "image": "macetaspokemon.png"
   },
   {
-    "name": "Alien3modificado",
-    "description": "alien modificado",
-    "color": "#00ff00",
-    "size": "8x24",
+    "name": "Capitán América",
+    "description": "Para todos los amantes de Marvel.",
+    "color": "painted",
+    "size": "small",
     "price": 30003,
     "sku": 3,
-    "image": "logo4.png"
+    "image": "capamerica.png"
   },
   {
-    "name": "Cat yoda",
-    "description": "Es el gato de Yoda ",
-    "color": "green",
+    "name": "Mate Pikachu",
+    "description": "Empezá tus mañanas tomándote un rico matecito con este Pikachu!",
+    "color": "painted",
     "size": "small",
-    "price": 12,
-    "sku": 5,
-    "image": "logo4.png"
+    "price": 666,
+    "sku": 4,
+    "image": "pokemonmate.png"
   },
   {
-    "name": "Constructor",
-    "description": "Imagen modificada por cat Yoda",
-    "color": "green",
-    "size": "big",
-    "price": 456,
-    "sku": 6,
-    "image": "imageOfCreatedProduct-1661707920314-619593254.png"
+    "name": "Portalápiz Darth Vader",
+    "description": "La fuerza estará contigo si tenés a Darth Vader en tu escritorio.",
+    "color": "painted",
+    "size": "small",
+    "price": 405,
+    "sku": 5,
+    "image": "swpenholder.png"
   }
 ]

@@ -23,5 +23,6 @@ app.use(method("m"));
 app.get("/", (req, res) => {
   res.render("index");
 });
+
 app.use(require("./routes/productsRoutes"));
 app.use(require("./routes/usersRoutes"));
