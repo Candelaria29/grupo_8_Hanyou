@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const route = Router();
 const {
+  home,
   index,
   show,
   create,
@@ -34,6 +35,7 @@ const upload = multer({
   storage: multer.diskStorage({ destination, filename }),
 });
 
+route.get ("/", home);
 // READ:
 // List de productos:
 route.get("/productos", index);

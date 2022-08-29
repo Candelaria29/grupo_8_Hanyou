@@ -25,7 +25,7 @@ let model = {
     product.price = parseInt(data.price);
     product.sku = skuGenerator();
     product.image = data.image;
-    product.index;
+    product.index = data.index;
     return product;
   },
   write: function (data) {

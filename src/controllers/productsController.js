@@ -3,6 +3,12 @@ const { unlinkSync } = require("fs");
 const { resolve } = require("path");
 
 const controller = {
+  //esta funcion filtra los productos destacados para mostrarlos en el index
+  home: (req, res) => {
+    let products= all();
+    let indexProducts = products.filter(product => product.index == true)
+    res.render("index", {indexProducts});
+  },
   index: (req, res) => {
     let products = all();
     return res.render("products/productList", { products });
