@@ -7,17 +7,17 @@
     "price": 2500,
     "sku": 1,
     "image": "babyyodafernet.png",
-    "index": true
+    "index": "true"
   },
   {
     "name": "Set de macetas Pokemón",
-    "description": "Combiná tu amor por las plantas y Pokemón con este set de macetas de Bulbasaur y Oddish.",
+    "description": "Combiná tu amor por las plantas y Pokemón con este set de macetas de Bulbasaur y Oddish.  ",
     "color": "painted",
     "size": "small",
     "price": 3560,
     "sku": 2,
     "image": "macetaspokemon.png",
-    "index": true
+    "index": "true"
   },
   {
     "name": "Capitán América",
@@ -27,7 +27,7 @@
     "price": 30003,
     "sku": 3,
     "image": "capamerica.png",
-    "index": true
+    "index": "true"
   },
   {
     "name": "Mate Pikachu",
@@ -37,16 +37,16 @@
     "price": 666,
     "sku": 4,
     "image": "pokemonmate.png",
-    "index": false
+    "index": "false"
   },
   {
     "name": "Portalápiz Darth Vader",
-    "description": "La fuerza estará contigo si tenés a Darth Vader en tu escritorio.",
+    "description": "La fuerza estará contigo si tenés a Darth Vader en tu escritorio.  ",
     "color": "painted",
     "size": "small",
     "price": 405,
     "sku": 5,
     "image": "swpenholder.png",
-    "index": false
+    "index": "false"
   }
 ]
