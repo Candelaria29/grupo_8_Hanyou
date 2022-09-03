@@ -86,7 +86,7 @@ button:hover {
 }
 
 #seguirComprando {
-  width: 50%;
+  width: 90%;
   padding: 10px;
   color: white;
   background-color: #645eff;
@@ -191,7 +191,7 @@ button:hover {
   }
 
   #seguirComprando {
-    width: 50%;
+    width: 90%;
     padding: 10px;
     background-color: #645eff;
     border: solid 1px #645eff;
