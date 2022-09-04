@@ -35,7 +35,7 @@ const upload = multer({
   storage: multer.diskStorage({ destination, filename }),
 });
 
-route.get ("/", home);
+route.get("/", home);
 // READ:
 // List de productos:
 route.get("/productos", index);

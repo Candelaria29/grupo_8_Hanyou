@@ -10,6 +10,22 @@ let model = {
   one: function (id) {
     model.index().find((e) => e.id == id);
   },
+  generate: function (data) {
+    let all = model.index();
+    const idGenerator = function () {
+      let lastId = all.pop().id;
+      return lastId + 1;
+    };
+    let user = {};
+    user.firstName = data.name;
+    user.lastName = data.apellido;
+    user.email = data.email;
+    user.password = data.password;
+    user.avatar = "/img/users/logo4.png";
+    user.type = "client";
+    user.id = idGenerator();
+    return user;
+  },
   write: function (data) {
     let file = resolve(__dirname, "../data", "users.json");
     let json = JSON.stringify(data, null, 2);

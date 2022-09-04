@@ -1,7 +1,41 @@
 const { Router } = require("express");
 const route = Router();
+const {
+  login,
+  register,
+  profile,
+  save,
+  access,
+} = require("../controllers/usersController");
+const { resolve, extname } = require("path");
+const { existsSync, mkdirSync } = require("fs");
 
-route.get("/register", (req, res) => res.render("users/register"));
-route.get("/login", (req, res) => res.render("users/login"));
+const destination = function (req, file, cb) {
+  let folder = resolve(__dirname, "..", "..", "public", "img", "users");
+  if (!existsSync(folder)) {
+    mkdirSync(folder);
+  }
+  return cb(null, folder);
+};
+
+const filename = function (req, file, cb) {
+  let unique = Date.now() + "-" + Math.round(Math.random() * 1e9);
+  let name = file.fieldname + "-" + unique + extname(file.originalname);
+  return cb(null, name);
+};
+
+const multer = require("multer");
+const { diskStorage } = require("multer");
+
+const upload = multer({
+  storage: diskStorage({ destination, filename }),
+});
+
+route.get("/register", register);
+route.get("/login", login);
+// route.get("/profile", profile);
+
+// route.post("/save", upload.any(), save);
+// route.post("/access", access);
 
 module.exports = route;
