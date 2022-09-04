@@ -1,4 +1,5 @@
 const express = require("express");
+const session = require("express-session");
 const app = express();
 const method = require("method-override");
 const { resolve } = require("path");
@@ -19,6 +20,14 @@ app.set("views", resolve(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(method("m"));
+
+app.use(
+  session({
+    secret: "hanyou",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 
 /* //Ruta main;
 app.get("/", (req, res) => {
