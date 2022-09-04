@@ -5,7 +5,8 @@
     "email": "jperez@gmail.com",
     "password": 1234,
     "avatar": "default.png",
-    "type": "admin"
+    "type": "admin",
+    "id": 1
   },
   {
     "firstName": "Carlos",
@@ -13,7 +14,8 @@
     "email": "carlitos@gmail.com",
     "password": 34325,
     "avatar": "default.png",
-    "type": "client"
+    "type": "client",
+    "id": 2
   },
   {
     "firstName": "Esteban",
@@ -21,7 +23,8 @@
     "email": "banquito@hotmail.com",
     "password": 213123,
     "avatar": "default.png",
-    "type": "client"
+    "type": "client",
+    "id": 3
   },
   {
     "firstName": "Eduardo",
@@ -29,6 +32,7 @@
     "email": "hernandez_eduardo@yahoo.com",
     "password": 587867,
     "avatar": "default.png",
-    "type": "client"
+    "type": "client",
+    "id": 4
   }
 ]
