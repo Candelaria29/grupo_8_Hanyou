@@ -16,4 +16,15 @@ module.exports = {
     write(todos);
     return res.redirect("/");
   },
+  access: (req, res) => {
+    let allUsers = index();
+    if (
+      (req.body.userName = req.session.user) &&
+      (req.body.password = req.session.user)
+    ) {
+      return res.redirect("/");
+    }
+    message = "Credenciales incorrectas";
+    return res.send(message);
+  },
 };
