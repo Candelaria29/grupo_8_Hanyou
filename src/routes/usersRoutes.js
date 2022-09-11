@@ -10,6 +10,8 @@ const {
 } = require("../controllers/usersController");
 const { resolve, extname } = require("path");
 const { existsSync, mkdirSync } = require("fs");
+const isLogged = require("../middlewares/isLogged");
+const notLogged = require("../middlewares/notLogged");
 
 const destination = function (req, file, cb) {
   let folder = resolve(__dirname, "..", "..", "public", "img", "users");
@@ -32,9 +34,9 @@ const upload = multer({
   storage: diskStorage({ destination, filename }),
 });
 
-route.get("/register", register);
-route.get("/login", login);
-// route.get("/profile", profile);
+route.get("/register", [notLogged], register);
+route.get("/login", [notLogged], login);
+// route.get("/profile",[isLogged] profile);
 route.get("/logout", logout);
 
 route.post("/save", upload.any(), save);

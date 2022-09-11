@@ -13,6 +13,7 @@ const {
 const { resolve, extname } = require("path");
 const { existsSync, mkdirSync } = require("fs");
 const path = require("path");
+const isLogged = require("../middlewares/isLogged");
 
 const destination = function (req, file, cb) {
   let folder = resolve(__dirname, "..", "..", "public", "img", "products");
@@ -46,7 +47,7 @@ route.get("/productos", index);
 // para identificar a los productos agregados al carrito:
 
 //vista carrito
-route.get("/productos/productCart", (req, res) =>
+route.get("/productos/productCart", [isLogged], (req, res) =>
   res.render("products/productCart")
 );
 
@@ -55,17 +56,17 @@ route.get("/productos/detalle/:sku", show);
 
 //CREATE:
 //Envio:
-route.get("/productos/crear", create);
+route.get("/productos/crear", [isLogged], create);
 //Creacion:
 route.post("/productos/guardar", upload.any(), save);
 
 //UPDATE:
 //Envio:
-route.get("/productos/editar/:sku", edit);
+route.get("/productos/editar/:sku", [isLogged], edit);
 //Edicion:
 route.put("/productos/actualizar", upload.any(), update);
 
 //DELETE:
 //Borrado:
-route.delete("/productos/eliminar", destroy);
+route.delete("/productos/eliminar", [isLogged], destroy);
 module.exports = route;
