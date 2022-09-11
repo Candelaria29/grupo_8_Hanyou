@@ -4,7 +4,10 @@ const { compareSync } = require("bcrypt");
 module.exports = {
   login: (req, res) => res.render("users/login"),
   register: (req, res) => res.render("users/register"),
-  profile: (req, res) => res.render("users/profile"),
+  profile: (req, res) => {
+    let activeUser = req.session.user;
+    return res.render("users/profile", { activeUser });
+  },
   save: (req, res) => {
     if (req.files && req.files.length > 0) {
       req.body.image = req.files[0].filename;

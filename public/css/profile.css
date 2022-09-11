@@ -1,0 +1,49 @@
+#main-profile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#firstSection-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#avatar {
+  width: 80%;
+  padding: 20px;
+}
+
+#userData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+#nombreUsuario {
+  font-size: 40px;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+#emailUsuario {
+  color: #645eff;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 5px;
+}
+
+@media (min-width: 769px) {
+  #main-profile {
+    flex-direction: row;
+  }
+
+  .sectionProfile {
+    width: 50%;
+  }
+}

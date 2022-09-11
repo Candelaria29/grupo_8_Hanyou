@@ -45,21 +45,12 @@
     "id": 5
   },
   {
-    "firstName": "Nicolás",
+    "firstName": "Nicolino",
     "lastName": "Cilio",
-    "email": "niiicolasagustincilio@gmail.com",
-    "password": "$2b$10$B5XOphPce2NjZ7PZunAM0O8.6sC6tv10Q4qI8R5XE0PbcrFxaADom",
+    "email": "nnnicolasagustincilio@gmail.com",
+    "password": "$2b$10$B0JRUon1WFS1ZhFDLOQ84enINyYPWOq1PDcihaCKdjZfx9er/tdSW",
     "avatar": "/img/users/logo4.png",
     "type": "client",
     "id": 6
-  },
-  {
-    "firstName": "Niccc",
-    "lastName": "Cilio",
-    "email": "nicolasagustincilio@gmail.comm",
-    "password": "$2b$10$mxaPHDQbrvAkttxZfjfeoeLnNySLV0GkGUmyqd4/p4nVQYYENDTju",
-    "avatar": "/img/users/logo4.png",
-    "type": "client",
-    "id": 7
   }
 ]
