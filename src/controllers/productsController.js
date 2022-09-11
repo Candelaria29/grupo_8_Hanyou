@@ -5,9 +5,9 @@ const { resolve } = require("path");
 const controller = {
   //esta funcion filtra los productos destacados para mostrarlos en el index
   home: (req, res) => {
-    let products= all();
-    let indexProducts = products.filter(product => product.index == "true")
-    res.render("index", {indexProducts});
+    let products = all();
+    let indexProducts = products.filter((product) => product.index == "true");
+    res.render("index", { indexProducts });
   },
   index: (req, res) => {
     let products = all();
@@ -53,7 +53,7 @@ const controller = {
         e.price = parseInt(req.body.precio);
         e.image =
           req.files && req.files.length > 0 ? req.files[0].filename : e.image;
-        e.index = req.body.index
+        e.index = req.body.index ? "true" : "false";
       }
       return e;
     });

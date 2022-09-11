@@ -90,7 +90,7 @@
           />
         </section>
         <section id="addIndex">
-          <input type="checkbox" name="index" value= "<%= product.index%>"/> 
+          <input type="checkbox" name="index" <% if (product.index == 'true') {%> checked <%} %>/> 
           <!-- como hacer para que quede tiqueada si el valor es true????? no funciona si quiero que un producto ya creado sea destacado -->
           <label for="index">Agregar a "Productos Destacados"</label>
         </section>
