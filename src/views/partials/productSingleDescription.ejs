@@ -27,6 +27,8 @@
     id="destroyItemForm"
   >
     <input type="hidden" name="sku" value="<%= product.sku%>" />
+    <% if (user) {%>
     <button type="submit" id="destroyButton">Eliminar producto</button>
+    <% } %>
   </form>
 </section>
