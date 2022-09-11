@@ -1,6 +1,6 @@
 const { writeFileSync, readFileSync } = require("fs");
 const { resolve } = require("path");
-const { hashSync, compareSync } = require("bcrypt");
+const { hashSync } = require("bcrypt");
 
 let model = {
   index: function () {

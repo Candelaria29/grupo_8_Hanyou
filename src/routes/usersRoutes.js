@@ -6,6 +6,7 @@ const {
   profile,
   save,
   access,
+  logout,
 } = require("../controllers/usersController");
 const { resolve, extname } = require("path");
 const { existsSync, mkdirSync } = require("fs");
@@ -34,6 +35,7 @@ const upload = multer({
 route.get("/register", register);
 route.get("/login", login);
 // route.get("/profile", profile);
+route.get("/logout", logout);
 
 route.post("/save", upload.any(), save);
 route.post("/access", access);
