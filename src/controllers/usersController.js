@@ -22,12 +22,12 @@ module.exports = {
     let result = allUsers.find((e) => e.email == req.body.userName);
     if (listOfEmails.indexOf(req.body.userName) == -1) {
       errorMessage = "Usuario no encontrado";
-      return res.send(errorMessage);
+      return res.redirect("/login");
     } else if (result.password != req.body.password) {
       newErrorMessage = "Contraseña incorrecta";
-      return res.send(newErrorMessage);
+      return res.redirect("/login");
     }
-    cookieDuration = 10e3;
+    cookieDuration = 60e3;
     res.cookie("user", req.body.userName, { maxAge: cookieDuration });
     req.session.user = allUsers.find((e) => e.email == req.body.userName);
     return res.redirect("/");
