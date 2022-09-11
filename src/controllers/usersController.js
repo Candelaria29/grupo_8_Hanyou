@@ -28,11 +28,11 @@ module.exports = {
       newErrorMessage = "Contraseña incorrecta";
       return res.redirect("/login");
     }
-    //La cookieDuration esta en milesimas:
-    cookieDuration = 1e4;
-    //Ver como agregar el opcional de sprint 5, para que solo se guarde una cookie
-    //si el usuario clickea la opcion de recordarlo
-    res.cookie("user", req.body.userName, { maxAge: cookieDuration });
+    //La cookieDuration esta en milesimas (ahora dura una hora):
+    cookieDuration = 3.6e6;
+    if (req.body.remember) {
+      res.cookie("user", req.body.userName, { maxAge: cookieDuration });
+    }
     req.session.user = allUsers.find((e) => e.email == req.body.userName);
     return res.redirect("/");
   },
