@@ -1,4 +1,5 @@
 const { index, one, generate, write } = require("../models/usersModel");
+const { hashSync, compareSync } = require("bcrypt");
 
 module.exports = {
   login: (req, res) => res.render("users/login"),
@@ -28,6 +29,8 @@ module.exports = {
       return res.redirect("/login");
     }
     cookieDuration = 60e3;
+    //Ver como agregar el opcional de sprint 5, para que solo se guarde una cookie
+    //si el usuario clickea la opcion de recordarlo
     res.cookie("user", req.body.userName, { maxAge: cookieDuration });
     req.session.user = allUsers.find((e) => e.email == req.body.userName);
     return res.redirect("/");

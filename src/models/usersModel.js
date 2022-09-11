@@ -1,5 +1,6 @@
 const { writeFileSync, readFileSync } = require("fs");
 const { resolve } = require("path");
+const { hashSync, compareSync } = require("bcrypt");
 
 let model = {
   index: function () {
@@ -20,7 +21,7 @@ let model = {
     user.firstName = data.nombre;
     user.lastName = data.apellido;
     user.email = data.email;
-    user.password = data.password;
+    user.password = hashSync(data.password, 10);
     user.avatar = "/img/users/logo4.png";
     user.type = "client";
     user.id = idGenerator();

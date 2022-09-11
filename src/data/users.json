@@ -43,5 +43,32 @@
     "avatar": "/img/users/logo4.png",
     "type": "client",
     "id": 5
+  },
+  {
+    "firstName": "Nicoláso",
+    "lastName": "Cilio",
+    "email": "nicolasagusstincilio@gmail.com",
+    "password": "1234",
+    "avatar": "/img/users/logo4.png",
+    "type": "client",
+    "id": 6
+  },
+  {
+    "firstName": "Nicoooo",
+    "lastName": "Cilio",
+    "email": "nicolasagustincilionn@gmail.com",
+    "password": "$2b$10$zangjPtODih7b7pgiUkVx.puM70CRPff/yqATF05S8lGRkEmA06LC",
+    "avatar": "/img/users/logo4.png",
+    "type": "client",
+    "id": 7
+  },
+  {
+    "firstName": "Niko",
+    "lastName": "Cilio",
+    "email": "nnnnnicolasagustincilio@gmail.com",
+    "password": "$2b$10$q2xn27B3B/umojmw9Ey.rOSPyxE3NfCMvA5zyJCDc4eq7zJ0pvKE2",
+    "avatar": "/img/users/logo4.png",
+    "type": "client",
+    "id": 8
   }
 ]
