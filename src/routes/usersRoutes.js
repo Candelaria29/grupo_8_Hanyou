@@ -35,7 +35,7 @@ route.get("/register", register);
 route.get("/login", login);
 // route.get("/profile", profile);
 
-// route.post("/save", upload.any(), save);
+route.post("/save", upload.any(), save);
 route.post("/access", access);
 
 module.exports = route;

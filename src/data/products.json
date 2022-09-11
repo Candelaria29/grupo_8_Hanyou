@@ -48,5 +48,15 @@
     "sku": 5,
     "image": "swpenholder.png",
     "index": "false"
+  },
+  {
+    "name": "yoda gato",
+    "description": "Yodaaaaa  ",
+    "color": "not painted",
+    "size": "big",
+    "price": 23445,
+    "sku": 6,
+    "image": "imageOfCreatedProduct-1662861757302-758662562.png",
+    "index": ""
   }
 ]

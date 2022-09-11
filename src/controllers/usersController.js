@@ -18,13 +18,18 @@ module.exports = {
   },
   access: (req, res) => {
     let allUsers = index();
-    if (
-      (req.body.userName = req.session.user) &&
-      (req.body.password = req.session.user)
-    ) {
-      return res.redirect("/");
+    let listOfEmails = allUsers.map((e) => e.email);
+    let result = allUsers.find((e) => e.email == req.body.userName);
+    if (listOfEmails.indexOf(req.body.userName) == -1) {
+      errorMessage = "Usuario no encontrado";
+      return res.send(errorMessage);
+    } else if (result.password != req.body.password) {
+      newErrorMessage = "Contraseña incorrecta";
+      return res.send(newErrorMessage);
     }
-    message = "Credenciales incorrectas";
-    return res.send(message);
+    cookieDuration = 10e3;
+    res.cookie("user", req.body.userName, { maxAge: cookieDuration });
+    req.session.user = allUsers.find((e) => e.email == req.body.userName);
+    return res.redirect("/");
   },
 };

@@ -34,5 +34,14 @@
     "avatar": "default.png",
     "type": "client",
     "id": 4
+  },
+  {
+    "firstName": "Nicolás",
+    "lastName": "Cilio",
+    "email": "nicolasagustincilio@gmail.com",
+    "password": "123",
+    "avatar": "/img/users/logo4.png",
+    "type": "client",
+    "id": 5
   }
 ]

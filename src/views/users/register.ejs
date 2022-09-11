@@ -9,7 +9,7 @@
     <%- include('../partials/header') %>
 
     <main id="registerBox">
-      <form action="/" method="POST" id="formularioDeRegistro">
+      <form action="/save" method="POST" id="formularioDeRegistro">
         <!--Campos completables-->
         <section id="nombreCompleto">
           <input
@@ -43,7 +43,7 @@
         />
         <input
           type="password"
-          name="password"
+          name="passwordConf"
           id="confirmPassword"
           placeholder="Confirmá tu contraseña"
           class="campos"

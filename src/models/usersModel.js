@@ -17,7 +17,7 @@ let model = {
       return lastId + 1;
     };
     let user = {};
-    user.firstName = data.name;
+    user.firstName = data.nombre;
     user.lastName = data.apellido;
     user.email = data.email;
     user.password = data.password;
