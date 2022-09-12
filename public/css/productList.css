@@ -4,7 +4,7 @@
 
 main {
   background-color: #4b4a4a;
-  padding-bottom: 10px;
+  padding: 10px 0px;
 }
 
 #mainBanner {
@@ -27,8 +27,9 @@ main {
 }
 
 #listTitle {
-  font-size: 45px;
+  font-size: 40px;
   text-align: center;
+  padding: 10px;
 }
 
 #productosIndex {
@@ -85,7 +86,7 @@ main {
 }
 
 .precioIndex {
-  color: #645eff;
+  color: #52a8ff;
   font-weight: 500;
   font-size: 25px;
 }
