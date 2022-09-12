@@ -1,15 +1,6 @@
 @import url("header.css");
 @import url("footer.css");
 
-/* @import url("login.css");
-@import url("productDetail.css");
-@import url("register.css");
-@import url("productCart.css");
-@import url("createNewProduct.css");
-@import url("editProduct.css");
-@import url("productList.css"); */
-@import url("profile.css");
-
 * {
   box-sizing: border-box;
   margin: 0px;
