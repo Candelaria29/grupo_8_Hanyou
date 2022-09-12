@@ -8,8 +8,8 @@ let model = {
     let data = readFileSync(file);
     return JSON.parse(data);
   },
-  one: function (id) {
-    model.index().find((e) => e.id == id);
+  one: function (data) {
+    model.index().find((e) => e.data == data);
   },
   generate: function (data) {
     let all = model.index();

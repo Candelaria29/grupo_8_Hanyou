@@ -36,7 +36,7 @@ const upload = multer({
 
 route.get("/register", [notLogged], register);
 route.get("/login", [notLogged], login);
-// route.get("/profile",[isLogged] profile);
+route.get("/profile", [isLogged], profile);
 route.get("/logout", logout);
 
 route.post("/save", upload.any(), save);

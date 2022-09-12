@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hanyou - Editar Producto</title>
+    <%- include('../partials/head') %>
+  </head>
+
+  <body>
+    <%- include('../partials/header') %>
+
+    <main id="main-profile">
+      <section id="firstSection-profile" class="sectionProfile">
+        <img src="/img/users/logo4.png " alt="Producto" id="avatar" />
+      </section>
+      <section class="sectionProfile">
+        <nav id="userData">
+          <p id="nombreUsuario">
+            Hola <%= `${activeUser.firstName} ${activeUser.lastName}` %>
+          </p>
+          <p id="emailUsuario">Email registrado: <%= activeUser.email %></p>
+        </nav>
+      </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+  </body>
+</html>
