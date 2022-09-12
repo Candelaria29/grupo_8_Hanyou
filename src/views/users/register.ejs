@@ -1,76 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hanyou - Creá tu cuenta</title>
-    <%- include('../partials/head') %>
-  </head>
 
-  <body>
-    <%- include('../partials/header') %>
+<head>
+  <title>Hanyou - Creá tu cuenta</title>
+  <link rel="stylesheet" href="/css/register.css" />
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <%- include('../partials/header') %>
 
     <main id="registerBox">
-      <form action="/save" method="POST" id="formularioDeRegistro">
+      <form action="/save" method="POST" enctype="multipart/form-data" id="formularioDeRegistro">
         <!--Campos completables-->
         <section id="nombreCompleto">
-          <input
-            type="text"
-            name="nombre"
-            id="nombre"
-            placeholder="Nombre"
-            class="campos"
-          />
-          <input
-            type="text"
-            name="apellido"
-            id="apellido"
-            placeholder="Apellido"
-            class="campos"
-          />
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="campos" />
+          <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="campos" />
         </section>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Correo electrónico"
-          class="campos"
-        />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Creá tu contraseña"
-          class="campos"
-        />
-        <input
-          type="password"
-          name="passwordConf"
-          id="confirmPassword"
-          placeholder="Confirmá tu contraseña"
-          class="campos"
-        />
+        <input type = "file" name="imagenUsuario" id="imagenUsuario">
+        <label for="imagenUsuario" id="addAvatar">Cargar foto de perfil</label>
+        <input type="email" name="email" id="email" placeholder="Correo electrónico" class="campos"/>
+        <input type="password" name="password" id="password" placeholder="Creá tu contraseña" class="campos" />
+        <input type="password" name="passwordConf" id="confirmPassword" placeholder="Confirmá tu contraseña"
+          class="campos" />
         <section id="terminosYCondiciones">
-          <input
-            type="checkbox"
-            name="terms"
-            id="terms"
-            value="terminos"
-            class="terms"
-            required
-          />
-          <label for="terms" id="terminos"
-            >Acepto términos de servicio y privacidad</label
-          >
+          <input type="checkbox" name="terms" id="terms" value="terminos" class="terms" required />
+          <label for="terms" id="terminos">Acepto términos de servicio y privacidad</label>
         </section>
 
         <!--Creá tu cuenta o iniciá sesión-->
         <section id="botonesRegistro">
           <button class="button">Crear cuenta</button>
           <p id="cuentaExistente">¿Ya tenés una cuenta?</p>
-          <a href="/register" id="buttonRegister"><div>Iniciá sesión</div></a>
+          <a href="/register" id="buttonRegister">
+            <div>Iniciá sesión</div>
+          </a>
         </section>
       </form>
     </main>
 
     <%- include('../partials/footer') %>
-  </body>
+</body>
+
 </html>

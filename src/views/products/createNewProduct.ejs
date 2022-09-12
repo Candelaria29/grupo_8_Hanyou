@@ -3,6 +3,7 @@
 
 <head>
   <title>Hanyou - Crear Producto</title>
+  <link rel="stylesheet" href="/css/createNewProduct.css"/>
   <%- include('../partials/head') %>
 </head>
 
@@ -11,11 +12,13 @@
     <main id="createNewProductMain">
       <form action="/productos/guardar" method="post" enctype="multipart/form-data" id="createNewProductForm">
         <h1 class="createNewProductTitles">Creación de productos</h1>
+        
         <input type="file" name="image" id="createNewProductDesign" style="display: none" accept=".jpg, .png" multiple
           required />
         <label for="createNewProductDesign" class="c_eButton" id="filesButton">Cargar boceto del diseño</label>
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
         <label for="img">Click me to upload image</label> -->
+        
         <!-- Nombre del producto -->
         <input type="text" name="name" id="createNewProductName" placeholder="Nombre del producto"
           class="createNewProductCampos" required />
