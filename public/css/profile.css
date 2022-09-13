@@ -1,4 +1,4 @@
-@import url("main.css"); 
+@import url("main.css");
 
 #main-profile {
   display: flex;
@@ -33,7 +33,7 @@
   padding: 5px;
 }
 
-#emailUsuario {
+.detalleUsuario {
   color: #645eff;
   font-weight: 500;
   font-size: 30px;

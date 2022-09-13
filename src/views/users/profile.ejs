@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Hanyou - Mi perfil</title>
-    <link rel="stylesheet" href="/css/profile.css"/>
+    <link rel="stylesheet" href="/css/profile.css" />
     <%- include('../partials/head') %>
   </head>
 
@@ -11,14 +11,23 @@
 
     <main id="main-profile">
       <section id="firstSection-profile" class="sectionProfile">
-        <img src="/img/users/<%= activeUser.avatar %> " alt="Producto" id="avatar" />
+        <img
+          src="/img/users/<%= activeUser.avatar %> "
+          alt="Producto"
+          id="avatar"
+        />
       </section>
       <section class="sectionProfile">
         <nav id="userData">
           <p id="nombreUsuario">
             Hola <%= `${activeUser.firstName} ${activeUser.lastName}` %>
           </p>
-          <p id="emailUsuario">Email registrado: <%= activeUser.email %></p>
+          <p class="detalleUsuario">
+            Email registrado: <%= activeUser.email %>
+          </p>
+          <% if (user.adminType) {%>
+          <p class="detalleUsuario">Perfil administrador</p>
+          <% } %>
         </nav>
       </section>
     </main>
