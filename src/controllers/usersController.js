@@ -10,15 +10,15 @@ module.exports = {
   },
   save: (req, res) => {
     if (req.files && req.files.length > 0) {
-      req.body.image = req.files[0].filename;
+      req.body.imagenUsuario = req.files[0].filename;
     } else {
-      req.body.image = "/img/users/logo4.png";
+      req.body.imagenUsuario = "default.png";
     }
     let nuevoUsuario = generate(req.body);
     let todos = index();
     todos.push(nuevoUsuario);
     write(todos);
-    return res.redirect("/");
+    return res.redirect("/profile");
   },
   access: (req, res) => {
     let allUsers = index();

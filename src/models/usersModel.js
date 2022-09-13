@@ -22,7 +22,7 @@ let model = {
     user.lastName = data.apellido;
     user.email = data.email;
     user.password = hashSync(data.password, 10);
-    user.avatar = "/img/users/logo4.png";
+    user.avatar = data.imagenUsuario;
     user.type = "client";
     user.id = idGenerator();
     return user;

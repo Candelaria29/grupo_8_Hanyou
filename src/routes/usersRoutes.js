@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const route = Router();
+//metodos del controlador
 const {
   login,
   register,
@@ -13,6 +14,7 @@ const { existsSync, mkdirSync } = require("fs");
 const isLogged = require("../middlewares/isLogged");
 const notLogged = require("../middlewares/notLogged");
 
+//config multer
 const destination = function (req, file, cb) {
   let folder = resolve(__dirname, "..", "..", "public", "img", "users");
   if (!existsSync(folder)) {
