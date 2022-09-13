@@ -150,5 +150,14 @@
     "avatar": "imagenUsuario-1663097509034-28147688.png",
     "type": "client",
     "id": 17
+  },
+  {
+    "firstName": "Ahora ",
+    "lastName": "Si",
+    "email": "ahorasi@gmail.com",
+    "password": "$2b$10$2YLmesingduDznJVVl28O.HMzv2xc14HyPe0.qpx/t9PljuTgGf/y",
+    "avatar": "default.png",
+    "type": "client",
+    "id": 18
   }
 ]
