@@ -14,6 +14,7 @@ const { resolve, extname } = require("path");
 const { existsSync, mkdirSync } = require("fs");
 const path = require("path");
 const isLogged = require("../middlewares/isLogged");
+const isAdmin = require("../middlewares/isAdmin");
 
 const destination = function (req, file, cb) {
   let folder = resolve(__dirname, "..", "..", "public", "img", "products");
@@ -47,7 +48,7 @@ route.get("/productos", index);
 // para identificar a los productos agregados al carrito:
 
 //vista carrito
-route.get("/productos/productCart", [isLogged], (req, res) =>
+route.get("/productos/productCart", [isAdmin], (req, res) =>
   res.render("products/productCart")
 );
 

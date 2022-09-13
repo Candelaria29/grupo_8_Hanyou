@@ -36,128 +36,21 @@
     "id": 4
   },
   {
-    "firstName": "Nicolás",
+    "firstName": "Nicol",
     "lastName": "Cilio",
-    "email": "nicolasagustincilio@gmail.com",
-    "password": "123",
-    "avatar": "default.png",
-    "type": "client",
+    "email": "nicolas.cilio95@gmail.com",
+    "password": "$2b$10$/ob8kTK5QgbRkEr.LFvs.ey6m4tqyuLqTW8K5VIqU/mf4O7gVFVk6",
+    "avatar": "imagenUsuario-1663110312898-640650027.png",
+    "adminType": false,
     "id": 5
   },
   {
-    "firstName": "Nicolino",
+    "firstName": "Nicolás",
     "lastName": "Cilio",
-    "email": "nnnicolasagustincilio@gmail.com",
-    "password": "$2b$10$B0JRUon1WFS1ZhFDLOQ84enINyYPWOq1PDcihaCKdjZfx9er/tdSW",
+    "email": "nicolasagustincilio@gmail.com",
+    "password": "$2b$10$3IB9QTvmvVGgVpG7oU5zJeNNNoeVceJ44xvKIUc1TCVpSHtWFmn5O",
     "avatar": "default.png",
-    "type": "client",
+    "adminType": true,
     "id": 6
-  },
-  {
-    "firstName": "Cande",
-    "lastName": "Barrios",
-    "email": "candelariabarrios@hotmail.com",
-    "password": "$2b$10$xyGKiio0txR8QAFwB4C4yOQNX1H/GcfUBa4qKJc2ySx9z8Nr8IXk2",
-    "avatar": "default.png",
-    "type": "client",
-    "id": 7
-  },
-  {
-    "firstName": "Juana",
-    "lastName": "Perez",
-    "email": "juanajuana@hotmail.com",
-    "password": "default.png",
-    "type": "client",
-    "id": 8
-  },
-  {
-    "firstName": "prueba ",
-    "lastName": "prueba",
-    "email": "probando@hotmail.com",
-    "password": "$2b$10$Iu/M/603BR8SdLOIL01eT.Z95moCX0OHkcp.K6jyPHNGVmHiiXKRm",
-    "avatar": "default.png",
-    "type": "client",
-    "id": 9
-  },
-  {
-    "firstName": "Maria Candelaria",
-    "lastName": "Barrios",
-    "email": "candelaria831@gmail.com",
-    "password": "$2b$10$P983dOQO1imbaf2bAOt82OX43UmN1izEQ75uRsS4Rrs7wxQAxs2CW",
-    "avatar": "default.png",
-    "type": "client",
-    "id": 10
-  },
-  {
-    "firstName": "probando",
-    "lastName": "pt3",
-    "email": "candelariabarrios@hotmail.com",
-    "password": "$2b$10$etOmLshCYICO3QL5H6YjiOAv3u7/5zxXauWn7nOukyNw5ByHl3WOW",
-    "avatar": "/img/users/default.png",
-    "type": "client",
-    "id": 11
-  },
-  {
-    "firstName": "prueba parte",
-    "lastName": "mil",
-    "email": "prueba1000@gmail.com",
-    "password": "$2b$10$Qjpa11vQZPng5YrOTzWvmO2hNL/nhnZmhK8F2hxPjTK9zxOYg2Uzy",
-    "avatar": "default.png",
-    "type": "client",
-    "id": 12
-  },
-  {
-    "firstName": "prueba parte",
-    "lastName": "2000",
-    "email": "prueba2000@gmail.com",
-    "password": "$2b$10$AZHlDnKvLaXriG2M2TKdBOtSWGC3p7D4RX7/S9v.3ZcAKlvzkiZ7K",
-    "avatar": "default.png",
-    "type": "client",
-    "id": 13
-  },
-  {
-    "firstName": "prueba 3",
-    "lastName": "si",
-    "email": "prueba3@gmail.com",
-    "password": "$2b$10$ARa4xQtdgdpaEDTXpjVUju1wzT/T.1z3NiqL8q8KJPHM8e5HivHSu",
-    "avatar": "default.png",
-    "type": "client",
-    "id": 14
-  },
-  {
-    "firstName": "prueba 4",
-    "lastName": "Barrios",
-    "email": "juana@sisi.com",
-    "password": "$2b$10$i/NL1sqEdgqLUIK4m54aNuRLEHYm/I4OAH.1r9qRiZQJRb5a.cKcO",
-    "avatar": "/img/users/default.png",
-    "type": "client",
-    "id": 15
-  },
-  {
-    "firstName": "prueba 5",
-    "lastName": "sisi",
-    "email": "prueba5@prueba.com",
-    "password": "$2b$10$P9MMAHA8JNjKiLYenAqm/e3OTtmSxas0Eiqc5xJn3FK6LuXpYtGDK",
-    "avatar": "default.png",
-    "type": "client",
-    "id": 16
-  },
-  {
-    "firstName": "prueba ",
-    "lastName": "6",
-    "email": "prueba6@gmail.com",
-    "password": "$2b$10$lF5DsUvdv8F8BQkSkgM4k.xf2aA5BANsYAaAGnGW95gEyb2vhRHtu",
-    "avatar": "imagenUsuario-1663097509034-28147688.png",
-    "type": "client",
-    "id": 17
-  },
-  {
-    "firstName": "Ahora ",
-    "lastName": "Si",
-    "email": "ahorasi@gmail.com",
-    "password": "$2b$10$2YLmesingduDznJVVl28O.HMzv2xc14HyPe0.qpx/t9PljuTgGf/y",
-    "avatar": "default.png",
-    "type": "client",
-    "id": 18
   }
 ]
