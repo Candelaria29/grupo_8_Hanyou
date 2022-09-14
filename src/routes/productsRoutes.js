@@ -42,11 +42,6 @@ route.get("/", home);
 // List de productos:
 route.get("/productos", index);
 
-//El de abajo, seria un read de algunos, ni todos ni uno sólo, si no los enviados al carrito.
-//Seria muy similar al one del model, pero en lugar de usar un find, se podria usar un filter.
-// Por otro lado, podriamos agregarle al json un campo con valor boolean
-// para identificar a los productos agregados al carrito:
-
 //vista carrito
 route.get("/productos/productCart", [isAdmin], (req, res) =>
   res.render("products/productCart")

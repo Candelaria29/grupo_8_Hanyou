@@ -7,10 +7,10 @@
   </head>
   <body>
     <%- include('../partials/header') %>
-    <main id="createNewProductMain">
-      <form action="/productos/actualizar?m=PUT" method="post" enctype = "multipart/form-data" id="createNewProductForm">
+    <main id="editProductMain">
+      <form action="/productos/actualizar?m=PUT" method="post" enctype = "multipart/form-data" id="editProductForm">
         <input type = "hidden" name = "sku" value = <%= product.sku%>>
-        <h1 class="createNewProductTitles">Edición de productos</h1>
+        <h1 id="editProductTitles">Edición de productos</h1>
         <input
           type="file"
           name="imageOfCreatedProduct"
@@ -20,7 +20,7 @@
           multiple
 
         />
-        <label for="createNewProductDesign" class="c_eButton" id="filesButton"
+        <label for="createNewProductDesign" class="eButton" id="editFilesButton"
           >Modificar boceto del diseño</label
         >
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
@@ -32,7 +32,7 @@
           id="createNewProductName"
           value="<%= product.name%>"
           placeholder="Nuevo nombre del producto"
-          class="createNewProductCampos"
+          class = "editProductCampos"
           required
         />
         <!-- Descripción  -->
@@ -42,22 +42,22 @@
           id="c_eDescripcion"
           placeholder="Nueva descripción del producto"
           maxlength="280"
-          class="createNewProductCampos"
+          class = "editProductCampos"
           required
         ><%= product.description %> </textarea>
         <!-- Imagen -->
         <!-- Características -->
-        <section id="caracteristicasProductoCreado">
-          <h2 class="createNewProductTitles">
+        <section id="caracteristicasProductoEdit">
+          <h2 id="editProductSubtitles">
             Modificar características del producto
           </h2>
           <!-- Colores -->
           <div id="characteristicArticles">
-            <article class="createNewProductcharacteristic">
-              <label class="createNewProductSubtitles"
+            <article id="editProductcharacteristic">
+              <label class="editProductSubtitles"
                 >Modifique el color</label
               >
-              <select name="color" class="c_eButton" required>
+              <select name="color" class="eButton" required>
                 <!-- MODIFICAR LOS VALUE POR EL COLOR EN TEXTO -->
                 <option value="painted"<% if (product.color == 'painted') {%>selected<%}%> >Pintado</option>
                 <option value="not painted"<% if (product.color == 'not painted') {%>selected<%}%>>No pintado</option>
@@ -65,11 +65,11 @@
               </select>
             </article>
             <!-- Tamaños -->
-            <article class="createNewProductcharacteristic">
-              <label class="createNewProductSubtitles"
+            <article id="editProductcharacteristic">
+              <label class="editProductSubtitles"
                 >Modifique la medida</label
               >
-              <select name="medida" class="c_eButton" required>
+              <select name="medida" class="eButton" required>
                 <option value="small" <% if (product.size == 'small') {%>selected <% }%>>Pequeño</option>
 
                 <option value="big"<% if (product.size == 'big') {%>selected <% }%>>Grande</option>
@@ -78,15 +78,14 @@
           </div>
         </section>
         <!-- Precio -->
-        <section id="precioProductoCreado">
-          <p>$</p>
+        <section id="precioProductoEdit">
           <input
             type="number"
             name="precio"
-            id="createNewProductPrice"
-            value="<%= product.price%>"
+            id="editProductPrice"
+            value="$<%= product.price%>"
             placeholder="Nuevo precio"
-            class="createNewProductCampos"
+            class = "editProductCampos"
             required
           />
         </section>
@@ -95,9 +94,9 @@
           <!-- como hacer para que quede tiqueada si el valor es true????? no funciona si quiero que un producto ya creado sea destacado -->
           <label for="index">Agregar a "Productos Destacados"</label>
         </section>
-        <section id="botonProductoCreado">
-          <button type="submit" class="c_eButton">Guardar cambios</button>
-          <button type="reset" class="c_eButton">Reiniciar formulario</button>
+        <section id="botonProductoEdit">
+          <button type="submit" class="eButton">Guardar cambios</button>
+          <button type="reset" class="eButton">Reiniciar formulario</button>
         </section>
       </form>
     </main>

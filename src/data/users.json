@@ -52,5 +52,14 @@
     "avatar": "default.png",
     "adminType": true,
     "id": 6
+  },
+  {
+    "firstName": "Maria Candelaria",
+    "lastName": "Barrios",
+    "email": "candelariabarrios@hotmail.com",
+    "password": "$2b$10$D4h7Fni6fMEoNUkNiSNGGe.xMI8GbGJr1RzgiSfgyVbXOmQweg0nW",
+    "avatar": "default.png",
+    "adminType": true,
+    "id": 7
   }
 ]

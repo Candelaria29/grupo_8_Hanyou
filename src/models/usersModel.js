@@ -24,7 +24,7 @@ let model = {
     user.password = hashSync(data.password, 10);
     user.avatar = data.imagenUsuario;
     let mailOwners = data.email.split("@");
-    let adminMails = ["nicolasagustincilio"];
+    let adminMails = ["nicolasagustincilio", "candelariabarrios"];
     user.adminType = adminMails.indexOf(mailOwners[0]) != -1 ? true : false;
     user.id = idGenerator();
     return user;

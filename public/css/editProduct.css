@@ -1,6 +1,12 @@
 @import url("main.css");
  
-/*#createNewProductMain*/
+#createNewProductTitles {
+  font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
 #editProductMain {
   display: flex;
   justify-content: center;
@@ -8,7 +14,6 @@
   background-color: #424242;
 }
 
-/*#createNewProductForm*/
 #editProductForm {
   display: flex;
   flex-direction: column;
@@ -20,13 +25,10 @@
   border-radius: 20px;
   width: 90%;
   background-color: #323232;
+  box-shadow: 0px 0px 20px #424242;
+  align-items: center;
 }
 
-/*#createNewProductForm*/
-#editProductForm {
-  box-shadow: 0px 0px 20px #424242;
-}
-/*#createNewProductForm*/
 #editProductForm:hover {
   box-shadow: 0px 0px 20px rgb(9, 21, 244);
 }
@@ -35,17 +37,7 @@
 #editFilesButton {
   margin: auto;
   text-align: center;
-}
-
-#c_eDescripcion {
-  max-width: 100%;
-  min-width: 100%;
-  max-height: 200px;
-  min-height: 50px;
-}
-
-/*c_eButton*/
-.eButton {
+  align-self: center;
   font-size: 14px;
   margin-left: 30px;
   margin-right: 30px;
@@ -56,7 +48,25 @@
   transition: all 450ms;
 }
 
-/*createNewProductCampos*/
+#c_eDescripcion {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 200px;
+  min-height: 50px;
+}
+
+.eButton {
+  font-size: 14px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 10px;
+  border: solid 1px #645eff;
+  background-color: #645eff;
+  padding: 10px;
+  margin: 10px;
+  transition: all 450ms;
+}
+
 .editProductCampos {
   padding: 10px;
   border-radius: 20px;
@@ -66,87 +76,86 @@
   color: #645eff;
 }
 
-/*caracteristicasProductoCreado*/
 #caracteristicasProductoEdit {
   display: flex;
   flex-direction: column;
 }
 
-/*createNewProductcharacteristic*/
-.editProductcharacteristic {
+#editProductcharacteristic {
   text-align: center;
+  align-self: center;
+  padding: 10px;
 }
 
-/*precioProductoCreado*/
-#precioProductoEdit {
+/* #precioProductoEdit {
   margin: 10px;
   display: flex;
   position: relative;
-}
-
-/*precioProductoCreado*/
+} */
+/* 
 #precioProductoEdit p {
   color: grey;
   position: absolute;
   top: 20px;
   left: 10px;
   font-size: 0.9rem;
-}
+} */
 
-/*createNewProductPrice*/
+#editProductTitles {
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+  align-self: center;
+}
 #editProductPrice {
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
+  width: 95%;
   padding-left: 18px;
 }
 
-/*botonProductoCreado*/
 #botonProductoEdit {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  padding: 15px;
 }
 
-/*botonProductoCreado*/
-#botonProductoEdit button,
-/*createNewProductcharacteristic*/
+/* #botonProductoEdit button,
 .editProductcharacteristic select {
   margin-bottom: 15px;
-}
+} */
 
-/*botonProductoCreado*/
 #botonProductoEdit button,
-/*filesButton*/
 #editFilesButton {
   width: 30vw;
 }
 
-/*filesButton*/
 #editFilesButton {
   margin-bottom: 10px;
 }
-/*filesButton*/
+
 #editFilesButton:hover,
-/*createNewProductcharacteristic*/
 .editProductcharacteristic select:hover {
   background-color: #52a8ff;
   border: solid 1px #52a8ff;
 }
 
-/*createNewProductTitles*/
-.editProductTitles {
-  font-size: 1.2rem;
+#editProductSubtitles {
+  font-size: 16px;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   text-transform: uppercase;
+  align-self: center;
 }
 
-/*createNewProductSubtitles*/
 .editProductSubtitles {
   font-size: 1rem;
   text-align: justify;
+}
+
+#addIndex {
+  align-self: center;
 }
 
 @media (min-width: 481px) {
