@@ -41,6 +41,20 @@
 }
 
 /* css botones viene de la vista de producto */
+.lButton {
+  padding: 10px;
+  background-color: #645eff;
+  border: solid 1px #645eff;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 20px;
+  transition: all 450ms;
+}
+
+.lButton:hover {
+background-color: #52a8ff;
+  border: solid 1px #52a8ff;
+}
 
 #buttonRegister {
   width: 50%;

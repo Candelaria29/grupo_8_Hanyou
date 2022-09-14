@@ -17,7 +17,7 @@
           <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="campos" />
           <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="campos" />
         </section>
-        <input type = "file" name="imagenUsuario" id="imagenUsuario" accept=".jpg, .png">
+        <input type = "file" name="imagenUsuario" class ="inputFile" id="imagenUsuario" accept=".jpg, .png">
         <label for="imagenUsuario" id="addAvatar">Cargar foto de perfil</label>
         <input type="email" name="email" id="email" placeholder="Correo electrónico" class="campos"/>
         <input type="password" name="password" id="password" placeholder="Creá tu contraseña" class="campos" />
@@ -30,10 +30,10 @@
 
         <!--Creá tu cuenta o iniciá sesión-->
         <section id="botonesRegistro">
-          <button class="button">Crear cuenta</button>
+          <button class="rButton">Crear cuenta</button>
           <p id="cuentaExistente">¿Ya tenés una cuenta?</p>
           <a href="/register" id="buttonRegister">
-            <div>Iniciá sesión</div>
+            <div class ="rButton">Iniciá sesión</div>
           </a>
         </section>
       </form>

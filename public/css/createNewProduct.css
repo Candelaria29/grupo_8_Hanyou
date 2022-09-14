@@ -41,14 +41,17 @@
 }
 
 .c_eButton {
-  font-size: 14px;
-  margin-left: 30px;
-  margin-right: 30px;
-  border-radius: 10px;
-  border: solid 1px #645eff;
-  background-color: #645eff;
-  padding: 10px;
-  transition: all 450ms;
+    margin: auto;
+    text-align: center;
+    align-self: center;
+    font-size: 14px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 10px;
+    border: solid 1px #645eff;
+    background-color: #645eff;
+    padding: 10px;
+    transition: all 450ms;
 }
 
 .createNewProductCampos {
