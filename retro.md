@@ -21,3 +21,16 @@ También podría ser de gran utilidad normalizar los mensajes insertados al mome
 4.**Less of:** Podría ser de gran ayuda dejar de implementar código excesivo, cuando hayan maneras más resumidas de realizar una funcionalidad. Esto está relacionado con el testeo en equipo, ya que muchas veces la misma persona que realizó un bloque de código está convencido de que lo hizo de la manera más eficiente posible, mientras que un observador externo podría aportar un punto de vista más fresco y de esa manera proponer una mejora superadora.
 
 5.**Stop doing:** Deberíamos evitar, en todos los casos, que el mismo integrante que realizó una tarea determinada sea el único que la testee.
+
+- ## Sprint 4. Retrospectiva:
+
+1.**Start doing:** Deberíamos dividirnos las tareas apenas se lanze el sprint, de esa forma cada participante puede organizar su tiempo y realizar sus tareas en los momentos en los que le resulte posible.
+
+2.**More of:** Fuimos mejorando la comunicación entre nosotros, pero creemos que esto podría seguir mejorando aún más. Podríamos comunicarnos más en cuanto a las dificultades de cada uno, tanto en tiempo de dedicación al proyecto como en el entendimiento de las cosas teóricas y su aplicación a este trabajo, a fin de adaptar las tareas a las capacidades de cada uno.
+
+3.**Keep doing:** Seguir mejorando sobre cosas de los sprints anteriores además de cumplir con los obligatorios en cada entrega.
+
+4.**Less of:** Atrasarnos en el contenido de las clases, así no se pierde tiempo durante el sprint viendo temas en vez de poder avanzar en el mismo.
+
+5.**Stop doing:** Deberíamos no tener que apoyarnos en un solo integrante del equipo para aplicar las funcionalidades que debemos hacer.
+
