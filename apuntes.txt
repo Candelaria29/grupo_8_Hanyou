@@ -1,0 +1,18 @@
+USERS
+    "firstName": "Juan", - VARCHAR (200) NOT NULL
+    "lastName": "Perez", - VARCHAR (200) NOT NULL
+    "email": "jperez@gmail.com", VARCHAR(200) NOT NULL UNIQUE
+    "password": 1234, - VARCHAR (200) NOT NULL
+    "avatar": "default.png", VARCHAR ????
+    "adminType": false, TINYINT ???? HABRIA QUE CAMBIAR EL VALUE??
+    "id": 1 PK NOT NULL UNIQUE AUTO_INCREMENT
+
+PROODUCTS
+    "name": "Baby Yoda - Fernet", VARCHAR (200) NOT NULL
+    "description": "¿Habrá un baby Yoda más argentino que este? ", VARCHAR (400) DEFAULT (como se configura?)
+    "color": "painted", VARCHAR (200)
+    "size_id": 1 TINYINT NOT NULL FK
+    "price": 2500, DECIMAL(6.2) NOT NULL
+    "sku": 1, PK UNIQUE NOT NULL AUTO_INCREMENT
+    "image": "babyyodafernet.png", VARCHAR (200) DEFAULT 
+    "index": "true" TINYINT
