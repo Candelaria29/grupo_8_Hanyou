@@ -1,18 +1,22 @@
 USERS
-    "firstName": "Juan", - VARCHAR (200) NOT NULL
-    "lastName": "Perez", - VARCHAR (200) NOT NULL
-    "email": "jperez@gmail.com", VARCHAR(200) NOT NULL UNIQUE
-    "password": 1234, - VARCHAR (200) NOT NULL
-    "avatar": "default.png", VARCHAR ????
-    "adminType": false, TINYINT ???? HABRIA QUE CAMBIAR EL VALUE??
+    "firstName": VARCHAR (200) NOT NULL
+    "lastName": VARCHAR (200) NOT NULL
+    "email": VARCHAR(200) NOT NULL UNIQUE
+    "password": VARCHAR (200) NOT NULL
+    "avatar": VARCHAR DEFAULT 
+    "adminType": TINYINT (es un boolean, deberiamos cambiar los value en el form para que sea 1 y 2 en vez de true o false no?)
     "id": 1 PK NOT NULL UNIQUE AUTO_INCREMENT
 
 PROODUCTS
     "name": "Baby Yoda - Fernet", VARCHAR (200) NOT NULL
-    "description": "¿Habrá un baby Yoda más argentino que este? ", VARCHAR (400) DEFAULT (como se configura?)
-    "color": "painted", VARCHAR (200)
+    "description": "¿Habrá un baby Yoda más argentino que este? ", VARCHAR (400) DEFAULT (donde configurariamos esto? en el controllador igual que donde tenemos la imagen por default?)
+    "color": VARCHAR (200) // pienso que como son 2 opciones tmb podria ser TINYINT?
     "size_id": 1 TINYINT NOT NULL FK
-    "price": 2500, DECIMAL(6.2) NOT NULL
-    "sku": 1, PK UNIQUE NOT NULL AUTO_INCREMENT
-    "image": "babyyodafernet.png", VARCHAR (200) DEFAULT 
-    "index": "true" TINYINT
+    "price": DECIMAL(6.2) NOT NULL
+    "sku": PK UNIQUE NOT NULL AUTO_INCREMENT
+    "image": VARCHAR (200) DEFAULT 
+    "index": TINYINT
+
+SIZES
+    "id": PK PK UNIQUE NOT NULL AUTO_INCREMENT
+    "size" : VARCHAR (200) NOT NULL
