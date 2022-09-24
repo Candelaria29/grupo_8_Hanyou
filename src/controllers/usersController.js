@@ -18,7 +18,7 @@ module.exports = {
     let todos = index();
     todos.push(nuevoUsuario);
     write(todos);
-    return res.redirect("/profile"); //como hacer para que de aca te lleve al perfil sin pasar por el login?
+    return res.redirect("/login");
   },
   access: (req, res) => {
     let allUsers = index();
