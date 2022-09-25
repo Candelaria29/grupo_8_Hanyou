@@ -17,7 +17,7 @@ CREATE TABLE `products` (
     `name` VARCHAR (100) NOT NULL,
     `description` VARCHAR (280) NOT NULL,
     `color` VARCHAR (200) NOT NULL,
-    `size_id` int(10) unsigned NOT NULL,
+    `size_id` int(10) unsigned NOT NULL ,
     `price` DECIMAL (6,2) unsigned NOT NULL,
     `sku` int unsigned AUTO_INCREMENT UNIQUE,
     `image` VARCHAR (300) NOT NULL,
