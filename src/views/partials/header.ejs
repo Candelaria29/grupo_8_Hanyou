@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<body>
-  <header>
-    <!-- logo -->
-    <article id=topbar>
-      <section id=logoSearch>
-        <a href="/" id="logo">
-          <img src="/img/logoHorizontal.png" alt="Logo Hanyou" />
-        </a>
-        <!-- barra busqueda -->
-        <form action="" method="get" id="barra-busqueda">
-          <input type="text" name="q" placeholder="Buscar" id="buscador" />
-          <button type="submit" id="buttonLupa">
-            <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
-          </button>
-        </form>
-      </section>
+  <body>
+    <header>
+      <!-- logo -->
+      <article id="topbar">
+        <section id="logoSearch">
+          <a href="/" id="logo">
+            <img src="/img/logoHorizontal.png" alt="Logo Hanyou" />
+          </a>
+          <!-- barra busqueda -->
+          <form action="" method="get" id="barra-busqueda">
+            <input type="text" name="q" placeholder="Buscar" id="buscador" />
+            <button type="submit" id="buttonLupa">
+              <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
+            </button>
+          </form>
+        </section>
         <ul class="icon-nav-bar">
-          <li class=icon>
-            <a href="/productos/productCart"><i class="fa-solid fa-cart-shopping icon"></i></a>
+          <li class="icon">
+            <a href="/productos/productCart"
+              ><i class="fa-solid fa-cart-shopping icon"></i
+            ></a>
           </li>
           <% if (!user) {%>
-            <li class=icon>
-              <a href="/login"><i class="fa-solid fa-user icon"></i></a>
-            </li>
-            <li class="welcome">Bienvenido, invitado!</li>
+          <li class="icon">
+            <a href="/login"><i class="fa-solid fa-user icon"></i></a>
+          </li>
+          <li class="welcome">Bienvenido, invitado!</li>
 
-            <% } else {%>
-              <li class="welcome">Bienvenido, <%= `${user.firstName}!` %>
-              </li>
-              <li class=icon>
-                <a href="/profile"> <i class="fa-solid fa-user"></i> </a>
-              </li>
-              <li class=icon>
-                <a href="/logout"><i class="fa-solid fa-door-open"></i></a>
-              </li>
-              <% } %>
+          <% } else {%>
+          <li class="welcome">Bienvenido, <%= `${user.firstName}!` %></li>
+          <li class="icon">
+            <a href="/profile"> <i class="fa-solid fa-user"></i> </a>
+          </li>
+          <li class="icon">
+            <a href="/logout"><i class="fa-solid fa-door-open"></i></a>
+          </li>
+          <% } %>
         </ul>
-    </article>
-    <ul class="link-nav-bar">
-      <li id="linksHeader"><a href="/productos">Productos</a></li>
-      <li id="linksHeader"><a href="/">Contacto</a></li>
-      <li id="linksHeader"><a href="/">Sobre Hanyou</a></li>
-      <li id="linksHeader"><a href="/register">Crea tu cuenta</a></li>
-    </ul>
-  </header>
-</body>
-
+      </article>
+      <ul class="link-nav-bar">
+        <li id="linksHeader"><a href="/productos">Productos</a></li>
+        <li id="linksHeader"><a href="/">Contacto</a></li>
+        <li id="linksHeader"><a href="/">Sobre Hanyou</a></li>
+        <li id="linksHeader"><a href="/register">Crea tu cuenta</a></li>
+      </ul>
+    </header>
+  </body>
 </html>

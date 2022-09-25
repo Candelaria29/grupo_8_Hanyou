@@ -61,5 +61,14 @@
     "avatar": "default.png",
     "adminType": true,
     "id": 7
+  },
+  {
+    "firstName": "Nicolása",
+    "lastName": "Cilio",
+    "email": "nicolas.cilio95@gmail.comm",
+    "password": "$2b$10$mrH684vX0yL88xgPyn8DreaSukT18OojpufS//lIhxecnQbi8NpH2",
+    "avatar": "imagenUsuario-1663272499149-787280848.png",
+    "adminType": false,
+    "id": 8
   }
 ]

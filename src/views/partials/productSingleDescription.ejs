@@ -16,7 +16,9 @@
     <button class="button">Comprar</button>
   </div>
 </section>
+
 <section id="productModif">
+  <% if (user && user.adminType == true) {%>
   <a href="/productos/crear" target="_blank"> Crear nuevo producto </a>
   <a href="/productos/editar/<%= product.sku%>" target="_blank">
     Modificar producto
@@ -27,8 +29,8 @@
     id="destroyItemForm"
   >
     <input type="hidden" name="sku" value="<%= product.sku%>" />
-    <% if (user) {%>
+
     <button type="submit" id="destroyButton">Eliminar producto</button>
-    <% } %>
   </form>
+  <% } %>
 </section>
