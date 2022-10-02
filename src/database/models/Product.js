@@ -41,5 +41,13 @@ module.exports = (sequelize, dataTypes) => {
     timestamps: false,
   };
   const Product = sequelize.define(alias, cols, config);
+
+  Product.associate = function (models) {
+    Product.belongsTo(models.Size, {
+      as: "sizes",
+      foreignKey: "size_id",
+    });
+  };
+
   return Product;
 };
