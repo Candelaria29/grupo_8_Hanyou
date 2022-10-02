@@ -24,13 +24,30 @@ También podría ser de gran utilidad normalizar los mensajes insertados al mome
 
 - ## Sprint 4. Retrospectiva:
 
-1.**Start doing:** Deberíamos dividirnos las tareas apenas se lanze el sprint, de esa forma cada participante puede organizar su tiempo y realizar sus tareas en los momentos en los que le resulte posible.
+  1.**Start doing:** Deberíamos dividirnos las tareas apenas se lanze el sprint, de esa forma cada participante puede organizar su tiempo y realizar sus tareas en los momentos en los que le resulte posible.
 
-2.**More of:** Fuimos mejorando la comunicación entre nosotros, pero creemos que esto podría seguir mejorando aún más. Podríamos comunicarnos más en cuanto a las dificultades de cada uno, tanto en tiempo de dedicación al proyecto como en el entendimiento de las cosas teóricas y su aplicación a este trabajo, a fin de adaptar las tareas a las capacidades de cada uno.
+  2.**More of:** Fuimos mejorando la comunicación entre nosotros, pero creemos que esto podría seguir mejorando aún más. Podríamos comunicarnos más en cuanto a las dificultades de cada uno, tanto en tiempo de dedicación al proyecto como en el entendimiento de las cosas teóricas y su aplicación a este trabajo, a fin de adaptar las tareas a las capacidades de cada uno.
 
-3.**Keep doing:** Seguir mejorando sobre cosas de los sprints anteriores además de cumplir con los obligatorios en cada entrega.
+  3.**Keep doing:** Seguir mejorando sobre cosas de los sprints anteriores además de cumplir con los obligatorios en cada entrega.
 
-4.**Less of:** Atrasarnos en el contenido de las clases, así no se pierde tiempo durante el sprint viendo temas en vez de poder avanzar en el mismo.
+  4.**Less of:** Atrasarnos en el contenido de las clases, así no se pierde tiempo durante el sprint viendo temas en vez de poder avanzar en el mismo.
 
-5.**Stop doing:** Deberíamos no tener que apoyarnos en un solo integrante del equipo para aplicar las funcionalidades que debemos hacer.
+  5.**Stop doing:** Deberíamos no tener que apoyarnos en un solo integrante del equipo para aplicar las funcionalidades que debemos hacer.
 
+- ## Sprint 5. Retrospectiva:
+
+En el sprint anterior, intentamos no descuidar la realización de las correcciones realizadas por nuestro tutor de turno, respecto de la entrega previa. Asimismo, pudimos realizar las consignas correspondientes al sprint, tanto las obligatorias como las optativas.
+
+Según el esquema de _Starfish retrospective_, podemos destacar las siguientes conclusiones:
+
+1.**Start doing:** Deberíamos recuperar el órden y actualización de nuestro tablero de trabajo, el TRELLO, de modo que sea mucho más fácil realizar una distribución de tareas ordenada y un control sobre la realización de cada una de ellas.
+
+También sería de utilidad que empezacemos a solicitar revisiones u observaciones parciales de parte de los tutores, para saber si estamos encausando bien el proyecto, y, en caso de corresponder, efectuar las correcciones pertinentes antes de la fecha de finalización del sprint.
+
+2.**More of:** Deberíamos intentar realizar más código entre tódos los integrantes del grupo juntos, _en vivo_, al menos para aquellas tareas que determinen el rumbo del proyecto.
+
+3.**Keep doing:** Seguir reforzando conceptos y volviendo hacía tareas correspondientes a sprints anteriores, con el fin de hacer lo más eficiente y comprensible posible el código, además de mejorar apartado visual de la web en cuanto sea posible.
+
+4.**Less of:** Mandarse cada uno por su cuenta a implementar código, sin haber realizado una división de tareas previa de manera consensuada entre todos los miembros del equipo.
+
+5.**Stop doing:** No deberíamos dejar el grueso de las tareas a realizar para los últimos días previos a las entregas.
