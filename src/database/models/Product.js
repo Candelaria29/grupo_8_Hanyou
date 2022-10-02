@@ -25,6 +25,7 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER.UNSIGNED,
       primaryKey: true,
       autoIncrement: true,
+      unique: true,
     },
     image: {
       type: dataTypes.STRING(300),
