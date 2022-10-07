@@ -30,11 +30,12 @@
           <% } %>
         </nav>
       </section>
-      <input type="hidden" name="sku" value="<%= activeUser.id%>" />
+      <form action="/destroy?m=DELETE" method="post" id="destroyUserForm">
+        <input type="hidden" name="id" value="<%= activeUser.id %>" />
 
-      <button type="submit" id="destroyButton">Eliminar usuario</button>
+        <button type="submit" id="destroy">Eliminar usuario</button>
+      </form>
     </main>
-
     <%- include('../partials/footer') %>
   </body>
 </html>

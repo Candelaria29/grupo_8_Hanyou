@@ -8,6 +8,7 @@ const {
   save,
   access,
   logout,
+  destroy,
 } = require("../controllers/usersController");
 const { resolve, extname } = require("path");
 const { existsSync, mkdirSync } = require("fs");
@@ -43,5 +44,6 @@ route.get("/logout", logout);
 
 route.post("/save", upload.any(), save);
 route.post("/access", access);
+route.delete("/destroy", [isLogged], destroy);
 
 module.exports = route;

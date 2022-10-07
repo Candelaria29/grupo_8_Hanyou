@@ -89,5 +89,15 @@ module.exports = {
     res.cookie("user", null, { maxAge: -1 });
     return res.redirect("/");
   },
-  destroy: (req, res) => {},
+  destroy: (req, res) => {
+    let userId = req.body.id;
+    Users.destroy({
+      where: {
+        id: userId,
+      },
+      force: true,
+    }).then(() => {
+      return res.redirect("/");
+    });
+  },
 };
