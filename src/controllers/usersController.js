@@ -97,6 +97,8 @@ module.exports = {
       },
       force: true,
     }).then(() => {
+      delete req.session.user;
+      res.cookie("user", null, { maxAge: -1 });
       return res.redirect("/");
     });
   },
