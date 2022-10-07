@@ -40,6 +40,29 @@
   padding: 5px;
 }
 
+#destroyUserForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#destroyUserButton {
+  width: 30%;
+  padding: 10px;
+  background-color: #645eff;
+  border: solid 1px #645eff;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 20px;
+  transition: all 450ms;
+}
+
+#destroyUserButton:hover {
+  background-color: #ff020f;
+  border: solid 1px #ff020f;
+}
+
 @media (min-width: 769px) {
   #main-profile {
     flex-direction: row;

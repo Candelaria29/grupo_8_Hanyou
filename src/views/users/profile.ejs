@@ -29,12 +29,13 @@
           <p class="detalleUsuario">Perfil administrador</p>
           <% } %>
         </nav>
-      </section>
-      <form action="/destroy?m=DELETE" method="post" id="destroyUserForm">
-        <input type="hidden" name="id" value="<%= activeUser.id %>" />
 
-        <button type="submit" id="destroy">Eliminar usuario</button>
-      </form>
+        <form action="/destroy?m=DELETE" method="post" id="destroyUserForm">
+          <input type="hidden" name="id" value="<%= activeUser.id %>" />
+
+          <button type="submit" id="destroyUserButton">Eliminar usuario</button>
+        </form>
+      </section>
     </main>
     <%- include('../partials/footer') %>
   </body>
