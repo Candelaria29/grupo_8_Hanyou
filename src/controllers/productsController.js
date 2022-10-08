@@ -2,13 +2,14 @@ const { all, one, generate, write } = require("../models/productsModel");
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
 
-const db = require('../database/models/index')
+const db = require('../database/models/index');
+const { request } = require("http");
 
 const controller = {
-  //esta funcion filtra los productos destacados para mostrarlos en el index
+  //esta funcion filtra los productos destacados para mostrarlos en el index - PENDIENTE
   home: (req, res) => {
     let products = all();
-    let indexProducts = products.filter((product) => product.index == "true");
+    let indexProducts = products.filter((product) => product.index == "1");
     res.render("index", { indexProducts });
   },
 
@@ -28,7 +29,7 @@ const controller = {
       return res.render("products/productDetail", {product});
     }
     return res.render("products/productDetail", {product: null});*/
-    
+
     let product = db.Product.findByPk(req.params.sku);
     const success = data => res.render("products/productDetail", {product:data})
     const error = error => res.send(error);
@@ -38,18 +39,35 @@ const controller = {
   create: (req, res) => {
     return res.render("products/createNewProduct");
   },
+
   save: (req, res) => {
     if (req.files && req.files.length > 0) {
       req.body.image = req.files[0].filename;
     } else {
       req.body.image = "/img/products/logo4.png";
-    }
-    let nuevo = generate(req.body);
+    } 
+    /* let nuevo = generate(req.body);
     let todos = all();
     todos.push(nuevo);
     write(todos);
-    return res.redirect("/");
+    return res.redirect("/"); */
+
+    let save = db.Product.create({
+      name: req.body.name,
+      description: req.body.description,
+      color:req.body.color,
+      size_id: req.body.size,
+      price: parseInt(req.body.price),
+      image: req.body.image,
+      index: req.body.index ? req.body.index : "0"
+    });
+
+    const success = data => res.redirect("/productos");
+    const error = error => res.send(error);
+
+    return save.then(success).then(error);
   },
+
   edit: (req, res) => {
     let product = one(req.params.sku);
     return res.render("products/editProduct", {
