@@ -2,6 +2,8 @@ const { all, one, generate, write } = require("../models/productsModel");
 const { unlinkSync } = require("fs");
 const { resolve } = require("path");
 
+const db = require('../database/models/index')
+
 const controller = {
   //esta funcion filtra los productos destacados para mostrarlos en el index
   home: (req, res) => {
@@ -9,18 +11,30 @@ const controller = {
     let indexProducts = products.filter((product) => product.index == "true");
     res.render("index", { indexProducts });
   },
+
   index: (req, res) => {
-    let products = all();
-    return res.render("products/productList", { products });
+    /* let products = all();
+    return res.render("products/productList", { products }); */
+    let products = db.Product.findAll();
+    const success = data => res.render("products/productList", {products:data})
+    const error = error => res.send(error);
+    return products.then(success).catch()
   },
+
   show: (req, res) => {
-    let product = one(req.params.sku);
+    /* let product = one(req.params.sku); 
     if (product) {
       // return res.send(product);
-      return res.render("products/productDetail", { product });
+      return res.render("products/productDetail", {product});
     }
-    return res.render("products/productDetail", { product: null });
+    return res.render("products/productDetail", {product: null});*/
+    
+    let product = db.Product.findByPk(req.params.sku);
+    const success = data => res.render("products/productDetail", {product:data})
+    const error = error => res.send(error);
+    return product.then(success).catch()    
   },
+
   create: (req, res) => {
     return res.render("products/createNewProduct");
   },
