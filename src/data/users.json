@@ -34,5 +34,14 @@
     "avatar": "imagenUsuario-1663272499149-787280848.png",
     "adminType": false,
     "id": 8
+  },
+  {
+    "firstName": "Nicolás",
+    "lastName": "Cilio",
+    "email": "nnnicolasagustincilio@gmail.com",
+    "password": "$2b$10$Fm4qLa8m20lMfRn6CXyqTuWQfViZjfokyP/m2SYCLb7FGJeCThai.",
+    "avatar": "default.png",
+    "adminType": false,
+    "id": 9
   }
 ]
