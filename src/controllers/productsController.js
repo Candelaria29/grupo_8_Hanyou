@@ -55,7 +55,7 @@ const controller = {
     if (req.files && req.files.length > 0) {
       req.body.image = req.files[0].filename;
     } else {
-      req.body.image = "/img/products/logo4.png";
+      req.body.image = "logo4.png";
     }
     /* let nuevo = generate(req.body);
     let todos = all();
@@ -80,9 +80,14 @@ const controller = {
   },
 
   edit: (req, res) => {
-    let product = one(req.params.sku);
-    return res.render("products/editProduct", {
-      product,
+    // let product = one(req.params.sku);
+    // return res.render("products/editProduct", {
+    //   product,
+    // });
+    db.Product.findByPk(req.params.sku).then((product) => {
+      return res.render("products/editProduct", {
+        product,
+      });
     });
   },
   update: (req, res) => {
