@@ -17,7 +17,7 @@ const controller = {
     /* let products = all();
     return res.render("products/productList", { products }); */
     let products = db.Product.findAll();
-    const success = data => res.render("products/productList", {products:data})
+    const success = data => res.render("products/productList", { products: data })
     const error = error => res.send(error);
     return products.then(success).catch()
   },
@@ -31,9 +31,9 @@ const controller = {
     return res.render("products/productDetail", {product: null});*/
 
     let product = db.Product.findByPk(req.params.sku);
-    const success = data => res.render("products/productDetail", {product:data})
+    const success = data => res.render("products/productDetail", { product: data })
     const error = error => res.send(error);
-    return product.then(success).catch()    
+    return product.then(success).catch()
   },
 
   create: (req, res) => {
@@ -45,7 +45,7 @@ const controller = {
       req.body.image = req.files[0].filename;
     } else {
       req.body.image = "/img/products/logo4.png";
-    } 
+    }
     /* let nuevo = generate(req.body);
     let todos = all();
     todos.push(nuevo);
@@ -55,7 +55,7 @@ const controller = {
     let save = db.Product.create({
       name: req.body.name,
       description: req.body.description,
-      color:req.body.color,
+      color: req.body.color,
       size_id: req.body.size,
       price: parseInt(req.body.price),
       image: req.body.image,
