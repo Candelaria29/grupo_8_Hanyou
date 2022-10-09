@@ -9,7 +9,7 @@
     <%- include('../partials/header') %>
     <main id="editProductMain">
       <form action="/productos/actualizar?m=PUT" method="post" enctype = "multipart/form-data" id="editProductForm">
-        <input type = "hidden" name = "sku" value = <%= product.sku%>>
+        <input type = "hidden" name = "sku" value="<%= product.sku%>"/>
         <h1 id="editProductTitles">Edición de productos</h1>
         <input
           type="file"
