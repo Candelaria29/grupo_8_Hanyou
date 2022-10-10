@@ -90,8 +90,9 @@ const controller = {
       });
     });
   },
+
   update: (req, res) => {
-    let todos = all();
+    /* let todos = all();
     let actualizados = todos.map((e) => {
       if (e.sku == req.body.sku) {
         e.name = req.body.nombre;
@@ -106,10 +107,36 @@ const controller = {
       return e;
     });
     write(actualizados);
-    return res.redirect("/");
+    return res.redirect("/"); */
+
+    const update = db.Product.update({
+      name: req.body.name,
+      description: req.body.description,
+      color:  req.body.color,
+      size_id: req.body.size,
+      price: parseInt(req.body.price),
+      image: req.body.image,
+      index: req.body.index ? req.body.index : "0", //(si sacas el tick funciona, si lo queres poner NO)
+    },{
+      where: {
+        sku: req.body.sku
+      }
+    });
+    const success = (data) => res.redirect("/productos");
+    const error = (error) => res.send(error);
+
+    return update.then(success).then(error);
+
   },
+
   destroy: (req, res) => {
-    let product = one(req.body.sku);
+    db.Product.destroy({
+      where: {
+        sku: req.body.sku
+      }
+    })
+    return res.redirect("/productos")
+    /* let product = one(req.body.sku);
     if (product.image != "logo4.png") {
       let file = resolve(
         __dirname,
@@ -125,7 +152,7 @@ const controller = {
     let todos = all();
     let noEliminados = todos.filter((e) => e.sku != req.body.sku);
     write(noEliminados);
-    return res.redirect("/");
+    return res.redirect("/"); */
   },
 };
 

@@ -1,50 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hanyou - Editar Producto</title>
-    <link rel="stylesheet" href="/css/editProduct.css"/>
-    <%- include('../partials/head') %>
-  </head>
-  <body>
-    <%- include('../partials/header') %>
-    <main id="editProductMain">
-      <form action="/productos/actualizar?m=PUT" method="post" enctype = "multipart/form-data" id="editProductForm">
-        <input type = "hidden" name = "sku" value="<%= product.sku%>"/>
-        <h1 id="editProductTitles">Edición de productos</h1>
-        <input
-          type="file"
-          name="imageOfCreatedProduct"
-          id="createNewProductDesign"
-          style="display: none"
-          accept=".jpg, .png"
-          multiple
 
-        />
-        <label for="createNewProductDesign" class="eButton" id="editFilesButton"
-          >Modificar boceto del diseño</label
-        >
+<head>
+  <title>Hanyou - Editar Producto</title>
+  <link rel="stylesheet" href="/css/editProduct.css" />
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <%- include('../partials/header') %>
+    <main id="editProductMain">
+      <form action="/productos/actualizar?m=PUT" method="post" enctype="multipart/form-data" id="editProductForm">
+        <input type="hidden" name="sku" value="<%= product.sku %>" />
+        <h1 id="editProductTitles">Edición de productos</h1>
+        <input type="file" name="image" id="createNewProductDesign" style="display: none" accept=".jpg, .png"
+          multiple />
+        <label for="createNewProductDesign" class="eButton" id="editFilesButton">Modificar boceto del diseño</label>
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
         <label for="img">Click me to upload image</label> -->
         <!-- Nombre del producto -->
-        <input
-          type="text"
-          name="nombre"
-          id="createNewProductName"
-          value="<%= product.name%>"
-          placeholder="Nuevo nombre del producto"
-          class = "editProductCampos"
-          required
-        />
+        <input type="text" name="name" id="createNewProductName" value="<%= product.name%>"
+          placeholder="Nuevo nombre del producto" class="editProductCampos" required />
         <!-- Descripción  -->
-        <textarea
-          type="text"
-          name="descripcion"
-          id="c_eDescripcion"
-          placeholder="Nueva descripción del producto"
-          maxlength="280"
-          class = "editProductCampos"
-          required
-        ><%= product.description %> </textarea>
+        <textarea type="text" name="description" id="c_eDescripcion" placeholder="Nueva descripción del producto"
+          maxlength="280" class="editProductCampos" required><%= product.description %> </textarea>
         <!-- Imagen -->
         <!-- Características -->
         <section id="caracteristicasProductoEdit">
@@ -54,45 +33,36 @@
           <!-- Colores -->
           <div id="characteristicArticles">
             <article id="editProductcharacteristic">
-              <label class="editProductSubtitles"
-                >Modifique el color</label
-              >
+              <label class="editProductSubtitles">Modifique el color</label>
               <select name="color" class="eButton" required>
                 <!-- MODIFICAR LOS VALUE POR EL COLOR EN TEXTO -->
-                <option value="painted"<% if (product.color == 'painted') {%>selected<%}%> >Pintado</option>
-                <option value="not painted"<% if (product.color == 'not painted') {%>selected<%}%>>No pintado</option>
+                <option value="painted" <% if (product.color=='painted' ) {%>selected<%}%> >Pintado</option>
+                <option value="not painted" <% if (product.color=='not painted' ) {%>selected<%}%>>No pintado</option>
                 <!-- <option value="blue"<% if (product.color == 'blue') {%>selected<%}%>>Azul</option> -->
               </select>
             </article>
             <!-- Tamaños -->
             <article id="editProductcharacteristic">
-              <label class="editProductSubtitles"
-                >Modifique la medida</label
-              >
-              <select name="medida" class="eButton" required>
-                <option value="small" <% if (product.size == 'small') {%>selected <% }%>>Pequeño</option>
+              <label class="editProductSubtitles">Modifique la medida</label>
+              <select name="size" class="eButton" required>
+                <option value="1" <% if (product.size=='1' ) {%>selected <% }%>>Pequeño</option>
 
-                <option value="big"<% if (product.size == 'big') {%>selected <% }%>>Grande</option>
+                <option value="2" <% if (product.size=='2' ) {%>selected <% }%>>Grande</option>
               </select>
             </article>
           </div>
         </section>
         <!-- Precio -->
         <section id="precioProductoEdit">
-          <input
-            type="number"
-            name="precio"
-            id="editProductPrice"
-            value=<%= product.price %>
-            placeholder="Nuevo precio"
-            class = "editProductCampos"
-            required
+          <input type="number" name="price" id="editProductPrice" value=<%=product.price %>
+          placeholder="Nuevo precio"
+          class = "editProductCampos"
+          required
           />
         </section>
         <section id="addIndex">
-          <input type="checkbox" name="index" <% if (product.index == 'true') {%> checked <%} %>/> 
-          <!-- como hacer para que quede tiqueada si el valor es true????? no funciona si quiero que un producto ya creado sea destacado -->
-          <label for="index">Agregar a "Productos Destacados"</label>
+          <input type="checkbox" name="index" <% if (product.index=='1' ) {%> checked <%} %>/>
+            <label for="index">Agregar a "Productos Destacados"</label>
         </section>
         <section id="botonProductoEdit">
           <button type="submit" class="eButton">Guardar cambios</button>
@@ -101,5 +71,6 @@
       </form>
     </main>
     <%- include('../partials/footer') %>
-  </body>
+</body>
+
 </html>
