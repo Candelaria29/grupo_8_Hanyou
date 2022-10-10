@@ -27,7 +27,7 @@ const controller = {
     return res.render("products/productList", { products }); */
     let products = db.Product.findAll();
     const success = (data) =>
-      res.render("products/productList", {  products:  data  });
+      res.render("products/productList", { products: data });
     const error = (error) => res.send(error);
     return products.then(success).catch();
   },
@@ -66,7 +66,7 @@ const controller = {
     let save = db.Product.create({
       name: req.body.name,
       description: req.body.description,
-      color:  req.body.color,
+      color: req.body.color,
       size_id: req.body.size,
       price: parseInt(req.body.price),
       image: req.body.image,
@@ -109,33 +109,35 @@ const controller = {
     write(actualizados);
     return res.redirect("/"); */
 
-    const update = db.Product.update({
-      name: req.body.name,
-      description: req.body.description,
-      color:  req.body.color,
-      size_id: req.body.size,
-      price: parseInt(req.body.price),
-      image: req.body.image,
-      index: req.body.index ? req.body.index : "0", //(si sacas el tick funciona, si lo queres poner NO)
-    },{
-      where: {
-        sku: req.body.sku
+    const update = db.Product.update(
+      {
+        name: req.body.name,
+        description: req.body.description,
+        color: req.body.color,
+        size_id: req.body.size,
+        price: parseInt(req.body.price),
+        image: req.body.image,
+        index: req.body.index ? 1 : "0", //(si sacas el tick funciona, si lo queres poner NO)
+      },
+      {
+        where: {
+          sku: req.body.sku,
+        },
       }
-    });
+    );
     const success = (data) => res.redirect("/productos");
     const error = (error) => res.send(error);
 
     return update.then(success).then(error);
-
   },
 
   destroy: (req, res) => {
     db.Product.destroy({
       where: {
-        sku: req.body.sku
-      }
-    })
-    return res.redirect("/productos")
+        sku: req.body.sku,
+      },
+    });
+    return res.redirect("/productos");
     /* let product = one(req.body.sku);
     if (product.image != "logo4.png") {
       let file = resolve(
