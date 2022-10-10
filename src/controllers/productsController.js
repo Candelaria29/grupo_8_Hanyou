@@ -183,8 +183,12 @@ const controller = {
     let q = req.query.q;
     let products = db.Product.findAll({
       where: {
-        name: { [Op.like]: "%" + q + "%" },
+        [Op.or]: [
+          { name: { [Op.like]: "%" + q + "%" } },
+          { "$Sizes.size$": q },
+        ],
       },
+      include: [{ association: "sizes" }],
     });
 
     const success = (products) =>
