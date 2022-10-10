@@ -4,6 +4,8 @@ const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const { hashSync } = require("bcrypt");
+const { resolve } = require("path");
+const { unlinkSync } = require("fs");
 
 const Users = db.User;
 
@@ -90,16 +92,35 @@ module.exports = {
     return res.redirect("/");
   },
   destroy: (req, res) => {
-    let userId = req.body.id;
-    Users.destroy({
+    Users.findOne({
       where: {
-        id: userId,
+        id: req.body.id,
       },
-      force: true,
-    }).then(() => {
-      delete req.session.user;
-      res.cookie("user", null, { maxAge: -1 });
-      return res.redirect("/");
-    });
+    })
+      .then((user) => {
+        if (user.avatar != "default.png") {
+          let file = resolve(
+            __dirname,
+            "..",
+            "..",
+            "public",
+            "img",
+            "users",
+            user.avatar
+          );
+          unlinkSync(file);
+        }
+        Users.destroy({
+          where: {
+            id: user.id,
+          },
+          force: true,
+        });
+      })
+      .then(() => {
+        delete req.session.user;
+        res.cookie("user", null, { maxAge: -1 });
+        return res.redirect("/");
+      });
   },
 };
