@@ -181,6 +181,12 @@ const controller = {
 
   search: (req, res) => {
     let q = req.query.q;
+    if (q === "pequeño") {
+      q = "small";
+    }
+    if (q === "grande") {
+      q = "big";
+    }
     let products = db.Product.findAll({
       where: {
         [Op.or]: [
