@@ -9,7 +9,7 @@ const { request } = require("http");
 const controller = {
   //esta funcion filtra los productos destacados para mostrarlos en el index
   home: (req, res) => {
-    // let products = all(); 
+    // let products = all();
     // let indexProducts = products.filter((product) => product.index == "1");
     // res.render("index", { indexProducts });
     db.Product.findAll({
@@ -133,12 +133,33 @@ const controller = {
   },
 
   destroy: (req, res) => {
-    db.Product.destroy({
+    db.Product.findOne({
       where: {
         sku: req.body.sku,
       },
-    });
-    return res.redirect("/productos");
+    })
+      .then((product) => {
+        if (product.image != "logo4.png") {
+          let file = resolve(
+            __dirname,
+            "..",
+            "..",
+            "public",
+            "img",
+            "products",
+            product.image
+          );
+          unlinkSync(file);
+        }
+        db.Product.destroy({
+          where: {
+            sku: product.sku,
+          },
+        });
+      })
+      .then(() => {
+        return res.redirect("/productos");
+      });
     /* let product = one(req.body.sku);
     if (product.image != "logo4.png") {
       let file = resolve(
@@ -162,14 +183,15 @@ const controller = {
     let q = req.query.q;
     let products = db.Product.findAll({
       where: {
-        name: {[Op.like]: '%'+q+'%'}
-      }}
-    )
+        name: { [Op.like]: "%" + q + "%" },
+      },
+    });
 
-    const success = (products) => res.render("products/productList", {products});
+    const success = (products) =>
+      res.render("products/productList", { products });
     const error = (error) => res.send(error);
     return products.then(success).catch(error);
-  }
+  },
 };
 
 module.exports = controller;
