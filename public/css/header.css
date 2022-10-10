@@ -73,7 +73,7 @@ header nav ul li a {
 }
 
 #linksHeader {
-  width: 25%;
+  width: 20%;
   text-align: center;
   border-bottom: solid 2px #323232;
   transition: border-bottom 450ms;

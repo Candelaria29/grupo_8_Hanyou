@@ -3,12 +3,13 @@ const { unlinkSync } = require("fs");
 const { resolve } = require("path");
 
 const db = require("../database/models/index");
+const Op = db.Sequelize.Op;
 const { request } = require("http");
 
 const controller = {
   //esta funcion filtra los productos destacados para mostrarlos en el index
   home: (req, res) => {
-    // let products = all();
+    // let products = all(); 
     // let indexProducts = products.filter((product) => product.index == "1");
     // res.render("index", { indexProducts });
     db.Product.findAll({
@@ -154,6 +155,19 @@ const controller = {
     write(noEliminados);
     return res.redirect("/"); */
   },
+
+  search: (req, res) => {
+    let q = req.query.q;
+    let products = db.Product.findAll({
+      where: {
+        name: {[Op.like]: '%'+q+'%'}
+      }}
+    )
+
+    const success = (products) => res.render("products/productList", {products});
+    const error = (error) => res.send(error);
+    return products.then(success).catch(error);
+  }
 };
 
 module.exports = controller;

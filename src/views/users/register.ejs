@@ -14,15 +14,15 @@
       <form action="/save" method="POST" enctype="multipart/form-data" id="formularioDeRegistro">
         <!--Campos completables-->
         <section id="nombreCompleto">
-          <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="campos" />
-          <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="campos" />
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="campos" required/>
+          <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="campos" required/>
         </section>
         <input type = "file" name="imagenUsuario" class ="inputFile" id="imagenUsuario" accept=".jpg, .png">
         <label for="imagenUsuario" id="addAvatar">Cargar foto de perfil</label>
-        <input type="email" name="email" id="email" placeholder="Correo electrónico" class="campos"/>
-        <input type="password" name="password" id="password" placeholder="Creá tu contraseña" class="campos" />
+        <input type="email" name="email" id="email" placeholder="Correo electrónico" class="campos" required/>
+        <input type="password" name="password" id="password" placeholder="Creá tu contraseña" class="campos" required/>
         <input type="password" name="passwordConf" id="confirmPassword" placeholder="Confirmá tu contraseña"
-          class="campos" />
+          class="campos" required/>
         <section id="terminosYCondiciones">
           <input type="checkbox" name="terms" id="terms" value="terminos" class="terms" required />
           <label for="terms" id="terminos">Acepto términos de servicio y privacidad</label>

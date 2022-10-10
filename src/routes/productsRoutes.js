@@ -9,6 +9,7 @@ const {
   edit,
   update,
   destroy,
+  search
 } = require("../controllers/productsController");
 const { resolve, extname } = require("path");
 const { existsSync, mkdirSync } = require("fs");
@@ -65,4 +66,7 @@ route.put("/productos/actualizar", upload.any(), update);
 //DELETE:
 //Borrado:
 route.delete("/productos/eliminar", [isLogged], destroy);
+
+//BUSCADOR:
+route.get('/search', search)
 module.exports = route;
