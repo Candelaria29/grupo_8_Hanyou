@@ -17,6 +17,8 @@ module.exports = {
     return res.render("users/profile", { activeUser });
   },
   save: (req, res) => {
+    let adminCheck = (data) => (data.includes("@hanyou.com") ? 1 : 0);
+
     if (req.files && req.files.length > 0) {
       req.body.imagenUsuario = req.files[0].filename;
     } else {
@@ -29,7 +31,7 @@ module.exports = {
       email: req.body.email,
       password: hashSync(req.body.password, 10),
       avatar: req.body.imagenUsuario,
-      adminType: req.body.email.includes("@hanyou.com") ? 1 : 0,
+      adminType: adminCheck(req.body.email),
     }).then(() => {
       return res.redirect("/login");
     });
