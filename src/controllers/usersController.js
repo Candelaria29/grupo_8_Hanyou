@@ -22,15 +22,14 @@ module.exports = {
     } else {
       req.body.imagenUsuario = "default.png";
     }
-    let mailOwners = req.body.email.split("@");
-    let adminMails = ["nicolasagustincilio", "candelariabarrios", "nicolo"];
+
     Users.create({
       firstName: req.body.nombre,
       lastName: req.body.apellido,
       email: req.body.email,
       password: hashSync(req.body.password, 10),
       avatar: req.body.imagenUsuario,
-      adminType: adminMails.indexOf(mailOwners[0]) != -1 ? 1 : 0,
+      adminType: req.body.email.includes("@hanyou.com") ? 1 : 0,
     }).then(() => {
       return res.redirect("/login");
     });
@@ -53,8 +52,8 @@ module.exports = {
         email: req.body.userName,
       },
     })
-      .then((responseEmail) => {
-        if (!compareSync(req.body.password, responseEmail.password)) {
+      .then((responseUser) => {
+        if (!compareSync(req.body.password, responseUser.password)) {
           return res.redirect("/login");
         }
         //La cookieDuration esta en milesimas (ahora dura una hora):
@@ -62,7 +61,7 @@ module.exports = {
         if (req.body.remember) {
           res.cookie("user", req.body.userName, { maxAge: cookieDuration });
         }
-        req.session.user = responseEmail;
+        req.session.user = responseUser;
         return res.redirect("/profile");
       })
       .catch(() => res.redirect("/login"));
