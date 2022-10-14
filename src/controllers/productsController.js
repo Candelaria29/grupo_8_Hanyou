@@ -69,7 +69,7 @@ const controller = {
       description: req.body.description,
       color: req.body.color,
       size_id: req.body.size,
-      price: parseInt(req.body.price),
+      price: parseFloat(req.body.price),
       image: req.body.image,
       index: req.body.index ? req.body.index : "0",
     });
@@ -116,7 +116,7 @@ const controller = {
         description: req.body.description,
         color: req.body.color,
         size_id: req.body.size,
-        price: parseInt(req.body.price),
+        price: parseFloat(req.body.price),
         image: req.body.image,
         index: req.body.index ? 1 : "0", //(si sacas el tick funciona, si lo queres poner NO)
       },
