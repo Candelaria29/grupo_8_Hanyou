@@ -1,4 +1,7 @@
 const { body } = require("express-validator");
+const db = require("../../database/models");
+
+const Users = db.User;
 
 let name = body("nombre")
   .notEmpty()
@@ -19,21 +22,48 @@ let email = body("email")
   .withMessage("El campo no puede estar vacío")
   .bail()
   .isEmail()
-  .withMessage("Formato no válido");
-//ver si se puede agregar validacion para que el mail no este repetido, ya que de momento la unica validacion esta hecha en SQL, lo que genera que se rompa la app en caso de no pasarla
+  .withMessage("Formato no válido")
+  .bail()
+  .custom((value, { req }) => {
+    return Users.findOne({
+      where: {
+        email: value,
+      },
+    })
+      .then((user) => {
+        if (!user) {
+          return true;
+        } else {
+          return Promise.reject("Ese email corresponde a una cuenta en uso");
+        }
+      })
+      .catch((e) => {
+        throw new Error(e);
+      });
+  })
+  .withMessage("Ese email corresponde a una cuenta en uso");
 
 let password = body("password")
   .notEmpty()
   .withMessage("El campo no puede estar vacío")
   .bail()
   .isLength({ min: 8 })
-  .withMessage("El campo debe contener al menos ocho caracteres");
-//agregar validacion de una mayuscula, una minuscula, un caracter especial y un numero. Ver Regex
+  .withMessage("El campo debe contener al menos ocho caracteres")
+  .bail()
+  .isStrongPassword()
+  .withMessage(
+    "La contraseña debe contener al menos, una mayúscula, una minúscula, un dígito y un caracter especial"
+  );
 
-//agregar validacion de contraseña de confirmacion
+let passwordConf = body("passwordConf").custom((value, { req }) => {
+  if (value !== req.body.password) {
+    throw new Error("La contraseña no coincide con la antes ingresada");
+  }
+  return true;
+});
 
 let avatar = 0;
 
-let validations = [name, surname, email, password];
+let validations = [name, surname, email, password, passwordConf];
 
 module.exports = validations;

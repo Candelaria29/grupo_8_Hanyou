@@ -77,6 +77,9 @@
           placeholder="Confirmá tu contraseña"
           class="campos"
         />
+        <% if (locals.errors && locals.errors.passwordConf) {%>
+        <p><%= locals.errors.passwordConf.msg %></p>
+        <% } %>
         <section id="terminosYCondiciones">
           <input
             type="checkbox"
