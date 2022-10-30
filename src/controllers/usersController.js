@@ -6,6 +6,7 @@ const { Op } = require("sequelize");
 const { hashSync } = require("bcrypt");
 const { resolve } = require("path");
 const { unlinkSync } = require("fs");
+const { validationResult } = require("express-validator");
 
 const Users = db.User;
 
@@ -17,6 +18,12 @@ module.exports = {
     return res.render("users/profile", { activeUser });
   },
   save: (req, res) => {
+    const result = validationResult(req);
+    if (!result.isEmpty()) {
+      let errors = result.mapped();
+      return res.render("users/register", { errors, data: req.body });
+    }
+
     let adminCheck = (data) => (data.includes("@hanyou.com") ? 1 : 0);
 
     if (req.files && req.files.length > 0) {

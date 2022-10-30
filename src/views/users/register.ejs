@@ -1,31 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Hanyou - Creá tu cuenta</title>
+    <link rel="stylesheet" href="/css/register.css" />
+    <%- include('../partials/head') %>
+  </head>
 
-<head>
-  <title>Hanyou - Creá tu cuenta</title>
-  <link rel="stylesheet" href="/css/register.css" />
-  <%- include('../partials/head') %>
-</head>
-
-<body>
-  <%- include('../partials/header') %>
+  <body>
+    <%- include('../partials/header') %>
 
     <main id="registerBox">
-      <form action="/save" method="POST" enctype="multipart/form-data" id="formularioDeRegistro">
+      <form
+        action="/save"
+        method="POST"
+        enctype="multipart/form-data"
+        id="formularioDeRegistro"
+      >
         <!--Campos completables-->
         <section id="nombreCompleto">
-          <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="campos" required/>
-          <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="campos" required/>
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre"
+            class="campos"
+            value="<%= locals.errors && !locals.errors.nombre && locals.data ? data.nombre : null %> "
+          />
+          <% if (locals.errors && locals.errors.nombre) {%>
+          <p><%= locals.errors.nombre.msg %></p>
+          <% } %>
+          <input
+            type="text"
+            name="apellido"
+            id="apellido"
+            placeholder="Apellido"
+            class="campos"
+            value="<%= locals.errors && !locals.errors.apellido && locals.data ? data.apellido : null %> "
+          />
+          <% if (locals.errors && locals.errors.apellido) {%>
+          <p><%= locals.errors.apellido.msg %></p>
+          <% } %>
         </section>
-        <input type = "file" name="imagenUsuario" class ="inputFile" id="imagenUsuario" accept=".jpg, .png">
+        <input
+          type="file"
+          name="imagenUsuario"
+          class="inputFile"
+          id="imagenUsuario"
+          accept=".jpg, .png"
+        />
         <label for="imagenUsuario" id="addAvatar">Cargar foto de perfil</label>
-        <input type="email" name="email" id="email" placeholder="Correo electrónico" class="campos" required/>
-        <input type="password" name="password" id="password" placeholder="Creá tu contraseña" class="campos" required/>
-        <input type="password" name="passwordConf" id="confirmPassword" placeholder="Confirmá tu contraseña"
-          class="campos" required/>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Correo electrónico"
+          class="campos"
+          value="<%= locals.errors && !locals.errors.email && locals.data ? data.email : null %> "
+        />
+        <% if (locals.errors && locals.errors.email) {%>
+        <p><%= locals.errors.email.msg %></p>
+        <% } %>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Creá tu contraseña"
+          class="campos"
+        />
+        <% if (locals.errors && locals.errors.password) {%>
+        <p><%= locals.errors.password.msg %></p>
+        <% } %>
+        <input
+          type="password"
+          name="passwordConf"
+          id="confirmPassword"
+          placeholder="Confirmá tu contraseña"
+          class="campos"
+        />
         <section id="terminosYCondiciones">
-          <input type="checkbox" name="terms" id="terms" value="terminos" class="terms" required />
-          <label for="terms" id="terminos">Acepto términos de servicio y privacidad</label>
+          <input
+            type="checkbox"
+            name="terms"
+            id="terms"
+            value="terminos"
+            class="terms"
+            required
+          />
+          <label for="terms" id="terminos"
+            >Acepto términos de servicio y privacidad</label
+          >
         </section>
 
         <!--Creá tu cuenta o iniciá sesión-->
@@ -33,13 +96,12 @@
           <button class="rButton">Crear cuenta</button>
           <p id="cuentaExistente">¿Ya tenés una cuenta?</p>
           <a href="/register" id="buttonRegister">
-            <div class ="rButton">Iniciá sesión</div>
+            <div class="rButton">Iniciá sesión</div>
           </a>
         </section>
       </form>
     </main>
 
     <%- include('../partials/footer') %>
-</body>
-
+  </body>
 </html>
