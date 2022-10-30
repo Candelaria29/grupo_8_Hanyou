@@ -42,7 +42,9 @@
         <li id="linksHeader"><a href="/productos">Productos</a></li>
         <li id="linksHeader"><a href="/">Contacto</a></li>
         <li id="linksHeader"><a href="/">Sobre Hanyou</a></li>
+        <% if (!user) {%>
         <li id="linksHeader"><a href="/register">Crea tu cuenta</a></li>
+        <% } %>
       </ul>
     </header>
   </body>
