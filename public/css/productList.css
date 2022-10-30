@@ -52,6 +52,7 @@ main {
   margin: 10px;
   transition: all 450ms;
   position: relative;
+  background-color: #434343;
 }
 
 .itemIndex {

@@ -20,4 +20,5 @@ a {
 
 main {
   background-color: #4b4a4a;
+  min-height: 100vh;
 }
