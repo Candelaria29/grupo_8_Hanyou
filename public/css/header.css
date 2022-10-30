@@ -83,14 +83,14 @@ header nav ul li a {
   border-bottom: solid 2px #645eff;
 }
 
-.icon {
+.hicon {
   margin: 0px 10px;
   transition: color 450ms;
   font-size: 15px;
   width: 10%;
 }
 
-.icon:hover {
+.hicon:hover {
   color: #645eff;
 }
 
@@ -98,6 +98,7 @@ header nav ul li a {
   font-size: 10px;
   width: 50%;
   margin: 0px 10px;
+  text-align: end;
 }
 
 .link-nav-bar {

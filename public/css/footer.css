@@ -6,14 +6,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-}
-
-#footer-icon-bar a {
-    margin: 10px;
     padding: 5px;
 }
 
-#footer-icon-bar a:hover {
+.ficon {
+    margin: 10px;
+    padding: 5px;
+    width: 13px;
+    transition: color 450ms;
+}
+
+.ficon:hover {
     color: #645eff;
 }
 

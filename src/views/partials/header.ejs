@@ -17,26 +17,25 @@
           </form>
         </section>
         <ul class="icon-nav-bar">
-          <li class="icon">
-            <a href="/productos/productCart"
-              ><i class="fa-solid fa-cart-shopping icon"></i
-            ></a>
-          </li>
           <% if (!user) {%>
           <li class="icon">
-            <a href="/login"><i class="fa-solid fa-user icon"></i></a>
+            <a href="/login"><i class="fa-solid fa-user hicon"></i></a>
           </li>
           <li class="welcome">Bienvenido, invitado!</li>
 
           <% } else {%>
           <li class="welcome">Bienvenido, <%= `${user.firstName}!` %></li>
           <li class="icon">
-            <a href="/profile"> <i class="fa-solid fa-user"></i> </a>
+            <a href="/profile"> <i class="fa-solid fa-user hicon"></i> </a>
           </li>
           <li class="icon">
-            <a href="/logout"><i class="fa-solid fa-door-open"></i></a>
+            <a href="/logout"><i class="fa-solid fa-door-open hicon"></i></a>
           </li>
           <% } %>
+          <li class="icon">
+            <a href="/productos/productCart"><i class="fa-solid fa-cart-shopping hicon"></i
+            ></a>
+          </li>
         </ul>
       </article>
       <ul class="link-nav-bar">
