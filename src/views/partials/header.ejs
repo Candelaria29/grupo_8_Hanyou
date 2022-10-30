@@ -17,33 +17,34 @@
           </form>
         </section>
         <ul class="icon-nav-bar">
-          <li class="icon">
-            <a href="/productos/productCart"
-              ><i class="fa-solid fa-cart-shopping icon"></i
-            ></a>
-          </li>
           <% if (!user) {%>
           <li class="icon">
-            <a href="/login"><i class="fa-solid fa-user icon"></i></a>
+            <a href="/login"><i class="fa-solid fa-user hicon"></i></a>
           </li>
           <li class="welcome">Bienvenido, invitado!</li>
 
           <% } else {%>
           <li class="welcome">Bienvenido, <%= `${user.firstName}!` %></li>
           <li class="icon">
-            <a href="/profile"> <i class="fa-solid fa-user"></i> </a>
+            <a href="/profile"> <i class="fa-solid fa-user hicon"></i> </a>
           </li>
           <li class="icon">
-            <a href="/logout"><i class="fa-solid fa-door-open"></i></a>
+            <a href="/logout"><i class="fa-solid fa-door-open hicon"></i></a>
           </li>
           <% } %>
+          <li class="icon">
+            <a href="/productos/productCart"><i class="fa-solid fa-cart-shopping hicon"></i
+            ></a>
+          </li>
         </ul>
       </article>
       <ul class="link-nav-bar">
         <li id="linksHeader"><a href="/productos">Productos</a></li>
         <li id="linksHeader"><a href="/">Contacto</a></li>
         <li id="linksHeader"><a href="/">Sobre Hanyou</a></li>
+        <% if (!user) {%>
         <li id="linksHeader"><a href="/register">Crea tu cuenta</a></li>
+        <% } %>
       </ul>
     </header>
   </body>

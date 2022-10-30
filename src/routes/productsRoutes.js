@@ -46,7 +46,7 @@ route.get("/", home);
 route.get("/productos", index);
 
 //vista carrito
-route.get("/productos/productCart", [isAdmin], (req, res) =>
+route.get("/productos/productCart", [isLogged], (req, res) =>
   res.render("products/productCart")
 );
 
