@@ -18,8 +18,7 @@ let price = body("price")
   .notEmpty()
   .withMessage("El campo no puede estar vacío")
   .bail()
-  //ver como hacer para que permita escribir hasta cuatro enteros y dos decimales
-  .isLength({ max: 6 })
+  .isLength({ max: 7 })
   .withMessage(
     "El campo no debe contener mas de cuatro enteros y dos decimales"
   )
