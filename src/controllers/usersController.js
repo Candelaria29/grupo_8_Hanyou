@@ -56,6 +56,12 @@ module.exports = {
     // return res.redirect("/login");
   },
   access: (req, res) => {
+    const result = validationResult(req);
+    if (!result.isEmpty()) {
+      let errors = result.mapped();
+      return res.render("users/login", { errors, data: req.body });
+    }
+
     Users.findOne({
       where: {
         email: req.body.userName,

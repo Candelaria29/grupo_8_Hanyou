@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Hanyou - Iniciar sesión</title>
-    <link rel="stylesheet" href="/css/login.css"/>
+    <link rel="stylesheet" href="/css/login.css" />
     <%- include('../partials/head') %>
   </head>
 
@@ -15,15 +15,20 @@
           name="userName"
           placeholder="Correo electrónico"
           class="camposLogin"
-          required
+          value="<%= locals.errors && !locals.errors.userName && locals.data ? data.userName : null %> "
         />
+        <% if (locals.errors && locals.errors.userName) {%>
+        <p><%= locals.errors.userName.msg %></p>
+        <% } %>
         <input
           type="password"
           name="password"
           placeholder="Contraseña"
           class="camposLogin"
-          required
         />
+        <% if (locals.errors && locals.errors.password) {%>
+        <p><%= locals.errors.password.msg %></p>
+        <% } %>
         <label>
           <input type="checkbox" name="remember" value="true" /> Recordar mi
           usuario y contraseña

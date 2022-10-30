@@ -15,6 +15,7 @@ const { existsSync, mkdirSync } = require("fs");
 const isLogged = require("../middlewares/isLogged");
 const notLogged = require("../middlewares/notLogged");
 const validatorRegister = require("../validations/users/register");
+const validatorLogin = require("../validations/users/login");
 
 //config multer
 const destination = function (req, file, cb) {
@@ -44,7 +45,7 @@ route.get("/profile", [isLogged], profile);
 route.get("/logout", logout);
 
 route.post("/save", upload.any(), validatorRegister, save);
-route.post("/access", access);
+route.post("/access", validatorLogin, access);
 route.delete("/destroy", [isLogged], destroy);
 
 module.exports = route;
