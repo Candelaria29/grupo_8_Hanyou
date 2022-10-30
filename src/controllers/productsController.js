@@ -5,6 +5,7 @@ const { resolve } = require("path");
 const db = require("../database/models/index");
 const Op = db.Sequelize.Op;
 const { request } = require("http");
+const { validationResult } = require("express-validator");
 
 const controller = {
   //esta funcion filtra los productos destacados para mostrarlos en el index
@@ -53,6 +54,15 @@ const controller = {
   },
 
   save: (req, res) => {
+    const result = validationResult(req);
+    if (!result.isEmpty()) {
+      let errors = result.mapped();
+      return res.render("products/createNewProduct", {
+        errors,
+        data: req.body,
+      });
+    }
+
     if (req.files && req.files.length > 0) {
       req.body.image = req.files[0].filename;
     } else {
@@ -109,6 +119,14 @@ const controller = {
     });
     write(actualizados);
     return res.redirect("/"); */
+    const result = validationResult(req);
+    if (!result.isEmpty()) {
+      let errors = result.mapped();
+      return res.render("products/editProduct", {
+        errors,
+        product: req.body,
+      });
+    }
 
     const update = db.Product.update(
       {

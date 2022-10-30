@@ -22,7 +22,7 @@
           name="image"
           id="createNewProductDesign"
           style="display: none"
-          accept=".jpg, .png"
+          accept=".jpg, .png, .jpeg, .gif"
           multiple
         />
         <label for="createNewProductDesign" class="c_eButton" id="filesButton"
@@ -38,8 +38,11 @@
           id="createNewProductName"
           placeholder="Nombre del producto"
           class="createNewProductCampos"
-          required
+          value="<%= locals.errors && !locals.errors.name && locals.data ? data.name : null %> "
         />
+        <% if (locals.errors && locals.errors.name) {%>
+        <p><%= locals.errors.name.msg %></p>
+        <% } %>
         <!-- Descripción  -->
         <textarea
           type="text"
@@ -47,8 +50,12 @@
           id="c_eDescripcion"
           placeholder="Descripción del producto"
           class="createNewProductCampos"
-          required
-        ></textarea>
+        >
+<%= locals.errors && !locals.errors.description && locals.data ? data.description : null %></textarea
+        >
+        <% if (locals.errors && locals.errors.description) {%>
+        <p><%= locals.errors.description.msg %></p>
+        <% } %>
         <!-- Imagen -->
         <!-- Características -->
         <section id="caracteristicasProductoCreado">
@@ -86,9 +93,12 @@
             placeholder="Precio"
             class="createNewProductCampos"
             step="any"
-            required
+            value="<%= locals.errors && !locals.errors.price && locals.data ? data.price : null %> "
           />
         </section>
+        <% if (locals.errors && locals.errors.price) {%>
+        <p><%= locals.errors.price.msg %></p>
+        <% } %>
         <section id="addIndex">
           <input type="checkbox" name="index" value="1" />
           <label for="index">Agregar a "Productos Destacados"</label>

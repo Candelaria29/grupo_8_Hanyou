@@ -9,13 +9,15 @@ const {
   edit,
   update,
   destroy,
-  search
+  search,
 } = require("../controllers/productsController");
 const { resolve, extname } = require("path");
 const { existsSync, mkdirSync } = require("fs");
 const path = require("path");
 const isLogged = require("../middlewares/isLogged");
 const isAdmin = require("../middlewares/isAdmin");
+const validatorCreate = require("../validations/products/create");
+const validatorUpdate = require("../validations/products/create");
 
 const destination = function (req, file, cb) {
   let folder = resolve(__dirname, "..", "..", "public", "img", "products");
@@ -55,18 +57,18 @@ route.get("/productos/detalle/:sku", show);
 //Envio:
 route.get("/productos/crear", [isLogged], create);
 //Creacion:
-route.post("/productos/guardar", upload.any(), save);
+route.post("/productos/guardar", upload.any(), validatorCreate, save);
 
 //UPDATE:
 //Envio:
 route.get("/productos/editar/:sku", [isLogged], edit);
 //Edicion:
-route.put("/productos/actualizar", upload.any(), update);
+route.put("/productos/actualizar", upload.any(), validatorUpdate, update);
 
 //DELETE:
 //Borrado:
 route.delete("/productos/eliminar", [isLogged], destroy);
 
 //BUSCADOR:
-route.get('/search', search)
+route.get("/search", search);
 module.exports = route;
