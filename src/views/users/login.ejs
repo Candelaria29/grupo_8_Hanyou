@@ -15,7 +15,7 @@
           name="userName"
           placeholder="Correo electrónico"
           class="camposLogin"
-          value="<%= locals.errors && !locals.errors.userName && locals.data ? data.userName : null %> "
+          value="<%= locals.errors && !locals.errors.userName && locals.data ? data.userName : '' %>"
         />
         <% if (locals.errors && locals.errors.userName) {%>
         <p><%= locals.errors.userName.msg %></p>

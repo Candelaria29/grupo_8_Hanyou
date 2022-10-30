@@ -1,5 +1,5 @@
 const { index, one, generate, write } = require("../models/usersModel");
-const { compareSync } = require("bcrypt");
+
 const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
@@ -42,23 +42,12 @@ module.exports = {
     }).then(() => {
       return res.redirect("/login");
     });
-
-    // JSON controller:
-    // if (req.files && req.files.length > 0) {
-    //   req.body.imagenUsuario = req.files[0].filename;
-    // } else {
-    //   req.body.imagenUsuario = "default.png";
-    // }
-    // let nuevoUsuario = generate(req.body);
-    // let todos = index();
-    // todos.push(nuevoUsuario);
-    // write(todos);
-    // return res.redirect("/login");
   },
   access: (req, res) => {
     const result = validationResult(req);
     if (!result.isEmpty()) {
       let errors = result.mapped();
+      console.log(errors);
       return res.render("users/login", { errors, data: req.body });
     }
 
@@ -66,39 +55,15 @@ module.exports = {
       where: {
         email: req.body.userName,
       },
-    })
-      .then((responseUser) => {
-        if (!compareSync(req.body.password, responseUser.password)) {
-          return res.redirect("/login");
-        }
-        //La cookieDuration esta en milesimas (ahora dura una hora):
-        cookieDuration = 3.6e6;
-        if (req.body.remember) {
-          res.cookie("user", req.body.userName, { maxAge: cookieDuration });
-        }
-        req.session.user = responseUser;
-        return res.redirect("/profile");
-      })
-      .catch(() => res.redirect("/login"));
-
-    // JSON controller:
-    // let allUsers = index();
-    // let listOfEmails = allUsers.map((e) => e.email);
-    // let result = allUsers.find((e) => e.email == req.body.userName);
-    // if (listOfEmails.indexOf(req.body.userName) == -1) {
-    //   errorMessage = "Usuario no encontrado";
-    //   return res.redirect("/login");
-    // } else if (!compareSync(req.body.password, result.password)) {
-    //   newErrorMessage = "Contraseña incorrecta";
-    //   return res.redirect("/login");
-    // }
-    // //La cookieDuration esta en milesimas (ahora dura una hora):
-    // cookieDuration = 3.6e6;
-    // if (req.body.remember) {
-    //   res.cookie("user", req.body.userName, { maxAge: cookieDuration });
-    // }
-    // req.session.user = allUsers.find((e) => e.email == req.body.userName);
-    // return res.redirect("/profile");
+    }).then((responseUser) => {
+      //La cookieDuration esta en milesimas (ahora dura una hora):
+      cookieDuration = 3.6e6;
+      if (req.body.remember) {
+        res.cookie("user", req.body.userName, { maxAge: cookieDuration });
+      }
+      req.session.user = responseUser;
+      return res.redirect("/profile");
+    });
   },
   logout: (req, res) => {
     delete req.session.user;

@@ -24,7 +24,7 @@
             id="nombre"
             placeholder="Nombre"
             class="campos"
-            value="<%= locals.errors && !locals.errors.nombre && locals.data ? data.nombre : null %> "
+            value="<%= locals.errors && !locals.errors.nombre && locals.data ? data.nombre : '' %>"
           />
           <% if (locals.errors && locals.errors.nombre) {%>
           <p><%= locals.errors.nombre.msg %></p>
@@ -35,7 +35,7 @@
             id="apellido"
             placeholder="Apellido"
             class="campos"
-            value="<%= locals.errors && !locals.errors.apellido && locals.data ? data.apellido : null %> "
+            value="<%= locals.errors && !locals.errors.apellido && locals.data ? data.apellido : '' %>"
           />
           <% if (locals.errors && locals.errors.apellido) {%>
           <p><%= locals.errors.apellido.msg %></p>
