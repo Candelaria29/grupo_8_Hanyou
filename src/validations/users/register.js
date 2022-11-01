@@ -1,5 +1,6 @@
 const { body } = require("express-validator");
 const db = require("../../database/models");
+const path = require("path");
 
 const Users = db.User;
 
@@ -62,8 +63,25 @@ let passwordConf = body("passwordConf").custom((value, { req }) => {
   return true;
 });
 
-let avatar = 0;
+let avatar = body("imagenUsuario")
+.custom((value, {req }) => {
+let acceptedExtensions = ['.jpg','.jpeg','.gif','.png'];
+let invalidFiles = [];
+if (!req.files) {
+  return true;
+}
+req.files.forEach(file => {
+  let fileExtension = path.extname(file.originalname).toLowerCase();
+  if(!acceptedExtensions.includes(fileExtension)) {
+    invalidFiles.push(file.originalname)
+  }
+})
+if (invalidFiles.length > 0) {
+  throw new Error('La imagen no es de un formato válido. Debe ser .jpg, .jpeg, .png, o .gif.');
+}
+return true;
+})
 
-let validations = [name, surname, email, password, passwordConf];
+let validations = [name, surname, email, password, passwordConf, avatar];
 
 module.exports = validations;

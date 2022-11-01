@@ -137,6 +137,15 @@
   padding: 10px;
 }
 
+.error {
+  font-size: 10px;
+  color:#645eff
+}
+
+.erroricon {
+  padding: 3px;
+}
+
 @media (min-width: 481px) {
   #createNewProductForm {
     width: 70%;

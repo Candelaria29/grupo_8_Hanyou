@@ -49,6 +49,10 @@
           accept=".jpg, .png, .jpeg, .gif"
         />
         <label for="imagenUsuario" id="addAvatar">Cargar foto de perfil</label>
+        <% if (locals.errors && locals.errors.imagenUsuario) {%>
+        <p><%= locals.errors.imagenUsuario.msg %></p>
+        <% } %>
+
         <input
           type="email"
           name="email"
