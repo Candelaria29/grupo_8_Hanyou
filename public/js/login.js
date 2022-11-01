@@ -25,7 +25,7 @@ console.log(errors);
 
 if (errors.length > 0) {
     let errorsList = document.querySelector('div#errors ul');
-    errors.forEach( error => errorsList.innerHTML += "<li class='error'> " + error + "</li>")
+    errors.forEach( error => errorsList.innerHTML += "<li> " + error + "</li>")
 } else {
     event.target.submit();
 }
