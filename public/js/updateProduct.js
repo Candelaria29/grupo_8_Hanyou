@@ -5,7 +5,12 @@ form.addEventListener('submit', function (event) {
     let errors = [];
 
     let inputFile = document.querySelector('#createNewProductDesign');
+    let file = inputFile.value;
+    let acceptedExtensions = /(.jpg|.jpeg|.gif|.png)$/i;
 
+    if(!acceptedExtensions.exec(file)) {
+        errors.push('La imagen no es de un formato válido. Debe ser .jpg, .jpeg, .png, o .gif.');
+    }
 
     let productName = document.querySelector('#createNewProductName');
 
