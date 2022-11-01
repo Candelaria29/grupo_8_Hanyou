@@ -27,23 +27,24 @@ let price = body("price")
   .isNumeric()
   .withMessage("El campo debe contener un número");
 
-let image = body("image")
-.custom((value, {req }) => {
-let acceptedExtensions = ['.jpg','.jpeg','.gif','.png'];
-let invalidFiles = [];
-if (!req.files) {
-  return true;
-}
-req.files.forEach(file => {
-  let fileExtension = path.extname(file.originalname).toLowerCase();
-  if(!acceptedExtensions.includes(fileExtension)) {
-    invalidFiles.push(file.originalname)
+let image = body("image").custom((value, { req }) => {
+  let acceptedExtensions = [".jpg", ".jpeg", ".gif", ".png"];
+  let invalidFiles = [];
+  if (!req.files) {
+    return true;
   }
-})
-if (invalidFiles.length > 0) {
-  throw new Error('La imagen no es de un formato válido. Debe ser .jpg, .jpeg, .png, o .gif.');
-}
-return true;
+  req.files.forEach((file) => {
+    let fileExtension = path.extname(file.originalname).toLowerCase();
+    if (!acceptedExtensions.includes(fileExtension)) {
+      invalidFiles.push(file.originalname);
+    }
+  });
+  if (invalidFiles.length > 0) {
+    throw new Error(
+      "La imagen no es de un formato válido. Debe ser .jpg, .jpeg, .png, o .gif."
+    );
+  }
+  return true;
 });
 
 let validator = [name, description, price, image];
