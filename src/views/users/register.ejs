@@ -24,6 +24,7 @@
             id="nombre"
             placeholder="Nombre"
             class="campos"
+            required
             value="<%= locals.errors && !locals.errors.nombre && locals.data ? data.nombre : '' %>"
           />
           <% if (locals.errors && locals.errors.nombre) {%>
@@ -35,6 +36,7 @@
             id="apellido"
             placeholder="Apellido"
             class="campos"
+            required
             value="<%= locals.errors && !locals.errors.apellido && locals.data ? data.apellido : '' %>"
           />
           <% if (locals.errors && locals.errors.apellido) {%>
@@ -59,6 +61,7 @@
           id="email"
           placeholder="Correo electrónico"
           class="campos"
+          required
           value="<%= locals.errors && !locals.errors.email && locals.data ? data.email : null %> "
         />
         <% if (locals.errors && locals.errors.email) {%>
@@ -70,6 +73,7 @@
           id="password"
           placeholder="Creá tu contraseña"
           class="campos"
+          required
         />
         <% if (locals.errors && locals.errors.password) {%>
         <p><%= locals.errors.password.msg %></p>
@@ -80,6 +84,7 @@
           id="confirmPassword"
           placeholder="Confirmá tu contraseña"
           class="campos"
+          required
         />
         <% if (locals.errors && locals.errors.passwordConf) {%>
         <p><%= locals.errors.passwordConf.msg %></p>
@@ -97,6 +102,10 @@
             >Acepto términos de servicio y privacidad</label
           >
         </section>
+
+        <div id="errors">
+          <ul></ul>
+        </div>
 
         <!--Creá tu cuenta o iniciá sesión-->
         <section id="botonesRegistro">

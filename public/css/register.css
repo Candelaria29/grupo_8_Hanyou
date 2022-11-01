@@ -102,6 +102,15 @@
     border: solid 1px #52a8ff;
 }
 
+.errorForm {
+  border: 2px solid red;
+}
+
+#errors {
+  text-align: center;
+  color: #645eff;
+}
+
 /* css botones viene de la vista de producto */
 
 @media (min-width: 768px) {
