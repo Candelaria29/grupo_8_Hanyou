@@ -102,13 +102,17 @@
     border: solid 1px #52a8ff;
 }
 
-.errorForm {
-  border: 2px solid red;
-}
-
 #errors {
   text-align: center;
-  color: #645eff;
+  padding: 10px 0px;
+}
+
+#errors ul li {
+  font-size: 14px;
+}
+
+#errors ul li i {
+  color: #52a8ff;
 }
 
 /* css botones viene de la vista de producto */

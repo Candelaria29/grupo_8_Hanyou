@@ -73,6 +73,19 @@ background-color: #52a8ff;
   border: solid 1px #52a8ff;
 }
 
+#errors {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+#errors ul li {
+  font-size: 14px;
+}
+
+#errors ul li i {
+  color: #52a8ff;
+}
+
 @media (min-width: 768px) {
   #loginBox {
     width: 60%;
