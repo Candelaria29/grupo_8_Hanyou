@@ -25,7 +25,13 @@ if (lastName.value == "") {
     lastName.classList.add('errorForm')
 }
 
-let file = document.querySelector('#imagenUsuario');
+let inputFile = document.querySelector('#imagenUsuario');
+let file = inputFile.value;
+    let acceptedExtensions = /(.jpg|.jpeg|.gif|.png)$/i;
+
+    if(!acceptedExtensions.exec(file)) {
+        errors.push('La imagen no es de un formato válido. Debe ser .jpg, .jpeg, .png, o .gif.');
+    }
 
 let email = document.querySelector('#email');
 
