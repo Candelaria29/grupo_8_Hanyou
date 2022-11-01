@@ -146,6 +146,15 @@
   padding: 3px;
 }
 
+.errorForm {
+  border: 2px solid red;
+}
+
+#error {
+  text-align: center;
+  color: #645eff;
+}
+
 @media (min-width: 481px) {
   #createNewProductForm {
     width: 70%;

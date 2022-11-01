@@ -106,6 +106,10 @@
           <input type="checkbox" name="index" value="1" />
           <label for="index">Agregar a "Productos Destacados"</label>
         </section>
+        <div id="errors">
+          <ul>
+          </ul>
+        </div>
         <section id="botonProductoCreado">
           <button type="submit" class="c_eButton">Crear producto</button>
           <button type="reset" class="c_eButton">Reiniciar formulario</button>
@@ -113,5 +117,7 @@
       </form>
     </main>
     <%- include('../partials/footer') %>
+
+    <script defer src="/js/createProduct.js"></script>
   </body>
 </html>
