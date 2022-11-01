@@ -137,15 +137,6 @@
   padding: 10px;
 }
 
-.error {
-  font-size: 10px;
-  color:#645eff
-}
-
-.erroricon {
-  padding: 3px;
-}
-
 .errorForm {
   border: 2px solid red;
 }

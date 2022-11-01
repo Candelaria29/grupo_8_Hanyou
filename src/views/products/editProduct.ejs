@@ -12,7 +12,9 @@
     <main id="editProductMain">
       <form action="/productos/actualizar?m=PUT" method="post" enctype="multipart/form-data" id="editProductForm">
         <input type="hidden" name="sku" value="<%= product.sku %>" />
+        
         <h1 id="editProductTitles">Edición de productos</h1>
+        
         <input type="file" name="image" id="createNewProductDesign" style="display: none" accept=".jpg, .png"
           multiple />
         <label for="createNewProductDesign" class="eButton" id="editFilesButton">Modificar boceto del diseño</label>
@@ -21,19 +23,22 @@
           <% } %>
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
         <label for="img">Click me to upload image</label> -->
+        
         <!-- Nombre del producto -->
         <input type="text" name="name" id="createNewProductName" value="<%= product.name%>"
           placeholder="Nuevo nombre del producto" class="editProductCampos"  />
           <% if (locals.errors && locals.errors.name) {%>
             <p><%= locals.errors.name.msg %></p>
             <% } %>
-        <!-- Descripción  -->
+        
+            <!-- Descripción  -->
         <textarea type="text" name="description" id="c_eDescripcion" placeholder="Nueva descripción del producto"
           maxlength="280" class="editProductCampos" ><%= product.description %> </textarea>
           <% if (locals.errors && locals.errors.description) {%>
             <p><%= locals.errors.description.msg %></p>
             <% } %>
-        <!-- Imagen -->
+        
+            <!-- Imagen -->
         <!-- Características -->
         <section id="caracteristicasProductoEdit">
           <h2 id="editProductSubtitles">
@@ -77,6 +82,10 @@
           <input type="checkbox" name="index" <% if (product.index=='1' ) {%> checked <%} %>/>
             <label for="index">Agregar a "Productos Destacados"</label>
         </section>
+        <div id="errors">
+          <ul>
+          </ul>
+        </div>
         <section id="botonProductoEdit">
           <button type="submit" class="eButton">Guardar cambios</button>
           <button type="reset" class="eButton">Reiniciar formulario</button>
