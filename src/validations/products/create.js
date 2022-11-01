@@ -1,4 +1,5 @@
 const { body } = require("express-validator");
+const path = require("path");
 
 let name = body("name")
   .notEmpty()
@@ -26,9 +27,25 @@ let price = body("price")
   .isNumeric()
   .withMessage("El campo debe contener un número");
 
-//ver como funcionan las imagenes en express-validator
-let image = 0;
+let image = body("image")
+.custom((value, {req }) => {
+let acceptedExtensions = ['.jpg','.jpeg','.gif','.png'];
+let invalidFiles = [];
+if (!req.files) {
+  return true;
+}
+req.files.forEach(file => {
+  let fileExtension = path.extname(file.originalname).toLowerCase();
+  if(!acceptedExtensions.includes(fileExtension)) {
+    invalidFiles.push(file.originalname)
+  }
+})
+if (invalidFiles.length > 0) {
+  throw new Error('La imagen no es de un formato válido. Debe ser .jpg, .jpeg, .png, o .gif.');
+}
+return true;
+});
 
-let validator = [name, description, price];
+let validator = [name, description, price, image];
 
 module.exports = validator;

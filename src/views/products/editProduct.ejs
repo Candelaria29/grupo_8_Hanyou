@@ -16,6 +16,9 @@
         <input type="file" name="image" id="createNewProductDesign" style="display: none" accept=".jpg, .png"
           multiple />
         <label for="createNewProductDesign" class="eButton" id="editFilesButton">Modificar boceto del diseño</label>
+        <% if (locals.errors && locals.errors.image) {%>
+          <p><%= locals.errors.image.msg %></p>
+          <% } %>
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
         <label for="img">Click me to upload image</label> -->
         <!-- Nombre del producto -->

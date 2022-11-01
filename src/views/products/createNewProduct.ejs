@@ -28,6 +28,9 @@
         <label for="createNewProductDesign" class="c_eButton" id="filesButton"
           >Cargar imagen del producto</label
         >
+        <% if (locals.errors && locals.errors.image) {%>
+          <p><%= locals.errors.image.msg %></p>
+          <% } %>
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
         <label for="img">Click me to upload image</label> -->
 
