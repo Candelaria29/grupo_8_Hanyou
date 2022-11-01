@@ -28,6 +28,6 @@ if (errors.length > 0) {
     errors.forEach( error => errorsList.innerHTML += "<li class='error'> " + error + "</li>")
 } else {
     event.target.submit();
-
-
-})
+}
+}
+)

@@ -1,6 +1,8 @@
 let form = document.querySelector('#formularioDeRegistro');
 
 form.addEventListener('submit', event => {
+    
+    event.preventDefault();
 let errors = [];
 
 let fisrtName = document.querySelector('#nombre');
@@ -46,8 +48,9 @@ if (password.value == "") {
 }
 
 if (errors.length > 0) {
-    event.preventDefault();
     let errorsList = document.querySelector('div#errors ul');
     errors.forEach( error => errorsList.innerHTML += "<li class='error'> " + error + "</li>")
+} else {
+    event.target.submit();
 }
 })
