@@ -137,13 +137,17 @@
   padding: 10px;
 }
 
-.errorForm {
-  border: 2px solid red;
+#errors {
+  text-align: center;
+  padding: 10px 0px;
 }
 
-#error {
-  text-align: center;
-  color: #645eff;
+#errors ul li {
+  font-size: 14px;
+}
+
+#errors ul li i {
+  color: #52a8ff;
 }
 
 @media (min-width: 481px) {
