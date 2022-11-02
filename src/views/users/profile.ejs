@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hanyou - Mi perfil</title>
-    <link rel="stylesheet" href="/css/profile.css" />
-    <%- include('../partials/head') %>
-  </head>
 
-  <body>
-    <%- include('../partials/header') %>
+<head>
+  <title>Hanyou - Mi perfil</title>
+  <link rel="stylesheet" href="/css/profile.css" />
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <%- include('../partials/header') %>
 
     <main id="main-profile">
-      <section id="firstSection-profile" class="sectionProfile">
-        <img
-          src="/img/users/<%= activeUser.avatar %> "
-          alt="Producto"
-          id="avatar"
-        />
-      </section>
-      <section class="sectionProfile">
-        <nav id="userData">
+      <section id="profile">
+        <img src="/img/users/<%= activeUser.avatar %> " alt="ImagenDePerfil" id="avatar" />
+        <article id="userData">
           <p id="nombreUsuario">
-            Hola <%= `${activeUser.firstName} ${activeUser.lastName}` %>
+            Hola, <%= `${activeUser.firstName} ${activeUser.lastName}` %>!
           </p>
-          <p class="detalleUsuario">
-            Email registrado: <%= activeUser.email %>
-          </p>
+        </article>
+      </section>
+      <section id="actions">
+          <article>
+            <h4>Email:</h4>
+          <p class="detalleUsuario"><%= activeUser.email %></p>
+          <h4>Perfil:</h4>
           <% if (user.adminType) {%>
-          <p class="detalleUsuario">Perfil administrador</p>
-          <% } %>
-        </nav>
+            <p class="detalleUsuario"><i class="fa-solid fa-screwdriver-wrench"></i>Administrador</p>
+            <% } else { %>
+            <p class ="detalleUsuario">Cliente <i class="fa-solid fa-heart"></i></p>
+            <% } %>
+          </article>
+        <ul>
+          <h4>Acciones</h4>
+          <% if (user.adminType) {%>
+            <li><a href="/productos/crear"><i class="fa-solid fa-square-plus"></i>Crear nuevo producto</a></li>
+            <li><a href="/productos"><i class="fa-solid fa-list"></i>Ver listado de productos</a></li>
+            <li><a href="/"><i class="fa-solid fa-shop"></i>Ver pedidos de clientes</a></li>
+            <li><a href="/"><i class="fa-solid fa-users"></i>Administrar usuarios</a></li>
 
+            <% } else { %>
+              <li><a href="/productos/productCart"><i class="fa-solid fa-cart-shopping"></i>Mi carrito</a></li>
+              <li><a href="/productos"><i class="fa-solid fa-list"></i>Mi compras previas</a></li>
+              <li><a href="/"><i class="fa-solid fa-comments"></i>Solicitar impresión personalizada</a></li>
+              <li><a href="/"><i class="fa-solid fa-newspaper"></i>Suscribirme al newsletter</a></li>
+              <% } %>
+        </ul>
+      </section>
+      <section id="delete">
         <form action="/destroy?m=DELETE" method="post" id="destroyUserForm">
           <input type="hidden" name="id" value="<%= activeUser.id %>" />
 
@@ -38,5 +55,6 @@
       </section>
     </main>
     <%- include('../partials/footer') %>
-  </body>
+</body>
+
 </html>
