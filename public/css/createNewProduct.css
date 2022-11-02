@@ -150,6 +150,10 @@
   color: #52a8ff;
 }
 
+.errorForm {
+  border: #52a8ff 3px solid;
+}
+
 @media (min-width: 481px) {
   #createNewProductForm {
     width: 70%;

@@ -8,7 +8,7 @@ form.addEventListener('submit', function (event) {
     let file = inputFile.value;
     let acceptedExtensions = /(.jpg|.jpeg|.gif|.png)$/i;
 
-    if(!acceptedExtensions.exec(file)) {
+    if(!acceptedExtensions.exec(file) {
         errors.push('La imagen no es de un formato válido. Debe ser .jpg, .jpeg, .png, o .gif.');
     }
 

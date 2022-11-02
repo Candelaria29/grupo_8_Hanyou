@@ -115,6 +115,10 @@
   color: #52a8ff;
 }
 
+.errorForm {
+  border: #52a8ff 3px solid;
+}
+
 /* css botones viene de la vista de producto */
 
 @media (min-width: 768px) {
