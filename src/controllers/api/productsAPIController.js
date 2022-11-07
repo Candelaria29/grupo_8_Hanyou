@@ -7,7 +7,23 @@ module.exports = {
   list: async (req, res) => {
     const productsCount = await Products.count();
     const productsList = await Products.findAll();
-
+    function countByCategory() {
+      let arrayBig = [];
+      let arraySmall = [];
+      for (i = 0; i < productsList.length; i++) {
+        if (productsList[i].size_id === 2) {
+          arrayBig.push(productsList[i].sku);
+        } else {
+          arraySmall.push(productsList[i].sku);
+        }
+      }
+      let bigProductAmount = arrayBig.length;
+      let smallProductAmount = arraySmall.length;
+      return {
+        "Productos pequeños": smallProductAmount,
+        "Productos grandes": bigProductAmount,
+      };
+    }
     function product() {
       let arrayProduct = [];
       for (i = 0; i < productsList.length; i++) {
@@ -23,7 +39,8 @@ module.exports = {
     }
     res.json({
       "Total de productos": productsCount,
-      Usuarios: product(),
+      "Productos por categoría": countByCategory(),
+      Productos: product(),
     });
   },
   detail: async (req, res) => {
