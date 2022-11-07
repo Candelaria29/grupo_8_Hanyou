@@ -102,4 +102,9 @@ module.exports = {
         return res.redirect("/");
       });
   },
+  count: (req, res) => {
+    Users.count().then((r) => {
+      return res.send(r);
+    });
+  },
 };

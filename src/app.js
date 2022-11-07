@@ -48,3 +48,5 @@ app.get("/", (req, res) => {
 //app.use(require("./routes/mainRoutes"));
 app.use(require("./routes/productsRoutes"));
 app.use(require("./routes/usersRoutes"));
+app.use(require("./routes/api/usersAPIRoutes"));
+app.use(require("./routes/api/productsAPIRoutes"));
