@@ -25,6 +25,7 @@ console.log(errors);
 
 if (errors.length > 0) {
     let errorsList = document.querySelector('div#errors ul');
+    errorsList.innerHTML = null;
     errors.forEach( error => errorsList.innerHTML += "<li> <i class='fa-solid fa-circle-exclamation'></i> " + error + "</li>")
 } else {
     event.target.submit();
