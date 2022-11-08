@@ -1,10 +1,6 @@
 const { Router } = require("express");
 const route = Router();
-const {
-  list,
-  detail,
-  size,
-} = require("../../controllers/api/productsAPIController");
+const { list, detail } = require("../../controllers/api/productsAPIController");
 
 //Listado y recuento de productos
 route.get("/api/products", list);
