@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    border: 5px solid rebeccapurple;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    min-height: 100vh;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+}
