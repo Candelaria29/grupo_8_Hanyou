@@ -1,6 +1,5 @@
 #main {
     width: 85%;
-    border: 3px solid red;
     background-color: #c9c8c8;
     color: #323232;
 }
@@ -11,9 +10,12 @@
 }
 
 #title2 {
-    margin: 15px;
-    padding-top: 30px;
+    margin-top: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px;
     font-size: 2rem;
+    border-top: #929191 1px solid;
 }
 
 #mainStats {
@@ -88,7 +90,9 @@
 
 #categoryList li {
     display: flex;
-padding: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 #categoryList li p {
@@ -97,7 +101,7 @@ padding: 10px;
 
 #categoryList li a {
     text-decoration: none;
-    color: #323232;
+    color: #645eff;
   }
 
   .productItem {
