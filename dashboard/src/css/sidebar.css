@@ -1,6 +1,6 @@
 header {
     display: flex;
-    border: 5px solid rebeccapurple;
+    background-color: #323232;
     flex-direction: column;
     align-content: center;
     justify-content: space-between;
@@ -12,4 +12,17 @@ header {
 #navbar {
     display: flex;
     flex-direction: column;
+}
+
+#logo img{
+    width: 100%;
+}
+
+#logo {
+    width: 70%;
+    align-self: center;
+}
+
+#author {
+    text-align: center;
 }

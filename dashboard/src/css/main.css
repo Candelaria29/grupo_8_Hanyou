@@ -1,0 +1,42 @@
+#main {
+    width: 85%;
+    border: 3px solid red;
+    background-color: #c9c8c8;
+    color: #323232;
+}
+
+#title {
+    margin: 15px;
+    font-size: 2rem;
+}
+
+#mainStats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.mainCard {
+    display: flex;
+    width: 25%;
+    border-left: 10px solid #645eff;
+    background-color: #929191;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.statTitle {
+    width: 100%;
+    font-size: 25px;
+    padding-left: 5px;
+    margin: 10px;
+}
+
+.statNumber {
+    width: 100%;
+    font-size: 100px;
+    align-self: center;
+    margin: 0% 50%;
+}
