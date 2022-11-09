@@ -1,0 +1,29 @@
+#newMain {
+    width: 85%;
+    background-color: #c9c8c8;
+    color: #323232;
+}
+
+#newTitle {
+    margin: 15px;
+    font-size: 2rem;
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#newProduct {
+    border: blue solid 2px;
+    width: 45%
+}
+
+#newUser {
+    border: red solid 2px;
+    width: 45%;
+
+}
