@@ -12,18 +12,38 @@
 #cards {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
+    margin: 25px;
 }
 
-#newProduct {
+#newCard {
     border: blue solid 2px;
-    width: 45%
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
 }
 
-#newUser {
-    border: red solid 2px;
-    width: 45%;
+/* 
+#newProductTitle {
+} */
 
+#newImg {
+    width: 100%;
+    align-self: center;
+}
+
+#newImg img {
+    width: 70%;
+    margin: auto;
+    align-self: center;
+} 
+
+#info {
+    border-top: solid 1px red;
+    margin: 20px;
 }
