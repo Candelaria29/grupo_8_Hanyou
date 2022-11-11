@@ -7,8 +7,8 @@ function NewUserCard() {
             <picture id= 'newImg'><img src={logo}></img></picture>
             <div id='info'>
                 <p id='userName'>Nombre Apellido</p>
-                <p id='rol'>Rol: Administrador</p>
-                <p id ='email'>Email: email@hotmail.com</p>
+                <p id='rol'><b>Rol:</b> Administrador</p>
+                <p id ='email'><b>Email:</b> email@hotmail.com</p>
             </div>
         </article>
     );

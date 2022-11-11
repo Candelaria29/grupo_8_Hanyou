@@ -6,7 +6,8 @@
 
 #newTitle {
     margin: 15px;
-    font-size: 2rem;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #cards {
@@ -14,36 +15,47 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     margin: 25px;
 }
 
 #newCard {
-    border: blue solid 2px;
+    border-left: 10px solid #645eff;
     width: 40%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
+    background-color: #e4dfdf;
 }
-
-/* 
-#newProductTitle {
-} */
 
 #newImg {
     width: 100%;
-    align-self: center;
+    margin: auto;
 }
 
 #newImg img {
-    width: 70%;
-    margin: auto;
-    align-self: center;
+    width: 50%;
 } 
 
 #info {
-    border-top: solid 1px red;
+    border-top: solid 1px #323232;
     margin: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#name {
+    font-weight: bold;
+}
+
+#userName {
+    font-weight: bold;
+}
+
+#price {
+    font-size: 25px;
+    color: #645eff;
+    font-weight: bold;
 }
