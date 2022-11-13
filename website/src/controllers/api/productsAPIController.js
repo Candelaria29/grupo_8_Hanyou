@@ -32,6 +32,7 @@ module.exports = {
           description: productsList[i].description,
           sku: productsList[i].sku,
           detail: `${req.url}/${productsList[i].sku}`,
+          size: productsList[i].size_id,
         };
         arrayProduct.push(singleProduct);
       }
