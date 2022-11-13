@@ -1,51 +1,52 @@
 #listMain {
-    width: 85%;
-    background-color: #c9c8c8;
-    color: #323232;
+  width: 85%;
+  background-color: #c9c8c8;
+  color: #323232;
 }
 
 #listTitle {
-    margin: 15px;
-    font-size: 20px;
-    font-weight: bold;
+  margin: 15px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 #product {
-    border-left: 10px solid #645eff;
-    background-color: #e4dfdf;
-    width: 25%;
-    display: flex;
-    margin: 10px;
-    padding: 5px;
-    align-items: center;
-    justify-content: space-around;
+  border-left: 10px solid #645eff;
+  background-color: #e4dfdf;
+  width: 25%;
+  min-height: 220px;
+  display: flex;
+  margin: 10px;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 #listImg {
-    width: 40%;
+  width: 40%;
 }
 
 #listImg img {
-    width: 100%;
+  width: 100%;
 }
 #listInfo {
-    width: 55%;
+  width: 55%;
 }
 
 #productTitle {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #productPrice {
-    font-size: 25px;
-    color: #645eff;
-    font-weight: bold;
+  font-size: 25px;
+  color: #645eff;
+  font-weight: bold;
 }

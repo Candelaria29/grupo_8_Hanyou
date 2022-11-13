@@ -33,6 +33,8 @@ module.exports = {
           sku: productsList[i].sku,
           detail: `${req.url}/${productsList[i].sku}`,
           size: productsList[i].size_id,
+          image: `/img/products/${productsList[i].image}`,
+          price: productsList[i].price,
         };
         arrayProduct.push(singleProduct);
       }
