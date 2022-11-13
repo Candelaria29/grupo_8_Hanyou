@@ -6,6 +6,10 @@ const method = require("method-override");
 const { resolve } = require("path");
 const { port, start } = require("./modules/server.js");
 const { static } = require("./modules/static.js");
+const cors = require("cors");
+
+//Configuración para poder compartir la API
+app.use(cors());
 
 // Inicio de servidor
 app.listen(port, start());
