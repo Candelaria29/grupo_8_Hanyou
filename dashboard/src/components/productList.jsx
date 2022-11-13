@@ -23,6 +23,7 @@ function ProductList() {
             name={product.name}
             image={`http://localhost:8000${product.image}`}
             price={product.price}
+            sku={product.sku}
           />
         ))}
       </section>
