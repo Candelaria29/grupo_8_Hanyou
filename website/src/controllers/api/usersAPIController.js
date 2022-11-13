@@ -13,6 +13,8 @@ module.exports = {
           lastName: usersDetail[i].lastName,
           email: usersDetail[i].email,
           detail: `${req.url}/${usersDetail[i].id}`,
+          avatar: `/img/users/${usersDetail[i].avatar}`,
+          adminType: usersDetail[i].adminType,
         };
         // console.log(usersDetail[i].firstName);
         // console.log(singleUser);
