@@ -20,8 +20,8 @@ module.exports = {
       let bigProductAmount = arrayBig.length;
       let smallProductAmount = arraySmall.length;
       return {
-        "Productos pequeños": smallProductAmount,
-        "Productos grandes": bigProductAmount,
+        ProductosPequenos: smallProductAmount,
+        ProductosGrandes: bigProductAmount,
       };
     }
     function product() {
@@ -38,8 +38,8 @@ module.exports = {
       return arrayProduct;
     }
     res.json({
-      "Total de productos": productsCount,
-      "Productos por categoría": countByCategory(),
+      TotalDeProductos: productsCount,
+      ProductosPorCategoria: countByCategory(),
       Productos: product(),
     });
   },

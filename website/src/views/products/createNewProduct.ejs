@@ -30,8 +30,8 @@
           >Cargar imagen del producto</label
         >
         <% if (locals.errors && locals.errors.image) {%>
-          <p><%= locals.errors.image.msg %></p>
-          <% } %>
+        <p><%= locals.errors.image.msg %></p>
+        <% } %>
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
         <label for="img">Click me to upload image</label> -->
 
@@ -42,7 +42,7 @@
           id="createNewProductName"
           placeholder="Nombre del producto"
           class="createNewProductCampos"
-          value="<%= locals.errors && !locals.errors.name && locals.data ? data.name : null %> "
+          value="<%= locals.errors && !locals.errors.name && locals.data ? data.name : null %>"
         />
         <% if (locals.errors && locals.errors.name) {%>
         <p><%= locals.errors.name.msg %></p>
@@ -108,8 +108,7 @@
           <label for="index">Agregar a "Productos Destacados"</label>
         </section>
         <div id="errors">
-          <ul>
-          </ul>
+          <ul></ul>
         </div>
         <section id="botonProductoCreado">
           <button type="submit" class="c_eButton">Crear producto</button>
@@ -118,7 +117,5 @@
       </form>
     </main>
     <%- include('../partials/footer') %>
-
-    
   </body>
 </html>
