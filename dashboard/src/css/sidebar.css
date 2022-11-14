@@ -12,6 +12,11 @@ header {
 #navbar {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: #929191;
+    width: 95%;
 }
 
 #logo img{
@@ -30,4 +35,16 @@ header {
 a {
     text-decoration: none;
     color: white;
+  }
+
+  .headerLinks {
+    width: 89%;
+    font-size: 20px;
+    border: 1px #323232 solid;
+    padding: 15px;
+    transition: all 450ms;
+  }
+  
+  .headerLinks:hover {
+    background-color: #645eff;
   }

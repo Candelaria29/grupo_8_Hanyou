@@ -23,7 +23,7 @@ function NewProductCard() {
       </picture>
       <div id="info">
         <p id="name">{product.name}</p>
-        <p id="price">{product.price}</p>
+        <p id="price">${product.price}</p>
         <p id="description">{product.description}</p>
       </div>
     </article>

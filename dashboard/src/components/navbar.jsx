@@ -5,13 +5,9 @@ function Navbar() {
   const URL = useLocation();
   return (
     <nav id="navbar">
-      {URL.pathname !== "/" ? <LinksNav path="/" title="Home" /> : ""}
-      {URL.pathname !== "/products" ? (
-        <LinksNav path="/products" title="Products" />
-      ) : (
-        ""
-      )}
-      {URL.pathname !== "/news" ? <LinksNav path="/news" title="News" /> : ""}
+      <LinksNav path="/" title="Home" />
+      <LinksNav path="/products" title="Products" />
+      <LinksNav path="/news" title="News" />
     </nav>
   );
 }
