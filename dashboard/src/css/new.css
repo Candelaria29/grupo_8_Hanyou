@@ -8,6 +8,7 @@
     margin: 15px;
     font-size: 2rem;
     font-weight: bold;
+    padding: 10px;
 }
 
 #cards {
@@ -35,6 +36,7 @@
     margin: auto;
     display: flex;
     justify-content: center;
+    margin: 10px;
 }
 
 #newImg img {
