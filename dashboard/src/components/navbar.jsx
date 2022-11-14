@@ -11,7 +11,7 @@ function Navbar() {
       ) : (
         ""
       )}
-      {URL.pathname !== "/news" ? <LinksNav path="/news" title="News" /> : ""}
+      {URL.pathname !== "/news" ? <LinksNav path="/news" title="New" /> : ""}
     </nav>
   );
 }
