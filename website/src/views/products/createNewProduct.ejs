@@ -34,6 +34,9 @@
         <% } %>
         <!-- <input type="file" name="uploadfile" id="img" style="display: none" />
         <label for="img">Click me to upload image</label> -->
+        <div id="imgErrors">
+          <ul></ul>
+        </div>
 
         <!-- Nombre del producto -->
         <input
@@ -47,6 +50,9 @@
         <% if (locals.errors && locals.errors.name) {%>
         <p><%= locals.errors.name.msg %></p>
         <% } %>
+        <div id="nameErrors">
+          <ul></ul>
+        </div>
         <!-- Descripción  -->
         <textarea
           type="text"

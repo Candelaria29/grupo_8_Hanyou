@@ -40,9 +40,11 @@ a {
   .headerLinks {
     width: 89%;
     font-size: 20px;
+    font-weight: bold;
     border: 1px #323232 solid;
     padding: 15px;
     transition: all 450ms;
+    text-align: center;
   }
   
   .headerLinks:hover {

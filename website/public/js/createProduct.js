@@ -1,4 +1,25 @@
 let form = document.querySelector('#createNewProductForm')
+let productName = document.querySelector('#createNewProductName');
+
+/* productName.addEventListener('blur', function(){
+    let errors = [];
+
+    if (productName.value == "") {
+        errors.push("El campo 'Nombre' no puede estar vacío");
+        productName.classList.add('errorForm')
+    } else if (productName.value.length < 5) {
+        errors.push("El campo 'Nombre' debe tener al menos 5 caractéres");
+        productName.classList.add('errorForm')
+    }
+
+    if (errors.length > 0) {
+        let errorsList = document.querySelector('div#productNameErrors ul');
+        errorsList.innerHTML = null;
+        errors.forEach(error => errorsList.innerHTML += "<li> <i class='fa-solid fa-circle-exclamation'></i> " + error + "</li>")
+    }
+}); 
+
+esto funciona, pero una vez que corregis no desaparece el error*/
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
