@@ -41,6 +41,8 @@ const upload = multer({
 });
 
 route.get("/", home);
+route.get("/contacto", (req,res) =>
+res.render("contacto"));
 // READ:
 // List de productos:
 route.get("/productos", index);
