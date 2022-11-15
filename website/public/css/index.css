@@ -27,7 +27,8 @@ main {
 }
 
 #mainProducts h2 {
-  font-size: 15px;
+  margin: 20px;
+  font-size: 35px;
   text-align: center;
 }
 
@@ -117,6 +118,9 @@ main {
     padding: 50px 5px;
     width: 90%;
     margin: auto;
+    padding: 30px;
+    border-top: 1px #323232 solid;
+    margin-top: 50px;
 }
 
 .infoart {
@@ -148,6 +152,6 @@ main {
   }
 
   .infoart {
-    width: 30%;
+    width: 25%;
   }
 }

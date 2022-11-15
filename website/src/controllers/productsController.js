@@ -10,9 +10,6 @@ const { validationResult } = require("express-validator");
 const controller = {
   //esta funcion filtra los productos destacados para mostrarlos en el index
   home: (req, res) => {
-    // let products = all();
-    // let indexProducts = products.filter((product) => product.index == "1");
-    // res.render("index", { indexProducts });
     db.Product.findAll({
       where: {
         index: 1,
@@ -25,8 +22,6 @@ const controller = {
   },
 
   index: (req, res) => {
-    /* let products = all();
-    return res.render("products/productList", { products }); */
     let products = db.Product.findAll();
     const success = (data) =>
       res.render("products/productList", { products: data });
@@ -35,13 +30,6 @@ const controller = {
   },
 
   show: (req, res) => {
-    /* let product = one(req.params.sku); 
-    if (product) {
-      // return res.send(product);
-      return res.render("products/productDetail", {product});
-    }
-    return res.render("products/productDetail", {product: null});*/
-
     let product = db.Product.findByPk(req.params.sku);
     const success = (data) =>
       res.render("products/productDetail", { product: data });
@@ -68,12 +56,7 @@ const controller = {
     } else {
       req.body.image = "logo4.png";
     }
-    /* let nuevo = generate(req.body);
-    let todos = all();
-    todos.push(nuevo);
-    write(todos);
-    return res.redirect("/"); */
-
+    
     let save = db.Product.create({
       name: req.body.name,
       description: req.body.description,
@@ -91,10 +74,6 @@ const controller = {
   },
 
   edit: (req, res) => {
-    // let product = one(req.params.sku);
-    // return res.render("products/editProduct", {
-    //   product,
-    // });
     db.Product.findByPk(req.params.sku).then((product) => {
       return res.render("products/editProduct", {
         product,
@@ -103,22 +82,6 @@ const controller = {
   },
 
   update: (req, res) => {
-    /* let todos = all();
-    let actualizados = todos.map((e) => {
-      if (e.sku == req.body.sku) {
-        e.name = req.body.nombre;
-        e.description = req.body.descripcion;
-        e.color = req.body.color;
-        e.size = req.body.medida;
-        e.price = parseInt(req.body.precio);
-        e.image =
-          req.files && req.files.length > 0 ? req.files[0].filename : e.image;
-        e.index = req.body.index ? "true" : "false";
-      }
-      return e;
-    });
-    write(actualizados);
-    return res.redirect("/"); */
     const result = validationResult(req);
     if (!result.isEmpty()) {
       let errors = result.mapped();
@@ -136,7 +99,7 @@ const controller = {
         size_id: req.body.size,
         price: parseFloat(req.body.price),
         image: req.body.image,
-        index: req.body.index ? 1 : "0", //(si sacas el tick funciona, si lo queres poner NO)
+        index: req.body.index ? 1 : "0", 
       },
       {
         where: {
@@ -178,23 +141,6 @@ const controller = {
       .then(() => {
         return res.redirect("/productos");
       });
-    /* let product = one(req.body.sku);
-    if (product.image != "logo4.png") {
-      let file = resolve(
-        __dirname,
-        "..",
-        "..",
-        "public",
-        "img",
-        "products",
-        product.image
-      );
-      unlinkSync(file);
-    }
-    let todos = all();
-    let noEliminados = todos.filter((e) => e.sku != req.body.sku);
-    write(noEliminados);
-    return res.redirect("/"); */
   },
 
   search: (req, res) => {
