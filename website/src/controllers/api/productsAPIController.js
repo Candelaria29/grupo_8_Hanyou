@@ -47,14 +47,18 @@ module.exports = {
     });
   },
   detail: async (req, res) => {
-    const singleProducts = await Products.findByPk(req.params.sku);
-    const productDetail = {};
-    productDetail.name = singleProducts.name;
-    productDetail.description = singleProducts.description;
-    productDetail.color = singleProducts.color;
-    productDetail.size = singleProducts.size_id;
-    productDetail.price = singleProducts.price;
-    productDetail.image = `/img/products/${singleProducts.image}`;
-    res.json(productDetail);
+    try {
+      const singleProducts = await Products.findByPk(req.params.sku);
+      const productDetail = {};
+      productDetail.name = singleProducts.name;
+      productDetail.description = singleProducts.description;
+      productDetail.color = singleProducts.color;
+      productDetail.size = singleProducts.size_id;
+      productDetail.price = singleProducts.price;
+      productDetail.image = `/img/products/${singleProducts.image}`;
+      res.json(productDetail);
+    } catch (e) {
+      res.send(e);
+    }
   },
 };

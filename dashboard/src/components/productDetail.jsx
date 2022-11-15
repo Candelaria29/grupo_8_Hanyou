@@ -18,9 +18,21 @@ function ProductDetail(props) {
 
   return (
     <div id="detailMain">
-      <p>Detalle de producto</p>
-      <p>{id}</p>
-      <p>{product.color}</p>
+      <article id="detailCard">
+        <p id="detailTitle"> Ultimo producto </p>
+        <picture id="detailImg">
+          <img src={`http://localhost:8000${product.image}`}></img>
+        </picture>
+        <div id="info">
+          <p id="name">{product.name}</p>
+          <p id="color">
+            {product.color === "painted" ? "Painted" : "Not painted"}
+          </p>
+          <p id="size">{product.size === 2 ? "Big" : "Small"}</p>
+          <p id="price">${product.price}</p>
+          <p id="description">{product.description}</p>
+        </div>
+      </article>
     </div>
   );
 }

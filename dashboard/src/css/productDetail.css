@@ -3,3 +3,33 @@
   background-color: #c9c8c8;
   color: #323232;
 }
+
+#detailTitle {
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#detailCard {
+  border-left: 10px solid #645eff;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #e4dfdf;
+}
+
+#detailImg {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#detailImg img {
+  width: 50%;
+}
