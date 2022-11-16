@@ -1,4 +1,4 @@
-import "../css/productList.css";
+import listStyle from "../css/productList.module.css";
 import SingleProduct from "./singleProduct";
 import { useState, useEffect } from "react";
 
@@ -15,9 +15,9 @@ function ProductList() {
   }, []);
 
   return (
-    <main id="listMain">
-      <h1 id="listTitle">Todos los productos</h1>
-      <section id="list">
+    <main className= {listStyle.listMain}>
+      <h1 className= {listStyle.listTitle}>Todos los productos</h1>
+      <section className= {listStyle.list}>
         {products.map((product) => (
           <SingleProduct
             name={product.name}

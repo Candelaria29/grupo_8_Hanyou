@@ -1,16 +1,16 @@
-#listMain {
+.listMain {
   width: 85%;
   background-color: #c9c8c8;
   color: #323232;
 }
 
-#listTitle {
+.listTitle {
     margin: 15px;
     font-size: 2rem;
     font-weight: bold;
 }
 
-#list {
+.list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -18,7 +18,7 @@
   justify-content: space-evenly;
   align-items: flex-start;
 }
-#product {
+.product {
   border-left: 10px solid #645eff;
   background-color: #e4dfdf;
   width: 25%;
@@ -30,23 +30,23 @@
   justify-content: space-around;
 }
 
-#listImg {
+.listImg {
   width: 40%;
 }
 
-#listImg img {
+.listImg img {
   width: 100%;
 }
-#listInfo {
+.listInfo {
   width: 55%;
 }
 
-#productTitle {
+.productTitle {
   font-weight: bold;
   color: rgb(0, 0, 0);
 }
 
-#productPrice {
+.productPrice {
   font-size: 25px;
   color: #645eff;
   font-weight: bold;
