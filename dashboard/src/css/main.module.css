@@ -1,15 +1,15 @@
-#main {
+.main {
   width: 85%;
   background-color: #c9c8c8;
   color: #323232;
 }
 
-#title1 {
+.title1 {
   margin: 15px;
   font-size: 2rem;
 }
 
-#title2 {
+.title2 {
   margin-top: 40px;
   margin-left: 15px;
   margin-right: 15px;
@@ -18,7 +18,7 @@
   border-top: #929191 1px solid;
 }
 
-#mainStats {
+.mainStats {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -49,7 +49,7 @@
   margin: 0% 50%;
 }
 
-#categories {
+.categories {
   margin: 20px;
   display: flex;
   justify-content: space-around;
@@ -72,7 +72,7 @@
   padding: 0px 15px;
 }
 
-#categoryList {
+.categoryList {
   /* display: none; */
   list-style: none;
   font-size: 25px;
@@ -83,22 +83,22 @@
 
 /*sacar display flex y agregar evento al hacer clic en el titulo con el siguiente id*/
 
-#categoryListClick {
+.categoryListClick {
   display: flex;
 }
 
-#categoryList li {
+.categoryList li {
   display: flex;
   padding: 10px;
   justify-content: center;
   align-items: center;
 }
 
-#categoryList li p {
+.categoryList li p {
   margin: 0px;
 }
 
-#categoryList li a {
+.categoryList li a {
   text-decoration: none;
   color: #645eff;
 }

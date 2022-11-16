@@ -1,3 +1,4 @@
+import mainStyle from '../css/main.module.css';
 import CategoryCard from "./categoryCard.jsx";
 import { useState, useEffect } from "react";
 
@@ -16,7 +17,7 @@ function Categories() {
   }, []);
 
   return (
-    <section id="categories">
+    <section className={mainStyle.categories}>
       {Object.keys(categories).map((category) => (
         <CategoryCard identifier={category} />
       ))}

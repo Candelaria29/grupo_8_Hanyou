@@ -1,3 +1,4 @@
+import mainStyle from '../css/main.module.css';
 import MainCard from "./mainCard.jsx";
 import { useState, useEffect } from "react";
 
@@ -28,7 +29,7 @@ function MainStats() {
   }, []);
 
   return (
-    <section id="mainStats">
+    <section className={mainStyle.mainStats}>
       <MainCard title="Total de productos" quantity={products.length} />
       <MainCard title="Total de usuarios" quantity={users.length} />
       <MainCard

@@ -1,3 +1,4 @@
+import mainStyle from '../css/main.module.css';
 import ProductLinks from "./productLinks.jsx";
 import { useState, useEffect } from "react";
 
@@ -16,9 +17,9 @@ function CategoryCard(props) {
   }, []);
 
   return (
-    <article className="categoryCard">
+    <article className={mainStyle.categoryCard}>
       <div>
-        <div class="catTitle">
+        <div className={mainStyle.catTitle}>
           {props.identifier === "ProductosPequenos" ? (
             <p>Productos pequeños</p>
           ) : (
@@ -26,7 +27,7 @@ function CategoryCard(props) {
           )}
           <i class="fa-solid fa-chevron-down"></i>
         </div>
-        <ul id="categoryList">
+        <ul className= {mainStyle.categoryList}>
           {/* aca hay que hacer que cada link llegue al detalle del producto correspondiente */}
           {products.map((product) =>
             product.size === 1 && props.identifier === "ProductosPequenos" ? (
