@@ -16,6 +16,6 @@ INSERT INTO products (name, description, color, size_id, price, sku, image, `ind
 
 -- TABLA DE USUARIOS
 INSERT INTO users (firstName, lastName, email, password, avatar, admintype, id) VALUES
-("Nicol", "Cilio", "nicolas.cilio95@gmail.com","$2b$10$/ob8kTK5QgbRkEr.LFvs.ey6m4tqyuLqTW8K5VIqU/mf4O7gVFVk6","imagenUsuario-1663110312898-640650027.png",0,DEFAULT),
-("Nicolás","Cilio","nicolasagustincilio@gmail.com","$2b$10$3IB9QTvmvVGgVpG7oU5zJeNNNoeVceJ44xvKIUc1TCVpSHtWFmn5O","default.png",1,DEFAULT),
-("Maria Candelaria","Barrios","candelariabarrios@hotmail.com","$2b$10$D4h7Fni6fMEoNUkNiSNGGe.xMI8GbGJr1RzgiSfgyVbXOmQweg0nW","default.png",1,DEFAULT);
+("Nicolas", "Cilio", "nicolasagustincilio@hanyou.com","$2b$10$CAlwRpr6UMJnvg2Mi628uuoX7REwINb.NHkYPpIQpHnIO2XD6NfJ2","imagenUsuario-1668368411626-503044099.gif",1,DEFAULT),
+("test","test","test@gmail.com","$2b$10$p068I9Qjnay3slUs/XY3pu2TCVrFEGaK.s0N3K/s.KKrBnklf5KT6","default.png",0,DEFAULT),
+("testadmin","test","testadmin@admin.com","$2b$10$hGlxvgNwwgIZ.YGQ9KGVWeaOsoBrjhdv/baQuGL9AGIyqU.sVZbvS","default.png",0,DEFAULT);
