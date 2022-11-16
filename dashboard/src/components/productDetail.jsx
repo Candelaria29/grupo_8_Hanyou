@@ -19,7 +19,7 @@ function ProductDetail(props) {
   return (
     <div id="detailMain">
       <article id="detailCard">
-        <p id="detailTitle"> Ultimo producto </p>
+        <p id="detailTitle"> Detalle </p>
         <picture id="detailImg">
           <img src={`http://localhost:8000${product.image}`}></img>
         </picture>

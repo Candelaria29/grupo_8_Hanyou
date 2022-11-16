@@ -18,7 +18,7 @@
         </section>
         <ul class="icon-nav-bar">
           <% if (!user) {%>
-            <li class="welcome">Bienvenido, invitado!</li>
+          <li class="welcome">Bienvenido, invitado!</li>
           <li class="icon">
             <a href="/login"><i class="fa-solid fa-user hicon"></i></a>
           </li>
@@ -34,10 +34,10 @@
           <% } %>
 
           <li class="icon">
-            <a href="/productos/productCart"><i class="fa-solid fa-cart-shopping hicon"></i
+            <a href="/productos/productCart"
+              ><i class="fa-solid fa-cart-shopping hicon"></i
             ></a>
           </li>
-
         </ul>
       </article>
       <ul class="link-nav-bar">
@@ -47,8 +47,10 @@
         <% if (!user) {%>
         <li id="linksHeader"><a href="/register">Crea tu cuenta</a></li>
         <% } else {%>
-          <li id="linksHeader"><a href="/productCart">Mis compras</a></li>
-          <% } %>
+        <li id="linksHeader">
+          <a href="/productos/productCart">Mis compras</a>
+        </li>
+        <% } %>
       </ul>
     </header>
   </body>

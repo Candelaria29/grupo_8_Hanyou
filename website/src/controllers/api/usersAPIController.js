@@ -26,13 +26,17 @@ module.exports = {
     res.json({ "Total de usuarios": usersCount, Usuarios: user() });
   },
   detail: async (req, res) => {
-    const singleUser = await Users.findByPk(req.params.id);
-    const userDetail = {};
-    userDetail.firstName = singleUser.firstName;
-    userDetail.lastName = singleUser.lastName;
-    userDetail.email = singleUser.email;
-    userDetail.id = singleUser.id;
-    userDetail.avatar = `/img/users/${singleUser.avatar}`;
-    res.json(userDetail);
+    try {
+      const singleUser = await Users.findByPk(req.params.id);
+      const userDetail = {};
+      userDetail.firstName = singleUser.firstName;
+      userDetail.lastName = singleUser.lastName;
+      userDetail.email = singleUser.email;
+      userDetail.id = singleUser.id;
+      userDetail.avatar = `/img/users/${singleUser.avatar}`;
+      res.json(userDetail);
+    } catch (e) {
+      res.json(e);
+    }
   },
 };
