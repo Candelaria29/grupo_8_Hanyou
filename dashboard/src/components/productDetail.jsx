@@ -1,4 +1,4 @@
-import "../css/productDetail.css";
+import detailStyle from "../css/productDetail.module.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -17,23 +17,23 @@ function ProductDetail(props) {
   }, []);
 
   return (
-    <div id="detailMain">
-      <article id="detailCard">
-        <p id="detailTitle"> Detalle </p>
-        <picture id="detailImg">
+    <main className= {detailStyle.detailMain}>
+      <h1 className= {detailStyle.detailTitle}>Detalle de producto</h1>
+      <section className= {detailStyle.detailCard}>
+        <h3 className= {detailStyle.name}>{product.name}</h3>
+        <picture className= {detailStyle.detailImg}>
           <img src={`http://localhost:8000${product.image}`}></img>
         </picture>
-        <div id="info">
-          <p id="name">{product.name}</p>
-          <p id="color">
-            {product.color === "painted" ? "Painted" : "Not painted"}
-          </p>
-          <p id="size">{product.size === 2 ? "Big" : "Small"}</p>
-          <p id="price">${product.price}</p>
-          <p id="description">{product.description}</p>
-        </div>
-      </article>
-    </div>
+        <ul className= {detailStyle.info}>
+          <li className= {detailStyle.color}>
+            <b>Color: </b>{product.color === "painted" ? "Painted" : "Not painted"}
+          </li>
+          <li><b>Tamaño: </b>{product.size === 2 ? "Big" : "Small"}</li>
+          <li className= {detailStyle.price}>${product.price}</li>
+          <li><b>Descripción: </b>{product.description}</li>
+        </ul>
+      </section>
+    </main>
   );
 }
 

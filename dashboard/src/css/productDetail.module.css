@@ -1,28 +1,29 @@
-#detailMain {
+.detailMain {
   width: 85%;
   background-color: #c9c8c8;
   color: #323232;
 }
 
-#detailTitle {
+.detailTitle {
   margin: 15px;
   font-size: 2rem;
   font-weight: bold;
   padding: 10px;
 }
 
-#detailCard {
+.detailCard {
   border-left: 10px solid #645eff;
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
   background-color: #e4dfdf;
+  margin: auto;
 }
 
-#detailImg {
+.detailImg {
   width: 100%;
   margin: auto;
   display: flex;
@@ -30,6 +31,30 @@
   margin: 10px;
 }
 
-#detailImg img {
+.detailImg img {
   width: 50%;
 }
+
+.info {
+  border-top: solid 1px #323232;
+  margin: 20px;
+  text-align: center;
+  list-style: none;
+  font-size: 20px;
+}
+
+.info li {
+  padding: 5px;
+}
+
+.price {
+  font-size: 25px;
+  color: #645eff;
+  font-weight: bold;
+}
+
+.name {
+  font-size: 30px;
+  text-align: center;
+}
+
