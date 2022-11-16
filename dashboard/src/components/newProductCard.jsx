@@ -1,4 +1,4 @@
-import logo from "../img/logo4.png";
+import newStyle from '../css/new.module.css';
 import { useState, useEffect } from "react";
 
 function NewProductCard() {
@@ -16,15 +16,15 @@ function NewProductCard() {
   }, []);
 
   return (
-    <article id="newCard">
-      <p id="newTitle"> Ultimo producto </p>
-      <picture id="newImg">
+    <article className= {newStyle.newCard}>
+      <p className= {newStyle.newTitle}> Ultimo producto </p>
+      <picture className= {newStyle.newImg}>
         <img src={`http://localhost:8000${product.image}`}></img>
       </picture>
-      <div id="info">
-        <p id="name">{product.name}</p>
-        <p id="price">${product.price}</p>
-        <p id="description">{product.description}</p>
+      <div className= {newStyle.info}>
+        <p className= {newStyle.name}>{product.name}</p>
+        <p className= {newStyle.price}>${product.price}</p>
+        <p className= {newStyle.description}>{product.description}</p>
       </div>
     </article>
   );

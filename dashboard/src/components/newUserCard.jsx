@@ -1,4 +1,4 @@
-import logo from "../img/logo4.png";
+import newStyle from '../css/new.module.css';
 import { useState, useEffect } from "react";
 
 function NewUserCard() {
@@ -16,17 +16,17 @@ function NewUserCard() {
   }, []);
 
   return (
-    <article id="newCard">
-      <p id="newTitle"> Ultimo usuario </p>
-      <picture id="newImg">
+    <article className= {newStyle.newCard}>
+      <p className= {newStyle.newTitle}> Ultimo usuario </p>
+      <picture className= {newStyle.newImg}>
         <img src={`http://localhost:8000${user.avatar}`}></img>
       </picture>
-      <div id="info">
-        <p id="userName"> {`${user.firstName} ${user.lastName}`} </p>
-        <p id="rol">
+      <div className= {newStyle.info}>
+        <p className= {newStyle.userName}> {`${user.firstName} ${user.lastName}`} </p>
+        <p className= {newStyle.rol}>
           <b>Rol:</b> {user.adminType === 1 ? "Administrador" : "Usuario"}
         </p>
-        <p id="email">
+        <p className= {newStyle.email}>
           <b>Email:</b> {user.email}
         </p>
       </div>

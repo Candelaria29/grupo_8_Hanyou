@@ -1,17 +1,17 @@
-#newMain {
+.newMain {
   width: 85%;
   background-color: #c9c8c8;
   color: #323232;
 }
 
-#newTitle {
+.newTitle {
   margin: 15px;
   font-size: 2rem;
   font-weight: bold;
   padding: 10px;
 }
 
-#cards {
+.cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -20,7 +20,7 @@
   margin: 25px;
 }
 
-#newCard {
+.newCard {
   border-left: 10px solid #645eff;
   width: 40%;
   display: flex;
@@ -31,7 +31,7 @@
   background-color: #e4dfdf;
 }
 
-#newImg {
+.newImg {
   width: 100%;
   margin: auto;
   display: flex;
@@ -39,26 +39,26 @@
   margin: 10px;
 }
 
-#newImg img {
+.newImg img {
   width: 50%;
 }
 
-#info {
+.info {
   border-top: solid 1px #323232;
   margin: 20px;
   text-align: center;
   font-size: 15px;
 }
 
-#name {
+.name {
   font-weight: bold;
 }
 
-#userName {
+.userName {
   font-weight: bold;
 }
 
-#price {
+.price {
   font-size: 25px;
   color: #645eff;
   font-weight: bold;
