@@ -9,7 +9,7 @@ header {
     min-height: 100vh;
 }
 
-#navbar {
+.navbar {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -19,16 +19,16 @@ header {
     width: 95%;
 }
 
-#logo img{
+.logo img{
     width: 100%;
 }
 
-#logo {
+.logo {
     width: 70%;
     align-self: center;
 }
 
-#author {
+.author {
     text-align: center;
 }
 
@@ -37,7 +37,7 @@ a {
     color: white;
   }
 
-  .headerLinks {
+ .headerLinks {
     width: 89%;
     font-size: 20px;
     font-weight: bold;
@@ -47,6 +47,6 @@ a {
     text-align: center;
   }
   
-  .headerLinks:hover {
+ .headerLinks:hover {
     background-color: #645eff;
   }
