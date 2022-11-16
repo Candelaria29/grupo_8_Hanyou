@@ -24,6 +24,6 @@ main {
 }
 
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: #4b4a4a;
 }

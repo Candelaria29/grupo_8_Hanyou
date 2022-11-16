@@ -47,10 +47,10 @@ let password = document.querySelector('#password');
 
 if (password.value == "") {
     errors.push("El campo 'Contraseña' no puede estar vacío.");
-    email.classList.add('errorForm')
+    password.classList.add('errorForm')
 } else if (password.value.length < 8) {
     errors.push("Su contraseña debe tener al menos 8 caractéres.");
-    email.classList.add('errorForm')
+    password.classList.add('errorForm')
 }
 
 if (errors.length > 0) {

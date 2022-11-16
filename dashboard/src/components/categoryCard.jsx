@@ -25,7 +25,6 @@ function CategoryCard(props) {
           ) : (
             <p>Productos grandes</p>
           )}
-          <i class="fa-solid fa-chevron-down"></i>
         </div>
         <ul className= {mainStyle.categoryList}>
           {/* aca hay que hacer que cada link llegue al detalle del producto correspondiente */}
